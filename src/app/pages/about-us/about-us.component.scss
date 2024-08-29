@@ -1,0 +1,69 @@
+p:not(:last-child) {
+    margin-bottom: 1.25em;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+i{
+    margin-right: 5px;
+}
+
+
+@media (min-width: 320px) and (max-width: 992px) {
+    .ptb-100 {
+        padding: 55px 0;
+    }
+}
+.gray-light-bg {
+    background: #f4f4f4;
+}
+.ptb-100 {
+    padding: 100px 0;
+}
+
+
+.work-process-icon-wrap {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+}
+
+.secondary-bg {
+    background: #162e66;
+}
+.rounded {
+    border-radius: .25rem !important;
+}
+
+.work-process-icon-wrap .process-step {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.primary-bg {
+    background: #1351a8;
+}
+.text-white {
+    color: #fff !important;
+}
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+}
+.workIcon{
+    font-size: 40px;
+    margin-top: 15px;
+    margin-left: 7px;
+}
