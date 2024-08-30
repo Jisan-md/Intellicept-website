@@ -1,0 +1,257 @@
+.head-img{
+    height: 250px;
+}
+
+.demo4{
+    letter-spacing: .5px;
+}
+.single-promo-block {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.single-promo-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.single-promo-block img {
+    margin-bottom: 20px;
+    width: 100px;
+    height: auto;
+}
+
+.promo-block-content {
+    text-align: left;
+    flex-grow: 1;
+}
+
+.single-promo-block h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.single-promo-block p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+.detail-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #007bff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.detail-link span {
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.detail-link:hover {
+    color: #0056b3;
+}
+
+.detail-link:hover span {
+    transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+    .single-promo-block {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+// -----------------------------form css-----------------------------
+.contact-us-section{
+    margin: 80px 0px 40px 0px;
+}
+.contact-us-form {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.form-group {
+    margin-bottom: 15px; 
+}
+
+.btn.secondary-solid-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn.secondary-solid-btn:hover {
+    background-color: #0056b3;
+}
+
+.text-danger {
+    font-size: 0.8rem;
+    color: #dc3545;
+    margin-top: 5px;
+}
+
+
+
+/* Ensure all cards have the same height */
+.single-promo-block {
+    height: 100%;
+    transition: height 0.3s ease-in-out;
+}
+
+.promo-block-content p {
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.single-promo-block.expanded .promo-block-content {
+    max-height: none;
+}
+
+/* Adjust button styles */
+.btn {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #007bff;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+/* Optional: Add responsive styling */
+@media (max-width: 768px) {
+    .single-promo-block {
+        height: auto;
+    }
+}
+
+/* Container and Slider */
+.container {
+    overflow: hidden;
+    
+  }
+  
+  .slider {
+    animation: slidein 30s linear infinite;
+    white-space: nowrap;
+  }
+  
+  .logos {
+    width: 100%;
+    display: inline-block;
+  }
+  
+  .LogoImg {
+    width: 150px; 
+    height: 100px; 
+    object-fit: contain; 
+    margin: 0 25px; 
+  }
+  
+  @keyframes slidein {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+// testimonial section
+
+.dark-bg{
+    background-image: url(/assets/dark-wavy-background_23-2148421508.avif);
+    // background-color: #000;
+    position: relative;
+    width: 100%;
+    // min-height: auto;
+  height: 350px;
+}
+@media (max-width: 768px) {
+  .dark-bg {
+    height: 400px;
+  }
+}
+.testimonial-heading {
+    color: #fff;
+  
+  }
+  .carousel-control-prev-icon, .carousel-control-next-icon{
+    // margin-top: 40px;
+
+  }
+  .carousel-item {
+    text-align: center;
+  }
+  
+  .author{
+    color: #007bff;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .carousel-item p {
+    font-style: italic; 
+    color: #fff;
+    height: auto;
+    width: auto;
+    padding: 50px;
+    margin: 30px 100px 50px 100px;
+  }
+  @media (max-width: 768px) {
+    .carousel-item p {
+      padding: 10px 50px 50px 50px;
+    margin: 0px 50px 50px 50px;
+    }
+  }
+  
+  
+//   testimonial section end

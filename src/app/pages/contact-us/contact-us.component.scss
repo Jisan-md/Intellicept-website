@@ -1,0 +1,161 @@
+
+// ----------------------*****--------------------
+.head-img {
+    height: 250px;
+    width: 100%;
+}
+.text-header h1{
+    text-align: center;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    font-weight: 700;
+    color: #fff;
+    font-size: 40px;
+}
+i{
+    color: #fff;
+}
+
+.space {
+  margin: 60px 0px;
+}
+a{
+    text-decoration: none;
+}
+.contact-info {
+  display: flex;
+  gap: 25px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;  border-radius: 5px;
+  background-color: var(--white-color);
+  padding: 20px;
+  height: 100%; 
+  flex-direction: column; 
+  justify-content:center; 
+  align-items:center;
+  text-align: center;
+}
+
+.contact-info_icon {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  background-color: #0056b3;
+  color: #fff;
+  text-align: center;
+
+  font-size: 40px;
+  position: relative;
+  box-shadow: 0px 6px 20px #158DB1;
+  border-radius: 5px;
+//   margin-bottom: 20px;
+}
+
+.contact-info .box-title {
+  margin-bottom: 10px;
+}
+
+.box-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+}
+
+.media-body {
+  flex: 1;
+}
+
+@media (max-width: 1199.98px) {
+  .col-xl-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+// ----------------------*****--------------------
+
+
+.contact-us-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .gray-light-bg {
+    background-color: #f9f9f9;
+  }
+  
+  .rounded {
+    border-radius: 8px;
+  }
+  
+  .p-5 {
+    padding: 3rem !important;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .btn{
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #007bff;
+  }
+  
+  .contact-us-content {
+    margin-top: 50px;
+  }
+  @media (max-width: 767.98px) {
+    .contact-us-content {
+        text-align: center;
+    }
+  }
+  
+  h4 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  h5 {
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #000;
+  }
+  
+  address {
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  
+  .link-color {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .link-color:hover {
+    text-decoration: underline;
+  }
+  
