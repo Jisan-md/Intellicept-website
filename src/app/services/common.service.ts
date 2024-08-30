@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CommonService {
-  apiUrl: any  = "https://api.neuvays.com/";
+  apiUrl: any  = "/";
 
   constructor() { }
   contactUs(data: any) {
