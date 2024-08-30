@@ -18,7 +18,7 @@ import { StaffingServicesComponent } from './pages/staffing-services/staffing-se
 import { DigitalMarketingServicesComponent } from './pages/digital-marketing-services/digital-marketing-services.component';
 import { RPOServicesComponent } from './pages/rpo-services/rpo-services.component';
 import { ServicesComponent } from './pages/services/services.component';
-
+import { AccordionModule } from 'ngx-bootstrap/accordion';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +41,7 @@ import { ServicesComponent } from './pages/services/services.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,AccordionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

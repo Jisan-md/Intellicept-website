@@ -1,1 +1,148 @@
-<p>header works!</p>
+<div class="navbar-area" [ngClass]="{ sticky: isSticky }">
+    <!-- <div class="container-fluid"> -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" [ngStyle]="{ 'background': 'linear-gradient(75deg, #1351a8 5%, #162e66)', 'background-color': 'linear-gradient(75deg, #1351a8 5%, #162e66)' }" [class.active]="classApplied">
+            <a class="navbar-brand" routerLink="/">
+                <img src="assets/Logo1.png" alt="logo" style="height: 60px" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" style="border-color: white;">
+                <span class="burger-menu">
+                    <span class="top-bar" style="background-color: white;"></span>
+                    <span class="middle-bar" style="background-color: white;"></span>
+                    <span class="bottom-bar" style="background-color: white;"></span>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                        [style.color]="(router.url == '/' || router.url == '/' || router.url == '/webinar') && isSticky == false ? 'white' : 'white'">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/aboutUs" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                        [style.color]="(router.url == '/' || router.url == '/' || router.url == '/webinar') && isSticky == false ? 'white' : 'white'">
+                            About Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/rpo-services" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                        [style.color]="(router.url == '/rpo-services' || router.url == '/' || router.url == '/webinar') && isSticky == false ? 'white' : 'white'">
+                            RPO
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/services" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                        [style.color]="(router.url == '/' || router.url == '/' || router.url == '/webinar') && isSticky == false ? 'white' : 'white'">
+                            Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/digital-marketing-services" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                        [style.color]="(router.url == '/' || router.url == '/' || router.url == '/webinar') && isSticky == false ? 'white' : 'white'">
+                            Digital Marketing Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/staffing-services" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                        [style.color]="(router.url == '/' || router.url == '/' || router.url == '/webinar') && isSticky == false ? 'white' : 'white'">
+                            Staffing Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/career" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                        [style.color]="(router.url == '/' || router.url == '/' || router.url == '/webinar') && isSticky == false ? 'white' : 'white'">
+                        Career
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/industries" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                        [style.color]="(router.url == '/' || router.url == '/' || router.url == '/webinar') && isSticky == false ? 'white' : 'white'">
+                            Industries
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/partner" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                        [style.color]="(router.url == '/' || router.url == '/' || router.url == '/webinar') && isSticky == false ? 'white' : 'white'">
+                            Partners
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/blog" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                        [style.color]="(router.url == '/' || router.url == '/' || router.url == '/webinar') && isSticky == false ? 'white' : 'white'">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/contact-us" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                        [style.color]="(router.url == '/' || router.url == '/' || router.url == '/webinar') && isSticky == false ? 'white' : 'white'">
+                            Contact Us
+                        </a>
+                    </li>
+                    
+
+                </ul>
+
+                <!-- Mobile View: Additional Menu Items -->
+                <ul class="navbar-nav for-responsive" [ngStyle]="{ 'background': 'linear-gradient(75deg, #1351a8 5%, #162e66)', 'background-color': 'linear-gradient(75deg, #1351a8 5%, #162e66)'}">
+                    <li class="nav-item">
+                        <a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/aboutUs" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                            About Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/rpo-services" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                            RPO
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/services" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                            Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/digital-marketing-services" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                            Digital Marketing Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/staffing-services" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                            Staffing Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/career" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                            Career
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/industries" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                            Industries
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/partner" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                            Partners
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/blog" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/contact-us" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+<!-- </div> -->
+

@@ -1,0 +1,122 @@
+// .promo-block {
+//     position: relative;
+//     padding: 50px 0;
+// }
+// .ptb-100 {
+//     padding: 100px 0;
+// }
+// .ptb-10 {
+//     padding: 100px 0;
+// }
+// .single-promo-block {
+//     background-color: #fff;
+//     border: 1px solid #e6e6e6;
+//     border-radius: 10px;
+//     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+//     transition: transform 0.3s ease, box-shadow 0.3s ease;
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     padding: 20px;
+//     // margin-bottom: 30px;
+// }
+
+// .row {
+//     margin-right: -15px;
+//     margin-left: -15px;
+// }
+
+// .row > [class*='col-'] {
+//     padding-right: 15px;
+//     padding-left: 15px;
+//     margin-bottom: 30px;
+// }
+
+// .single-promo-block:hover {
+//     transform: translateY(-10px);
+//     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+// }
+
+// .promo-block-content {
+//     flex-grow: 1;
+// }
+
+// .promo-block-content h5 {
+//     font-size: 1.15rem;
+//     font-weight: 600;
+//     margin-bottom: 10px;
+//     color: #333;
+// }
+
+// .promo-block-content p {
+//     font-size: 0.95rem;
+//     color: #555;
+//     line-height: 1.5;
+//     margin-bottom: 15px;
+// }
+
+// .promo-block-content img {
+//     width: 100%;
+//     max-width: 80px;
+//     height: auto;
+//     margin-bottom: 15px;
+// }
+
+// .detail-link {
+//     display: inline-block;
+//     margin-top: 15px;
+//     color: #007bff;
+//     font-weight: 500;
+//     text-decoration: none;
+//     transition: color 0.3s ease;
+// }
+
+// .detail-link:hover {
+//     color: #0056b3;
+// }
+
+// /* Add spacing between promo-block sections */
+// .promo-block + .promo-block {
+//     margin-top: 30px; /* Adjust this value to control the gap between sections */
+// }
+
+// @media (min-width: 768px) {
+//     .row {
+//         display: flex;
+//         flex-wrap: wrap;
+//     }
+
+//     .row > [class*='col-'] {
+//         margin-bottom: 30px;
+//     }
+// }
+
+// @media (max-width: 767px) {
+//     .single-promo-block {
+//         margin-bottom: 20px;
+//     }
+// }
+
+// .gray-light-bg {
+//     background: #f4f4f4;
+// }
+// .p-5 {
+//     padding: 3rem !important;
+// }
+// .rounded {
+//     border-radius: .25rem !important;
+// }
+
+// .secondary-solid-btn:hover {
+//     background: transparent;
+//     color: #1351a8;
+//     -webkit-box-shadow: none;
+//     box-shadow: none;
+// }
+// .secondary-solid-btn {
+//     color: #fff;
+//     background: #1351a8;
+//     border: 1px solid #1351a8;
+// }
+
