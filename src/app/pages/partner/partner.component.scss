@@ -97,3 +97,90 @@ h1, h2, h3, h4, h5 {
     color: initial;
 }
 
+
+.dark-bg{
+    background-image: url(/assets/dark-wavy-background_23-2148421508.avif);
+    // background-color: #000;
+    position: relative;
+    width: 100%;
+    // min-height: auto;
+  height: 350px;
+}
+@media (max-width: 768px) {
+  .dark-bg {
+    height: 400px;
+  }
+}
+.testimonial-heading {
+    color: #fff;
+  
+  }
+  .carousel-control-prev-icon, .carousel-control-next-icon{
+    // margin-top: 40px;
+
+  }
+  .carousel-item {
+    text-align: center;
+  }
+  
+  .author{
+    color: #007bff;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .carousel-item p {
+    font-style: italic; 
+    color: #fff;
+    height: auto;
+    width: auto;
+    padding: 50px;
+    margin: 30px 100px 50px 100px;
+  }
+  @media (max-width: 768px) {
+    .carousel-item p {
+      padding: 10px 50px 50px 50px;
+    margin: 0px 50px 50px 50px;
+    }
+  }
+  .container {
+    overflow: hidden;
+    
+  }
+  
+  .slider {
+    animation: slidein 30s linear infinite;
+    white-space: nowrap;
+  }
+  
+  .logos {
+    width: 100%;
+    display: inline-block;
+  }
+  
+  .LogoImg {
+    width: 150px; 
+    height: 100px; 
+    object-fit: contain; 
+    margin: 0 25px; 
+  }
+  
+  @keyframes slidein {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
