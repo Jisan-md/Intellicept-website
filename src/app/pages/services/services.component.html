@@ -1,1 +1,85 @@
-<p>services works!</p>
+        <section class="head-img" style="background: url('/assets/Services.jpg')no-repeat center center / cover">
+                <div class="row justify-content-center">
+                        <div class="text-header">
+                            <!-- <h1 class="text-white mb-0">Our Services</h1> -->
+                           
+                            </div>
+                        </div>
+            </section>
+        
+            <section class="promo-block">
+                <div class="container">
+                  <div class="row">
+                    <div *ngFor="let promo of promoBlocks" class="col-md-4 col-lg-4 mt-4">
+                      <div class="single-promo-block shadow-lg rounded" [ngStyle]="{ 'height': '100%' }">
+                        <img [src]="promo.imgSrc" [alt]="promo.altText" class="mb-3" width="100">
+                        <div class="promo-block-content" [ngStyle]="{ 'padding-bottom': promo.paddingBottom }">
+                          <h5>{{ promo.title }}</h5>
+                          <p>{{ promo.description }}</p>
+                          <a *ngIf="promo.link" [href]="promo.link" class="detail-link mt-4">{{ promo.linkText }} <span class="ti-arrow-right"></span></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
+        <section class="contact-us-section ">
+            <div class="container">
+              <div class="row justify-content-around">
+                <div class="col-md-6">
+                  <div class="contact-us-form rounded p-4">
+                    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                      <div class="form-row">
+                        <div class="col-12">
+                          <div class="form-group">
+                            <input type="text" [formControl]="getControl('userName')" class="form-control" placeholder="Enter name" id="userName">
+                            <div *ngIf="getControl('userName')?.invalid && getControl('userName')?.touched" class="text-danger">
+                              Name is required (min 2 characters).
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-group">
+                            <input type="email" [formControl]="getControl('userEmail')" class="form-control" placeholder="Enter email" id="userEmail">
+                            <div *ngIf="getControl('userEmail')?.invalid && getControl('userEmail')?.touched" class="text-danger">
+                              Valid email is required.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-group">
+                            <input type="text" [formControl]="getControl('userPhone')" class="form-control" placeholder="Mobile No" id="userPhone">
+                            <div *ngIf="getControl('userPhone')?.invalid && getControl('userPhone')?.touched" class="text-danger">
+                              Valid 10-digit phone number is required.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-group">
+                            <textarea [formControl]="getControl('userMessage')" id="userMessage" class="form-control" rows="7" placeholder="Message"></textarea>
+                            <div *ngIf="getControl('userMessage')?.invalid && getControl('userMessage')?.touched" class="text-danger">
+                              Message is required (min 10 characters).
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-12 mt-3">
+                          <button type="submit" class="btn secondary-solid-btn" [disabled]="contactForm.invalid">
+                            Send Message
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+         
+      <!--bottom to top button start-->
+    <button class="scroll-top scroll-to-target open" data-target="html">
+        <span class="ti-angle-up"></span>
+    </button>
+    <!--bottom to top button end-->
+    

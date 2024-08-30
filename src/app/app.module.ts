@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './pages/header/header.component';
@@ -18,6 +20,7 @@ import { StaffingServicesComponent } from './pages/staffing-services/staffing-se
 import { DigitalMarketingServicesComponent } from './pages/digital-marketing-services/digital-marketing-services.component';
 import { RPOServicesComponent } from './pages/rpo-services/rpo-services.component';
 import { ServicesComponent } from './pages/services/services.component';
+
 
 @NgModule({
   declarations: [
@@ -41,7 +44,9 @@ import { ServicesComponent } from './pages/services/services.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    CarouselModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
