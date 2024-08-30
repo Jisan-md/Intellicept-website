@@ -1,0 +1,88 @@
+.ptb-10 {
+    padding: 100px 0;
+}
+.ptb-100 {
+    padding: 100px 0;
+}
+
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.portfolio-item {
+    width: 32%; /* Adjusted to fit three columns with spacing */
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-wrapper {
+    position: relative;
+    height: 100%; /* Ensures consistent height */
+}
+
+.portfolio-wrapper .content-overlay {
+    background: linear-gradient(to right, rgba(8, 79, 179, 0.7) 2%, rgba(22, 36, 119, 0.7) 82%);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.portfolio-item:hover .content-overlay {
+    opacity: 1;
+}
+
+.content-details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .content-details {
+    opacity: 1;
+}
+
+
+/* Responsive Breakpoints */
+@media (max-width: 991px) {
+    .portfolio-item {
+        width: 48%; /* Two columns on medium screens */
+    }
+}
+
+@media (max-width: 767px) {
+    .portfolio-item {
+        width: 100%; /* One column on small screens */
+    }
+}
+
+
+
+
+.content-details h5 {
+    /* Add your custom styles here */
+    font-size: 1.25rem;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    // line-height: 1.21;
+   
+    /* Add any other styles you want */
+}

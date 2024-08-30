@@ -1,0 +1,287 @@
+.banner {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+   
+    color: antiquewhite;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+} 
+button:not(:disabled) {
+    cursor: pointer;
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: #64559f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: aliceblue;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+}
+
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(10, 9, 9, 0.075) !important;
+}
+.rounded {
+    border-radius: .25rem !important;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    height: 300px;
+}
+@media (max-width: 768px) {
+    .image-row img {
+        width: 100%;
+        margin-bottom: 10px; 
+    }
+}
+
+.image-row {
+    display: flex;
+    
+    flex-wrap: wrap;
+   
+}
+
+h2 {
+    font-size: 1.442em;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0 0 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 1.21;
+    color: initial;
+}
+.no-bullets {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.no-bullets li {
+    margin-bottom: 10px; /* Optional: adds space between list items */
+}
+.flow1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+
+.flow1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.box {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.right-arrow,.left-arrow,
+.down-arrow {
+    font-size: 2rem;
+    color: #333;
+    padding: 0 10px;
+}
+
+.down-arrow {
+    display: block;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .flow1 {
+        flex-direction: column;
+    }
+
+    .right-arrow,
+    .down-arrow {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .box p {
+        font-size: 14px;
+        
+    }
+    
+    .right-arrow,
+    .down-arrow {
+        font-size: 1.5rem;
+    }
+}
+
+/* Desktop-specific styles */
+@media (min-width: 769px) {
+    .desktop-only {
+        margin-left: 150px;
+        margin-top: 5rem;
+    }
+}
+
+/* Mobile and tablet views - these styles will hide the element */
+@media (max-width: 768px) {
+    .desktop-only {
+        margin-left: 0;
+        margin-top: 0;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+
+.column {
+    flex: 1;
+    min-width: 250px; /* Adjust this value as needed */
+    max-width: 100%;
+    padding: 15px;
+}
+
+.card {
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card p {
+    margin: 10px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .column {
+        min-width: 100%;
+    }
+}
+
+.row {
+    margin: 0 -5px;
+}
+
+.gray-light-bg {
+    background: #f4f4f4;
+}
+.ptb-100 {
+    padding: 100px 0;
+}
+
+
+.sap-success-stories {
+    padding: 30px;
+    background-color: #ebe8e8;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.section-heading h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.story-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.story-title .icon {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.story-content ul {
+    list-style: none;
+    padding-left: 0;
+    color: #555;
+}
+
+.story-content ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.story-content ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #007bff;
+    font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+    .story-title {
+        justify-content: center;
+        text-align: center;
+    }
+    .story-title .icon {
+        display: block;
+        margin: 0 auto 10px;
+    }
+}
+
+h2 {
+    font-size: 1.442em;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0 0 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 1.21;
+    color: initial;
+}
