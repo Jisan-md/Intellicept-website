@@ -43,7 +43,9 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    CommonModule,AccordionModule
+    CommonModule,AccordionModule,
+    ReactiveFormsModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
