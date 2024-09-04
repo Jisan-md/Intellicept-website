@@ -5,10 +5,16 @@
 .demo4{
     letter-spacing: .5px;
 }
+.promo-block-section{
+  background-color: #f5f5f5;
+
+}
 .single-promo-block {
     background-color: #fff;
     border-radius: 8px;
     padding: 25px;
+    background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,1) 70%, rgba(153,187,224,1) 100%);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
@@ -20,7 +26,7 @@
 
 .single-promo-block:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    // box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .single-promo-block img {
@@ -150,6 +156,7 @@
 }
 .btn:hover {
     background-color: #007bff;
+    color: #fff;
 }
 
 .btn:focus {

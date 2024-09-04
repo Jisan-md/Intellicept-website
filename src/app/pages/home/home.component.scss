@@ -139,14 +139,21 @@ h5 {
 a.detail-link {
     display: inline-block;
     text-decoration: none;
-    color: #495057;
+    color: #2ebf6d;
     font-weight: 600;
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
 }
 a:hover {
-    color: #1351a8;
+    color: #358a37;
     text-decoration: none;
+}
+.detail-link span{
+    color: #2ebf6d;
+    margin-left: 2px;
+}
+.detail-link span:hover{
+    color: #358a37;
 }
 .services-single {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -162,7 +169,7 @@ a:hover {
 }
 
 .detail-link:hover {
-    color: #007bff; /* Change this to your desired hover color */
+    color: #358a37; /* Change this to your desired hover color */
 }
 
 .services-single img {
@@ -346,7 +353,14 @@ a:hover {
 }
 
 
+.rounded-circle
+{
+background-color: #2ebf6d;
+color: #fff;
+width: 40px;
+}
 
-
-
+.rounded-circle i{
+    color: #fff ;
+}
 

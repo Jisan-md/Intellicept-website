@@ -13,6 +13,13 @@ import { RPOServicesComponent } from './pages/rpo-services/rpo-services.componen
 import { ServicesComponent } from './pages/services/services.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { HeaderComponent } from './pages/header/header.component';
+import { CustomerExperienceExcellenceComponent } from './pages/customer-experience-excellence/customer-experience-excellence.component';
+import { BusinessProcessExecutionComponent } from './pages/business-process-execution/business-process-execution.component';
+import { DataAnalyticsComponent } from './pages/data-analytics/data-analytics.component';
+import { DigitalTransformationComponent } from './pages/digital-transformation/digital-transformation.component';
+import { CloudMigrationServicesComponent } from './pages/cloud-migration-services/cloud-migration-services.component';
+import { InnovationEngineComponent } from './pages/innovation-engine/innovation-engine.component';
+
 
 const routes: Routes = [
   {
@@ -66,6 +73,30 @@ const routes: Routes = [
   {
     path: 'header',
     component: HeaderComponent
+  },
+  {
+    path: 'customer-experience-excellence',
+    component: CustomerExperienceExcellenceComponent
+  },
+  {
+    path: 'business-process-execution',
+    component: BusinessProcessExecutionComponent
+  },
+  {
+    path: 'data-analytics',
+    component: DataAnalyticsComponent
+  },
+  {
+    path: 'digital-transformation',
+    component: DigitalTransformationComponent
+  },
+  {
+    path: 'cloud-migration-services',
+    component: CloudMigrationServicesComponent
+  },
+  { 
+    path: 'innovation-engine',
+    component: InnovationEngineComponent
   }
   
 ];

@@ -119,13 +119,15 @@ h1, h2, h3, h4, h5 {
 .right-arrow,.left-arrow,
 .down-arrow {
     font-size: 2rem;
-    color: #333;
+    color: #64559f;
     padding: 0 10px;
 }
 
 .down-arrow {
-    display: block;
-    margin-top: 10px;
+    // display: block;
+    position: relative;
+    right: 20%;
+    float: right;
 }
 
 @media (max-width: 768px) {

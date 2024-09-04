@@ -125,8 +125,8 @@
 
 
 
-.bg-gray {
-    background-color: gray;
+.help-section{
+    background-color: #0056b3;
 }
 
 .help-section h1 {
@@ -143,4 +143,19 @@
     display: block;
     margin-top: 10px;
     color: #fff;
+}
+li{
+    list-style: none;
+}
+div {
+    margin-bottom: 8px;
+}
+
+div > i {
+    margin-right: 8px;
+    color: #007bff;
+}
+h3{
+    color: #000;
+    margin-top: 20px;
 }

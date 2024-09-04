@@ -21,6 +21,12 @@ import { DigitalMarketingServicesComponent } from './pages/digital-marketing-ser
 import { RPOServicesComponent } from './pages/rpo-services/rpo-services.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { CustomerExperienceExcellenceComponent } from './pages/customer-experience-excellence/customer-experience-excellence.component';
+import { BusinessProcessExecutionComponent } from './pages/business-process-execution/business-process-execution.component';
+import { DataAnalyticsComponent } from './pages/data-analytics/data-analytics.component';
+import { DigitalTransformationComponent } from './pages/digital-transformation/digital-transformation.component';
+import { CloudMigrationServicesComponent } from './pages/cloud-migration-services/cloud-migration-services.component';
+import { InnovationEngineComponent } from './pages/innovation-engine/innovation-engine.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +42,13 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
     StaffingServicesComponent,
     DigitalMarketingServicesComponent,
     RPOServicesComponent,
-    ServicesComponent
+    ServicesComponent,
+    CustomerExperienceExcellenceComponent,
+    BusinessProcessExecutionComponent,
+    DataAnalyticsComponent,
+    DigitalTransformationComponent,
+    CloudMigrationServicesComponent,
+    InnovationEngineComponent
   ],
   imports: [
     BrowserModule,
