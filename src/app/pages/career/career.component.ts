@@ -8,16 +8,16 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class CareerComponent {
 
-  applyForm: FormGroup;
+  applyForm!: FormGroup;
   errorMessage: string = '';
   file: File | null = null;
 
   constructor(private fb: FormBuilder) {
     this.applyForm = this.fb.group({
-      name: ['', Validators.required],
+      name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
-      phone: ['', Validators.required],
-      desc: [''],
+      phone: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
+      desc: ['', [Validators.required, Validators.minLength(10)]],
       file: [null]
     });
   }
@@ -35,18 +35,29 @@ export class CareerComponent {
       formData.append('email', this.applyForm.get('email')?.value);
       formData.append('phone', this.applyForm.get('phone')?.value);
       formData.append('desc', this.applyForm.get('desc')?.value);
-
+  
       if (this.file) {
         formData.append('fileToUpload', this.file);
       }
-
-      console.log('Form submitted:', formData);
-
-      // Call your backend API here with formData
-      // Example: this.http.post('your-backend-endpoint', formData).subscribe(...)
-
+  
+      // Log form data manually
+      console.log('Form Data:');
+      formData.forEach((value, key) => {
+        console.log(`${key}:`, value);
+      });
+  
+      this.errorMessage = ''; // Clear error message on successful submission
+  
+      // Optionally, you can post the formData to your backend here
+      // this.http.post('your-backend-endpoint', formData).subscribe(response => {
+      //   console.log('Form submitted successfully:', response);
+      // }, error => {
+      //   console.error('Form submission failed:', error);
+      // });
+  
     } else {
       this.errorMessage = 'Please fill in all required fields.';
     }
   }
+  
 }
