@@ -38,8 +38,12 @@
                   class="form-control"
                   formControlName="userName"
                   placeholder="Enter name"
-                  required
+                  [ngClass]="{'is-invalid': contactForm.get('userName')?.invalid && contactForm.get('userName')?.touched}"
                 />
+                <div *ngIf="contactForm.get('userName')?.invalid && contactForm.get('userName')?.touched" class="invalid-feedback">
+                  <div *ngIf="contactForm.get('userName')?.errors?.['required']">Name is required.</div>
+                  <div *ngIf="contactForm.get('userName')?.errors?.['minlength']">Name must be at least 2 characters long.</div>
+                </div>
               </div>
               <div class="form-group">
                 <input
@@ -47,8 +51,12 @@
                   class="form-control"
                   formControlName="userEmail"
                   placeholder="Enter email"
-                  required
+                  [ngClass]="{'is-invalid': contactForm.get('userEmail')?.invalid && contactForm.get('userEmail')?.touched}"
                 />
+                <div *ngIf="contactForm.get('userEmail')?.invalid && contactForm.get('userEmail')?.touched" class="invalid-feedback">
+                  <div *ngIf="contactForm.get('userEmail')?.errors?.['required']">Email is required.</div>
+                  <div *ngIf="contactForm.get('userEmail')?.errors?.['email']">Please enter a valid email address.</div>
+                </div>
               </div>
               <div class="form-group">
                 <input
@@ -56,8 +64,12 @@
                   class="form-control"
                   formControlName="userPhone"
                   placeholder="Mobile No"
-                  required
+                  [ngClass]="{'is-invalid': contactForm.get('userPhone')?.invalid && contactForm.get('userPhone')?.touched}"
                 />
+                <div *ngIf="contactForm.get('userPhone')?.invalid && contactForm.get('userPhone')?.touched" class="invalid-feedback">
+                  <div *ngIf="contactForm.get('userPhone')?.errors?.['required']">Phone number is required.</div>
+                  <div *ngIf="contactForm.get('userPhone')?.errors?.['pattern']">Phone number must be exactly 10 digits.</div>
+                </div>
               </div>
               <div class="form-group">
                 <textarea
@@ -65,15 +77,18 @@
                   formControlName="userMessage"
                   rows="4"
                   placeholder="Message"
-                  required
+                  [ngClass]="{'is-invalid': contactForm.get('userMessage')?.invalid && contactForm.get('userMessage')?.touched}"
                 ></textarea>
+                <div *ngIf="contactForm.get('userMessage')?.invalid && contactForm.get('userMessage')?.touched" class="invalid-feedback">
+                  <div *ngIf="contactForm.get('userMessage')?.errors?.['required']">Message is required.</div>
+                  <div *ngIf="contactForm.get('userMessage')?.errors?.['minlength']">Message must be at least 10 characters long.</div>
+                </div>
               </div>
               <div class="text-center">
-                <button class="btn btn-primary" type="submit">
-                  Send Message
-                </button>
+                <button class="btn btn-primary" type="submit">Send Message</button>
               </div>
             </form>
+            
           </div>
         </div>
       </div>

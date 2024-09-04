@@ -6,10 +6,17 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CommonService {
-  apiUrl: any  = "/";
+  apiUrl: any  = "https://3e39-203-92-37-218.ngrok-free.app/";
 
-  constructor() { }
-  contactUs(data: any) {
-    // return this.http.post(this.apiUrl + `contactUs`, data);
+  constructor(private http: HttpClient) { }
+  serviceForm(data: any) {
+    return this.http.post(this.apiUrl + `service`, data);
   }
+  digitalMarketingForm(data: any) {
+    return this.http.post(this.apiUrl + `digitalMarketing`, data);
+  }
+  contactUsForm(data: any) {
+  return this.http.post(this.apiUrl + `contactUs`, data);
+}
+
 }

@@ -19,6 +19,7 @@ import { DataAnalyticsComponent } from './pages/data-analytics/data-analytics.co
 import { DigitalTransformationComponent } from './pages/digital-transformation/digital-transformation.component';
 import { CloudMigrationServicesComponent } from './pages/cloud-migration-services/cloud-migration-services.component';
 import { InnovationEngineComponent } from './pages/innovation-engine/innovation-engine.component';
+import { OracleServiceComponent } from './pages/oracle-service/oracle-service.component';
 import { StaffingMythsUnveiledComponent } from './pages/staffing-myths-unveiled/staffing-myths-unveiled.component';
 
 
@@ -99,11 +100,14 @@ const routes: Routes = [
     path: 'innovation-engine',
     component: InnovationEngineComponent
   },
+  {
+    path: 'oracle-service',
+    component: OracleServiceComponent
+  },
   { 
     path: 'staffing-myths-Unveiled',
     component: StaffingMythsUnveiledComponent
   }
-  
 ];
 
 @NgModule({

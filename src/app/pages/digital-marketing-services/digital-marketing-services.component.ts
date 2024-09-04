@@ -1,33 +1,53 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators,FormControl  } from '@angular/forms';
-
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CommonService } from '../../services/common.service';
 
 @Component({
   selector: 'app-digital-marketing-services',
   templateUrl: './digital-marketing-services.component.html',
-  styleUrl: './digital-marketing-services.component.scss'
+  styleUrls: ['./digital-marketing-services.component.scss']
 })
-export class DigitalMarketingServicesComponent {
+export class DigitalMarketingServicesComponent implements OnInit {
 
-  contactForm: FormGroup;
+  contactForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private commonService: CommonService) {}
+
+  ngOnInit() {
     this.contactForm = this.fb.group({
       userName: ['', [Validators.required, Validators.minLength(2)]],
       userEmail: ['', [Validators.required, Validators.email]],
-      userPhone: ['', [Validators.required, Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')]], // 10-digit phone number
+      userPhone: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
       userMessage: ['', [Validators.required, Validators.minLength(10)]]
     });
   }
 
   onSubmit() {
+    console.log('Form Values on Submit:', this.contactForm.value);
+
+    this.contactForm.markAllAsTouched();
+    this.contactForm.updateValueAndValidity();
+    
+    Object.keys(this.contactForm.controls).forEach(key => {
+      const control = this.contactForm.get(key);
+      if (control) {
+        console.log(`${key} - Valid: ${control.valid}, Errors: ${JSON.stringify(control.errors)}`);
+      }
+    });
+
     if (this.contactForm.valid) {
-      console.log(this.contactForm.value);
-      alert('Message sent successfully!');
+      this.commonService.digitalMarketingForm(this.contactForm.value).subscribe((res: any) => {
+        console.log('Form submitted successfully:', res);
+      }, (err: any) => {
+        console.error('Form submission failed:', err);
+      });
     } else {
-      alert('Please fill out the form correctly.');
+      console.log('Form is invalid');
     }
   }
+
+
+
   cards = [
     {
       title: 'SEO Services',
@@ -82,9 +102,9 @@ export class DigitalMarketingServicesComponent {
   toggleReadMore(card: any) {
     this.cards.forEach(c => {
       if (c !== card) {
-        c.expanded = false; // Collapse all other cards
+        c.expanded = false;
       }
     });
-    card.expanded = !card.expanded; // Toggle the clicked card
+    card.expanded = !card.expanded;
   }
 }

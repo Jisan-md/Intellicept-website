@@ -1,0 +1,58 @@
+.head-img{
+    height: 270px;
+}
+.text-white{
+    color: #fff;
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: .5px;
+    text-align: center;
+    margin: 100px 0 0 0px;
+
+
+}
+
+h4{
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: .5px;
+}
+/* Sidebar list styling */
+.sidebar-right .widget {
+    margin-bottom: 20px;
+}
+
+.widget-title h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #000; 
+}
+
+.all-service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.all-service-list li {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.all-service-list li i {
+    color: #007bff; 
+    margin-right: 10px;
+}
+
+.all-service-list li a {
+    text-decoration: none;
+    color: #333; 
+    transition: color 0.3s ease;
+}
+
+.all-service-list li a:hover {
+    color: #007bff; 
+}
