@@ -19,7 +19,7 @@ import { DataAnalyticsComponent } from './pages/data-analytics/data-analytics.co
 import { DigitalTransformationComponent } from './pages/digital-transformation/digital-transformation.component';
 import { CloudMigrationServicesComponent } from './pages/cloud-migration-services/cloud-migration-services.component';
 import { InnovationEngineComponent } from './pages/innovation-engine/innovation-engine.component';
-
+import { OracleServiceComponent } from './pages/oracle-service/oracle-service.component';
 
 const routes: Routes = [
   {
@@ -97,8 +97,11 @@ const routes: Routes = [
   { 
     path: 'innovation-engine',
     component: InnovationEngineComponent
+  },
+  {
+    path: 'oracle-service',
+    component: OracleServiceComponent
   }
-  
 ];
 
 @NgModule({

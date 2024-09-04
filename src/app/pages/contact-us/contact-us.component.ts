@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CommonService } from '../../services/common.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -8,9 +9,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ContactUsComponent {
 
-  contactForm: FormGroup;
+  contactForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private commonService: CommonService) {
+   
+  }
+
+  ngOnInit() {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -19,9 +24,10 @@ export class ContactUsComponent {
   }
 
   onSubmit() {
-    if (this.contactForm.valid) {
-      console.log('Form Submitted!', this.contactForm.value);
-      // Handle form submission, e.g., send data to backend
-    }
+   this.commonService.contactUsForm(this.contactForm.value).subscribe((res: any) => {
+      console.log('Form submitted successfully:', res);
+    }, (err: any) => {
+      console.error('Form submission failed:', err);
+    });
   }
 }

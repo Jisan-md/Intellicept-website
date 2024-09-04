@@ -27,6 +27,7 @@ import { DataAnalyticsComponent } from './pages/data-analytics/data-analytics.co
 import { DigitalTransformationComponent } from './pages/digital-transformation/digital-transformation.component';
 import { CloudMigrationServicesComponent } from './pages/cloud-migration-services/cloud-migration-services.component';
 import { InnovationEngineComponent } from './pages/innovation-engine/innovation-engine.component';
+import { OracleServiceComponent } from './pages/oracle-service/oracle-service.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +49,8 @@ import { InnovationEngineComponent } from './pages/innovation-engine/innovation-
     DataAnalyticsComponent,
     DigitalTransformationComponent,
     CloudMigrationServicesComponent,
-    InnovationEngineComponent
+    InnovationEngineComponent,
+    OracleServiceComponent
   ],
   imports: [
     BrowserModule,

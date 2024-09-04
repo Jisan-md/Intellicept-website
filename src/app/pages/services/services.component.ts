@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators,FormControl  } from '@angular/forms';
+import { CommonService } from '../../services/common.service';
 
 @Component({
   selector: 'app-services',
@@ -8,9 +9,13 @@ import { FormBuilder, FormGroup, Validators,FormControl  } from '@angular/forms'
 })
 export class ServicesComponent {
 
-  contactForm: FormGroup;
+  contactForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private commonService: CommonService) {
+   
+  }
+
+  ngOnInit() {
     this.contactForm = this.fb.group({
       userName: ['', [Validators.required, Validators.minLength(2)]],
       userEmail: ['', [Validators.required, Validators.email]],
@@ -18,12 +23,15 @@ export class ServicesComponent {
       userMessage: ['', [Validators.required]]
     });
   }
-
   onSubmit() {
     if (this.contactForm.valid) {
-      console.log(this.contactForm.value);
+      // console.log(this.contactForm.value);
+      this.commonService.serviceForm(this.contactForm.value).subscribe((res: any) => {
+        console.log(res);
+      });
     } else {
-      console.log('Form is invalid');}
+      console.log('Form is invalid');
+    }
   }
   getControl(controlName: string): FormControl {
     return this.contactForm.get(controlName) as FormControl;
@@ -37,7 +45,7 @@ export class ServicesComponent {
       description: `At Intellicept, we understand the importance of leveraging the right technology to drive business success. 
       That's why we've established strong alliances with leading technology providers, allowing us to deliver innovative solutions 
       that meet the evolving needs of our clients.`,
-      link: 'oracle-service.php',
+      link: 'oracle-service',
       linkText: 'Read more',
       paddingBottom: '22px'
     },
