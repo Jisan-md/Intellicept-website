@@ -124,6 +124,7 @@ a{
   
   .btn:hover {
     background-color: #007bff;
+    color: #fff;
   }
   
   .contact-us-content {
@@ -161,3 +162,9 @@ a{
     text-decoration: underline;
   }
   
+  .form-group{
+    margin: 0 !important;
+  }
+  .invalid-feedback div{
+    color: #dc3545;
+  }

@@ -33,43 +33,72 @@
                       <div class="form-row">
                         <div class="col-12">
                           <div class="form-group">
-                            <input type="text" [formControl]="getControl('userName')" class="form-control" placeholder="Enter name" id="userName">
-                            <div *ngIf="getControl('userName')?.invalid && getControl('userName')?.touched" class="text-danger">
-                              Name is required (min 2 characters).
+                            <input
+                              type="text"
+                              formControlName="userName"
+                              class="form-control"
+                              placeholder="Enter name"
+                              [ngClass]="{'is-invalid': contactForm.get('userName')?.invalid && contactForm.get('userName')?.touched}"
+                            />
+                            <div *ngIf="contactForm.get('userName')?.invalid && contactForm.get('userName')?.touched" class="invalid-feedback">
+                              <div *ngIf="contactForm.get('userName')?.errors?.['required']">Name is required.</div>
+                              <div *ngIf="contactForm.get('userName')?.errors?.['minlength']">Name must be at least 2 characters long.</div>
                             </div>
                           </div>
                         </div>
                         <div class="col-12">
                           <div class="form-group">
-                            <input type="email" [formControl]="getControl('userEmail')" class="form-control" placeholder="Enter email" id="userEmail">
-                            <div *ngIf="getControl('userEmail')?.invalid && getControl('userEmail')?.touched" class="text-danger">
-                              Valid email is required.
+                            <input
+                              type="email"
+                              formControlName="userEmail"
+                              class="form-control"
+                              placeholder="Enter email"
+                              [ngClass]="{'is-invalid': contactForm.get('userEmail')?.invalid && contactForm.get('userEmail')?.touched}"
+                            />
+                            <div *ngIf="contactForm.get('userEmail')?.invalid && contactForm.get('userEmail')?.touched" class="invalid-feedback">
+                              <div *ngIf="contactForm.get('userEmail')?.errors?.['required']">Email is required.</div>
+                              <div *ngIf="contactForm.get('userEmail')?.errors?.['email']">Valid email is required.</div>
                             </div>
                           </div>
                         </div>
                         <div class="col-12">
                           <div class="form-group">
-                            <input type="text" [formControl]="getControl('userPhone')" class="form-control" placeholder="Mobile No" id="userPhone">
-                            <div *ngIf="getControl('userPhone')?.invalid && getControl('userPhone')?.touched" class="text-danger">
-                              Valid 10-digit phone number is required.
+                            <input
+                              type="text"
+                              formControlName="userPhone"
+                              class="form-control"
+                              placeholder="Mobile No"
+                              [ngClass]="{'is-invalid': contactForm.get('userPhone')?.invalid && contactForm.get('userPhone')?.touched}"
+                            />
+                            <div *ngIf="contactForm.get('userPhone')?.invalid && contactForm.get('userPhone')?.touched" class="invalid-feedback">
+                              <div *ngIf="contactForm.get('userPhone')?.errors?.['required']">Phone number is required.</div>
+                              <div *ngIf="contactForm.get('userPhone')?.errors?.['pattern']">Valid 10-digit phone number is required.</div>
                             </div>
                           </div>
                         </div>
                         <div class="col-12">
                           <div class="form-group">
-                            <textarea [formControl]="getControl('userMessage')" id="userMessage" class="form-control" rows="7" placeholder="Message"></textarea>
-                            <div *ngIf="getControl('userMessage')?.invalid && getControl('userMessage')?.touched" class="text-danger">
-                              Message is required (min 10 characters).
+                            <textarea
+                              formControlName="userMessage"
+                              class="form-control"
+                              rows="7"
+                              placeholder="Message"
+                              [ngClass]="{'is-invalid': contactForm.get('userMessage')?.invalid && contactForm.get('userMessage')?.touched}"
+                            ></textarea>
+                            <div *ngIf="contactForm.get('userMessage')?.invalid && contactForm.get('userMessage')?.touched" class="invalid-feedback">
+                              <div *ngIf="contactForm.get('userMessage')?.errors?.['required']">Message is required.</div>
+                              <div *ngIf="contactForm.get('userMessage')?.errors?.['minlength']">Message must be at least 10 characters long.</div>
                             </div>
                           </div>
                         </div>
                         <div class="col-sm-12 mt-3">
-                          <button type="submit" class="btn secondary-solid-btn" [disabled]="contactForm.invalid">
+                          <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">
                             Send Message
                           </button>
                         </div>
                       </div>
                     </form>
+                    
                   </div>
                 </div>
               </div>
