@@ -24,5 +24,29 @@ export class HeaderComponent {
           this.isSticky = false;
       }
   }
+
+  navLinks = [
+    { path: '/', label: 'Home' },
+    { path: '/aboutUs', label: 'About Us' },
+    { path: '/rpo-services', label: 'RPO' },
+    { path: '/services', label: 'Services' },
+    { path: '/digital-marketing-services', label: 'Digital Marketing Services' },
+    { path: '/staffing-services', label: 'Staffing Services' },
+    { path: '/career', label: 'Career' },
+    { path: '/industries', label: 'Industries' },
+    { path: '/partner', label: 'Partners' },
+    { path: '/blog', label: 'Blog' },
+    { path: '/contact-us', label: 'Contact Us' },
+  ];
+
+  
+
+  closeNav() {
+    const navbar = document.querySelector('.navbar-collapse');
+    if (navbar) {
+      navbar.classList.remove('show'); // Close the navbar
+    }
+  }
+
 }
 

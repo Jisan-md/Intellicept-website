@@ -51,7 +51,7 @@ import { StaffingMythsUnveiledComponent } from './pages/staffing-myths-unveiled/
     DigitalTransformationComponent,
     CloudMigrationServicesComponent,
     InnovationEngineComponent,
-    OracleServiceComponent
+    OracleServiceComponent,
     InnovationEngineComponent,
     StaffingMythsUnveiledComponent
   ],

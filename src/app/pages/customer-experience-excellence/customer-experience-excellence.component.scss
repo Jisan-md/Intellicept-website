@@ -30,29 +30,86 @@ h4{
     color: #000; 
 }
 
-.all-service-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
 
-.all-service-list li {
-    display: flex;
-    align-items: center;
-    font-size: 15px;
-}
 
-.all-service-list li i {
-    color: #007bff; 
-    margin-right: 10px;
-}
 
 .all-service-list li a {
-    text-decoration: none;
-    color: #333; 
-    transition: color 0.3s ease;
+    color: #000; 
+    text-decoration: none; 
+    position: relative;
+    display: inline-block;
+    font-weight: bold; 
+    // padding: 10px;
+    transition: color 0.4s ease-in-out, transform 0.4s ease, letter-spacing 0.4s ease;
+}
+
+.all-service-list li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 50%; 
+    // background: linear-gradient(90deg, #727ff5, #727ff5);
+    transition: all 0.5s ease-in-out;
+    transform: translateX(-50%);
+    visibility: hidden;
+}
+
+.all-service-list li a:hover::before {
+    width: 100%;
+    visibility: visible;
 }
 
 .all-service-list li a:hover {
-    color: #007bff; 
+    // color: white;
+    letter-spacing: 1px; 
+    // transform: scale(1.1); 
 }
+
+.all-service-list li {
+    list-style-type: none; 
+    margin: 20px 0; 
+    padding: 15px;
+    position: relative;
+    background: #f9f9f9; 
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgb(134, 176, 221); 
+    cursor: pointer;
+}
+
+.all-service-list li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(120deg, rgb(134, 176, 221), rgb(149, 182, 218));
+    transition: left 0.5s ease-in-out;
+    z-index: -1;
+}
+
+.all-service-list li:hover::after {
+    left: 0; 
+}
+
+.all-service-list li:hover {
+    background: linear-gradient(135deg, rgb(134, 176, 221), rgb(158, 192, 228) 100%);
+    box-shadow: 0 8px 25px rgb(134, 176, 221); 
+    transform: translateY(-5px);
+}
+
+.all-service-list li hr {
+    border-color: #ddd; 
+    margin: 10px 0;
+}
+
+.all-service-list li:hover hr {
+    border-color: rgb(157, 186, 218) 100%;
+}
+
+
+
