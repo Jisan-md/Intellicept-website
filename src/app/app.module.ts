@@ -27,6 +27,7 @@ import { DataAnalyticsComponent } from './pages/data-analytics/data-analytics.co
 import { DigitalTransformationComponent } from './pages/digital-transformation/digital-transformation.component';
 import { CloudMigrationServicesComponent } from './pages/cloud-migration-services/cloud-migration-services.component';
 import { InnovationEngineComponent } from './pages/innovation-engine/innovation-engine.component';
+import { StaffingMythsUnveiledComponent } from './pages/staffing-myths-unveiled/staffing-myths-unveiled.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +49,8 @@ import { InnovationEngineComponent } from './pages/innovation-engine/innovation-
     DataAnalyticsComponent,
     DigitalTransformationComponent,
     CloudMigrationServicesComponent,
-    InnovationEngineComponent
+    InnovationEngineComponent,
+    StaffingMythsUnveiledComponent
   ],
   imports: [
     BrowserModule,
