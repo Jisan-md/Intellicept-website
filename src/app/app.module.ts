@@ -28,6 +28,7 @@ import { DigitalTransformationComponent } from './pages/digital-transformation/d
 import { CloudMigrationServicesComponent } from './pages/cloud-migration-services/cloud-migration-services.component';
 import { InnovationEngineComponent } from './pages/innovation-engine/innovation-engine.component';
 import { OracleServiceComponent } from './pages/oracle-service/oracle-service.component';
+import { StaffingMythsUnveiledComponent } from './pages/staffing-myths-unveiled/staffing-myths-unveiled.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +52,8 @@ import { OracleServiceComponent } from './pages/oracle-service/oracle-service.co
     CloudMigrationServicesComponent,
     InnovationEngineComponent,
     OracleServiceComponent
+    InnovationEngineComponent,
+    StaffingMythsUnveiledComponent
   ],
   imports: [
     BrowserModule,
