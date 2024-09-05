@@ -1,7 +1,13 @@
 p:not(:last-child) {
     margin-bottom: 1.25em;
 }
-
+.page-header-content h1{
+    text-align: center;
+        position: relative;
+        font-weight: 700;
+        color: #fff;
+        font-size: 40px;
+}
 .lead {
     font-size: 1.2rem;
     // font-weight: 300;
@@ -124,6 +130,8 @@ top: 2px;
 .single-counter {
     margin-top: 20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px !important;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 70%, rgba(153,187,224,1) 100%);
 }
 
 .client{
@@ -223,18 +231,19 @@ top: 2px;
 }
   
 .close {
-    color: #1351a8;
     position: absolute;
+    color: #1351a8;
     top: 10px;
     right: 20px;
-    font-size: 28px;
+    font-size: 40px;
     font-weight: bold;
+    cursor: pointer;
+    width: 40px;
 }
   
 .close:hover,
 .close:focus {
     color: #007bff;
-    cursor: pointer;
 }
 
 .modal-body {

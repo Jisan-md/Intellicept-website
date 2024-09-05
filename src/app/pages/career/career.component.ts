@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import{ CommonService } from '../../services/common.service';
 
 @Component({
   selector: 'app-career',
@@ -12,13 +13,16 @@ export class CareerComponent {
   errorMessage: string = '';
   file: File | null = null;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private commonService: CommonService) {
+   
+  }
+
+  ngOnInit() {
     this.applyForm = this.fb.group({
-      name: ['', [Validators.required, Validators.minLength(2)]],
+      name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
       desc: ['', [Validators.required, Validators.minLength(10)]],
-      file: [null]
     });
   }
 
@@ -37,24 +41,17 @@ export class CareerComponent {
       formData.append('desc', this.applyForm.get('desc')?.value);
   
       if (this.file) {
-        formData.append('fileToUpload', this.file);
+        formData.append('file', this.file);
       }
-  
-      // Log form data manually
-      console.log('Form Data:');
+        console.log('Form Data:');
       formData.forEach((value, key) => {
         console.log(`${key}:`, value);
       });
-  
-      this.errorMessage = ''; // Clear error message on successful submission
-  
-      // Optionally, you can post the formData to your backend here
-      // this.http.post('your-backend-endpoint', formData).subscribe(response => {
-      //   console.log('Form submitted successfully:', response);
-      // }, error => {
-      //   console.error('Form submission failed:', error);
-      // });
-  
+
+      this.commonService.careerForm(formData).subscribe((res: any) => {
+        console.log('Form submitted successfully:', res);
+      });
+
     } else {
       this.errorMessage = 'Please fill in all required fields.';
     }

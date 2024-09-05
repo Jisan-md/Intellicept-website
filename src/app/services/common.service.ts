@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CommonService {
-  apiUrl: any  = "https://ffe3-203-92-37-218.ngrok-free.app/";
+  apiUrl: any  = "https://48f3-203-92-37-218.ngrok-free.app/";
 
   constructor(private http: HttpClient) { }
   serviceForm(data: any) {
@@ -19,7 +19,7 @@ export class CommonService {
   return this.http.post(this.apiUrl + `contactUs`, data);
 }
 careerForm(data: any) {
-  return this.http.post(this.apiUrl + `career`, data);  
+  return this.http.post(this.apiUrl + `User`, data);  
 }
 
 }
