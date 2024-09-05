@@ -17,9 +17,9 @@
 
 
     <!--promo section end-->
-    <div class="row justify-content-center">
-                <div class="col-md-10" style="text-align:justify; margin-top:106px;">
-                    <div class="section-heading text-center mb-5">
+    <div class="row justify-content-center mt-5 mb-5">
+                <div class="col-md-10" style="text-align:justify;">
+                    <div class="section-heading text-center mt-4">
                         <p class="lead">With a strong focus on Digital enablement and client focus coupled with execution of next gen technologies, Intellicept is striving to be at the forefront of transformation for its clients across various industry sectors. </p>
                         <p class="lead">The roots of Intellicept originate from strong foundation of technology laid by its parent firm McKinsol Consulting Inc. which is a well-known name in SAP S4 HANA based projects in Retail and Fashion Industry.</p>
                         <p class="lead">Intellicept aims to work with the businesses across all industries to enable meaningful and lucid digital tech adoption for long term sustainable profits for the organizations of all size.</p>
@@ -366,7 +366,7 @@ Digital Transformation Services</li>
   <!-- Modal Structure -->
 <div *ngIf="isModalOpen" class="modal">
     <div class="modal-content">
-      <div class="close" (click)="closeModal()">&times;</div>
+      <button class="close" (click)="closeModal()">&times;</button>
       <div class="modal-body">
         <img [src]="modalData.image" alt="team image" class="model-img-top" />
         <div class="text-content">
