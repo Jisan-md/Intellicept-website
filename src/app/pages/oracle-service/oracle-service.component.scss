@@ -4,7 +4,7 @@
 
 
 h4.section-title, h4, h5 {
-    color: #1351a8; 
+    color: red; 
     font-weight: bold;
 }
 
@@ -17,10 +17,16 @@ p, .lead  {
 }
 
 .highlight {
-    color: #007bff;
+    color: black;
 }
 
-
+hr {
+    margin: 1rem 0;
+    color: inherit;
+    border: 0;
+    border-top: var(--bs-border-width) solid;
+    opacity: .50;
+}
 
 .section-heading h4 {
     font-size: 24px;
@@ -32,8 +38,34 @@ p, .lead  {
 }
 
  span {
-    color: #1351a8;
+    color: black;
+    font: bolder;
+    font: 600;
 }
+
+// cards sections
+
+.quality-card[_ngcontent-ng-c662536361] .number[_ngcontent-ng-c662536361] {
+    color: red;
+    margin-bottom: 16px;
+    line-height: 1;
+    opacity: .4;
+    font-size: 22px;
+    font-weight: 600;
+}
+.quality-card[_ngcontent-ng-c662536361] {
+    transition: var(--transition);
+    background-color: #ffedea;
+    margin-bottom: 25px;
+    position: relative;
+    padding: 30px;
+}
+p[_ngcontent-ng-c662536361] {
+    text-align: justify;
+    color: #707070;
+    font-family: "Poppins", sans-serif;
+}
+
 
 /* Cards Section */
 .promo-block {
@@ -43,7 +75,7 @@ p, .lead  {
 
 .single-promo-block {
     background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 70%, rgba(153,187,224,1) 100%);    border: 1px solid #ddd;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 70%, rgb(245, 243, 243) 100%);    border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -81,7 +113,7 @@ p, .lead  {
 .promo-block-content h5 {
     font-size: 20px;
     margin-bottom: 15px;
-    color: #1351a8;
+    color: black;
 }
 
 .promo-block-content p {
