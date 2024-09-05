@@ -49,6 +49,7 @@ a {
 }
         .navbar-nav {
             margin: 0 auto;
+            
 
             .nav-item {
                 position: relative;
@@ -238,10 +239,10 @@ a {
         .navbar {
             .navbar-nav {
                 display: none;
-                max-height: 50vh;
+                max-height: 67vh;
                 background-color: #f9f9f9;
                 overflow-y: scroll;
-                margin-top: 15px;
+                // margin-top: 15px;
                 padding: 18px;
                 flex-direction: column;
 
@@ -420,7 +421,7 @@ a {
         .navbar {
             .navbar-nav {
                 display: none;
-                max-height: 50vh;
+                max-height: 65vh;
                 background-color: #f9f9f9;
                 overflow-y: scroll;
                 margin-top: 15px;
