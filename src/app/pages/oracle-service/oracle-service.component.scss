@@ -8,12 +8,10 @@ h4.section-title, h4, h5 {
     font-weight: bold;
 }
 
-p, .lead  {
-    color: #555;
-   
-}
+
 .service-item{
     margin-bottom: 5px;
+    color: #707070;
 }
 
 .highlight {
@@ -34,7 +32,7 @@ hr {
 
 .section-heading p.lead,.lead {
     font-size: 18px;
-    color: #666;
+    // color: #666;
 }
 
  span {
@@ -63,7 +61,6 @@ hr {
 p[_ngcontent-ng-c662536361] {
     text-align: justify;
     color: #707070;
-    font-family: "Poppins", sans-serif;
 }
 
 
@@ -118,7 +115,6 @@ p[_ngcontent-ng-c662536361] {
 
 .promo-block-content p {
     font-size: 16px;
-    color: #555;
 }
 
 /* Image Section */
@@ -126,4 +122,51 @@ p[_ngcontent-ng-c662536361] {
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Feature Section */
+.feature-section {
+    padding-bottom: 20px;
+}
+
+h4 .highlight {
+    color: #1351a8;
+}
+
+.quality-card {
+    background-color: #ffedea;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.quality-card .number {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1351a8;
+}
+
+.quality-card p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.quality-card i {
+    font-size: 40px;
+    color: #1351a8;
+    margin-bottom: 15px;
+}
+
+.quality-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

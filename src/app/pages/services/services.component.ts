@@ -19,20 +19,26 @@ export class ServicesComponent {
     this.contactForm = this.fb.group({
       userName: ['', [Validators.required, Validators.minLength(2)]],
       userEmail: ['', [Validators.required, Validators.email]],
-      userPhone: ['', [Validators.required, Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')]], 
+      userPhone: ['', [Validators.required, Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')]],
       userMessage: ['', [Validators.required]]
     });
   }
+  
   onSubmit() {
     if (this.contactForm.valid) {
-      // console.log(this.contactForm.value);
       this.commonService.serviceForm(this.contactForm.value).subscribe((res: any) => {
-        console.log(res);
+        this.commonService.showToast('success', "Form submission successful");
+  
+        
+        this.contactForm.reset();
+        this.contactForm.markAsPristine();
+        this.contactForm.markAsUntouched();
       });
     } else {
-      console.log('Form is invalid');
+      this.commonService.showToast('error', "Form submission failed");
     }
   }
+  
   getControl(controlName: string): FormControl {
     return this.contactForm.get(controlName) as FormControl;
   }

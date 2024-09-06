@@ -49,11 +49,17 @@ export class CareerComponent {
       });
 
       this.commonService.careerForm(formData).subscribe((res: any) => {
-        console.log('Form submitted successfully:', res);
+        // console.log('Form submitted successfully:', res);
+        this.commonService.showToast('success', "Form submission successful");
+        this.applyForm.reset();
+        this.applyForm.markAsPristine();
+        this.applyForm.markAsUntouched();
+
       });
 
     } else {
-      this.errorMessage = 'Please fill in all required fields.';
+      // this.errorMessage = 'Please fill in all required fields.';
+      this.commonService.showToast('error', "Form submission failed.");
     }
   }
   
