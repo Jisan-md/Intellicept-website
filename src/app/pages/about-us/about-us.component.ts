@@ -51,7 +51,7 @@ export class AboutUsComponent {
     modalOne: {
       name: 'Anurag Varshney',
       title: 'PRESIDENT / CHIEF ARCHITECT',
-      image: '/assets/Anurag-8e15fb04.jpg',
+      image: '/assets/AnuragVarshney.jpg',
       linkedin: 'https://www.linkedin.com/in/varshneyanurag/',
       description: `Anurag is an accomplished IT & SAP Executive and expert in SAP S/4 HANA Retail & CAR with 
                     proven experience in Retail, Fashion, CPG and Life Sciences with 23+ years of achievement 
@@ -67,7 +67,7 @@ export class AboutUsComponent {
     modalTwo: {
       name: 'Mayank Gupta',
       title: 'Lead Designer',
-      image: '/assets/Mayank-fcee8f90.jpg',
+      image: '/assets/mayankGupta.jpg',
       linkedin: 'https://www.linkedin.com/in/mayank-gupta-500171128/',
       description: `Mayank is an experienced and certified SAP professional with a demonstrated history of working 
                     in the apparel, fashion and retail industry. He is strong professional with a Master of Science (BS) 
@@ -81,7 +81,7 @@ export class AboutUsComponent {
     modalThree: {
       name: 'Gaurav Mishra',
       title: 'Managing Director',
-      image: '/assets/gaurav.jpg',
+      image: '/assets/gauravMishra.jpg',
       linkedin: 'https://www.linkedin.com/in/gaurav-mishra-924a6a9/',
       description: `High-energy, results driven client services and strategic business development professional with 
                     18 years of successful global information technology solutions and services senior sales leadership. 
