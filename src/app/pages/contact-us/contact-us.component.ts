@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CommonService } from '../../services/common.service';
 
+
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
@@ -25,9 +26,15 @@ export class ContactUsComponent {
 
   onSubmit() {
    this.commonService.contactUsForm(this.contactForm.value).subscribe((res: any) => {
-      console.log('Form submitted successfully:', res);
+      // console.log('Form submitted successfully:', res);
+      this.commonService.showToast('success', "Form submission successful");
+      this.contactForm.reset();
+      this.contactForm.markAsPristine();
+      this.contactForm.markAsUntouched();
+      
     }, (err: any) => {
-      console.error('Form submission failed:', err);
+      // console.error('Form submission failed:', err);
+      this.commonService.showToast('error', "Form submission failed");
     });
   }
 }
