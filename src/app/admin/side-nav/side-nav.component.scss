@@ -1,0 +1,71 @@
+.sidebar {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    // background-color: #158DB1;
+    background-color: #F3F3F3;
+  }
+  
+  img {
+    height: 88px;
+    width: 184px;
+    position: relative;
+    margin: 30px;
+  }
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .sidebar ul li {
+    padding: 5px;
+  }
+  .sidebar ul li a {
+    color: #000;
+    text-decoration: none;
+    padding-left: 10px;
+  }
+  .sidebar ul li :hover {
+    color: #fff;
+    text-decoration: none;
+    // background-color: rgb(8, 229, 229);
+    background-color: #158DB1;
+    // padding: 9px;
+    display: inline-block;
+    width: 100%;
+  }
+  .sidebar ul li .active {
+    color: #fff;
+    // background-color: rgb(8, 229, 229);
+    background-color: #158DB1;
+    // padding: 9px;
+    display: inline-block;
+    width: 100%;
+  }
+  .logout-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .tool{
+    color: #fff;
+    background-color: #158DB1;
+  }
+  
+  .mat-toolbar {
+    display: flex;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .main-toolbar {
+      justify-content: flex-start;
+     }
+  
+    .main-toolbar button {
+      margin-left: 10px;
+      border-radius: 1px solid black;
+    }
+  }
