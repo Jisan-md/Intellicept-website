@@ -41,9 +41,6 @@ import { AdminCareerComponent } from './admin/admin-career/admin-career.componen
 import { AdminDigitalBusinessServicesComponent } from './admin/admin-digital-business-services/admin-digital-business-services.component';
 import { AdminServicesComponent } from './admin/admin-services/admin-services.component';
 import { SideNavComponent } from './admin/side-nav/side-nav.component';
-
-// import { OwlCarouselModule } from 'ngx-owl-carousel-o';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,11 +73,6 @@ import { SideNavComponent } from './admin/side-nav/side-nav.component';
     AdminServicesComponent,
     SideNavComponent
   ],
-    StaffingMythsUnveiledComponent,
-    
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -95,9 +87,6 @@ import { SideNavComponent } from './admin/side-nav/side-nav.component';
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule
-    BrowserModule,AppRoutingModule,FormsModule,BrowserAnimationsModule,
-    ReactiveFormsModule,CarouselModule,HttpClientModule,AccordionModule,CommonModule,
-    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
