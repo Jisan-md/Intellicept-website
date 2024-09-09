@@ -5,6 +5,11 @@
     font-weight: bold; 
     border-bottom: 2px solid #fff;
 }
+ @media (max-width: 678px) {
+    .navbar-nav .nav-link.active {
+        border-bottom: none;
+    }
+}
 
 a {
     cursor: pointer;

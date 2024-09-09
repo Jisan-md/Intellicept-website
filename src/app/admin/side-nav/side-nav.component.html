@@ -1,0 +1,55 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav class="sidebar" #sidenav mode="side" [opened]="isSidenavOpen" [fixedInViewport]="isSidenavFixed">
+    <mat-toolbar class="menu-bar">
+      <img src="assets/logo1.png" alt="" routerLink="/" style="margin-top: 80px;">
+    </mat-toolbar>
+
+    <hr style="color: #000; margin-top: 40px;">
+
+    <!-- Links for navigation -->
+    <ul class="mt" (click)="closeSidenav()">
+      <li>
+        <a routerLink="/admin-digital-business-services" routerLinkActive="active">
+          <i class="fa-solid fa-business-time" style="display: contents;"></i>&nbsp; Digital Business Services
+        </a>
+      </li>
+      <li>
+        <a routerLink="/admin-contact-us" routerLinkActive="active">
+          <i class="fa-solid fa-address-book" style="display: contents;"></i>&nbsp; Contact Us
+        </a>
+      </li>
+      <li>
+        <a routerLink="/admin-career" routerLinkActive="active">
+          <i class="fa-solid fa-person-chalkboard" style="display: contents;"></i>&nbsp; Career
+        </a>
+      </li>
+      <li>
+        <a routerLink="/admin-services" routerLinkActive="active">
+          <i class="fa-solid fa-concierge-bell" style="display: contents;"></i>&nbsp; Services
+        </a>
+      </li>
+    </ul>
+
+    <!-- Logout section -->
+    <ul style="position: absolute; bottom: 0; left: 0; width: 100%;">
+      <hr style="color: #000;">
+      <li>
+        <a (click)="logout()" style="cursor: pointer;">
+          <i class="fa-solid fa-right-from-bracket" style="display: contents;"></i>&nbsp; Logout
+        </a>
+      </li>
+    </ul>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar *ngIf="isMobileView" class="tool">
+      <button mat-icon-button (click)="toggleSidenav()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Menu</span>
+    </mat-toolbar>
+
+    <!-- Page content goes here -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

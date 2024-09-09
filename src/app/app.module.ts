@@ -3,6 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -31,6 +35,12 @@ import { CloudMigrationServicesComponent } from './pages/cloud-migration-service
 import { InnovationEngineComponent } from './pages/innovation-engine/innovation-engine.component';
 import { OracleServiceComponent } from './pages/oracle-service/oracle-service.component';
 import { StaffingMythsUnveiledComponent } from './pages/staffing-myths-unveiled/staffing-myths-unveiled.component';
+import { AdminContactUsComponent } from './admin/admin-contact-us/admin-contact-us.component';
+import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
+import { AdminCareerComponent } from './admin/admin-career/admin-career.component';
+import { AdminDigitalBusinessServicesComponent } from './admin/admin-digital-business-services/admin-digital-business-services.component';
+import { AdminServicesComponent } from './admin/admin-services/admin-services.component';
+import { SideNavComponent } from './admin/side-nav/side-nav.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +65,13 @@ import { StaffingMythsUnveiledComponent } from './pages/staffing-myths-unveiled/
     InnovationEngineComponent,
     OracleServiceComponent,
     InnovationEngineComponent,
-    StaffingMythsUnveiledComponent
+    StaffingMythsUnveiledComponent,
+    AdminContactUsComponent,
+    AdminLoginComponent,
+    AdminCareerComponent,
+    AdminDigitalBusinessServicesComponent,
+    AdminServicesComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +82,11 @@ import { StaffingMythsUnveiledComponent } from './pages/staffing-myths-unveiled/
     ReactiveFormsModule,
     CarouselModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    RouterModule.forRoot([]),
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
