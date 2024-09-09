@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { ToastrModule } from 'ngx-toastr';
+import { ToastrModule } from 'ngx-toastr';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { HttpClientModule } from '@angular/common/http';
@@ -31,6 +31,7 @@ import { CloudMigrationServicesComponent } from './pages/cloud-migration-service
 import { InnovationEngineComponent } from './pages/innovation-engine/innovation-engine.component';
 import { OracleServiceComponent } from './pages/oracle-service/oracle-service.component';
 import { StaffingMythsUnveiledComponent } from './pages/staffing-myths-unveiled/staffing-myths-unveiled.component';
+
 // import { OwlCarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
@@ -57,13 +58,15 @@ import { StaffingMythsUnveiledComponent } from './pages/staffing-myths-unveiled/
     InnovationEngineComponent,
     OracleServiceComponent,
     InnovationEngineComponent,
-    StaffingMythsUnveiledComponent
+    StaffingMythsUnveiledComponent,
+    
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 
   imports: [
     BrowserModule,AppRoutingModule,FormsModule,BrowserAnimationsModule,
     ReactiveFormsModule,CarouselModule,HttpClientModule,AccordionModule,CommonModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -80,7 +80,7 @@ export class AboutUsComponent {
     },
     modalThree: {
       name: 'Gaurav Mishra',
-      title: 'Managing Director',
+      title: 'VP of Business Development and Pre-Sales',
       image: '/assets/gauravMishra.jpg',
       linkedin: 'https://www.linkedin.com/in/gaurav-mishra-924a6a9/',
       description: `High-energy, results driven client services and strategic business development professional with 
