@@ -1,1 +1,51 @@
-<p>admin-services works!</p>
+<app-side-nav></app-side-nav>
+<!-- modal Add team body -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
+
+<div id="viewport">
+  <div class="header">
+    <h3> Services</h3>
+  </div>
+  <div class="">
+    
+      <div class="col-12">
+        <div class="panel">
+          <div class="panel-body table-responsive">
+            <div class="fixTableHead">
+              <ng-container *ngIf="getData && getData.length > 0; else noData">
+                <table class="table text-center">
+                  <thead class="table-secondary">
+                    <tr>
+                      <th>S.No.</th>
+                      <th>Name</th>
+                      <th>Phone Number</th>
+                      <th>Email</th>
+                      <th>Message</th>
+                   
+                    </tr>
+                  </thead>
+                  <tbody class="text-center">
+                    <tr *ngFor="let item of getData; index as i;">
+                      <td>{{ i + 1 }}</td>
+                      <td>{{ item.userName }}</td>
+                      <td>{{ item.phone }}</td>
+                      <td>{{ item.userEmail }}</td>
+                      <td>{{ item.userMessage}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </ng-container>
+              <ng-template #noData>
+                <h5 style="text-align: center; margin-top: 30px;">No data found</h5>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

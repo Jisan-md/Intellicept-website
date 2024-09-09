@@ -1,0 +1,41 @@
+// for master and details ui
+@media(max-width: 768px){
+    #viewport {
+        
+            padding-left: 0px;
+    }
+}
+#viewport {
+    padding-left: 250px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.contact-item p{
+    margin: 0;
+}
+// modal
+.modal.fade.show {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+/* Adjust the modal dialog's maximum width if needed */
+.modal-dialog {
+    width: 100%;
+}
+th{
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+
+.fixTableHead {
+    overflow-x: auto;
+}
+.fixTableHead thead th {
+    position: sticky;
+    top: 0;
+    background-color: #f8f9fa;
+}

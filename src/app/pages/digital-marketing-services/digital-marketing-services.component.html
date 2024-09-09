@@ -30,10 +30,10 @@
   
         <!-- Right Side Form -->
         <div class="col-md-6 col-lg-6">
-          <div class="contact-us-form gray-light-bg rounded p-4" >
-            <h4 id="get" class="text-center mb-4">Get in touch with us</h4>
+          <div class="contact-us-form  rounded p-5" >
+            <h3 id="get" class="text-center mb-4 " style="color:#333"> <b> Get in touch with us </b></h3>
             <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-              <div class="form-group">
+              <div class="form-group  mb-4">
                 <input
                   type="text"
                   class="form-control"
@@ -46,7 +46,7 @@
                   <div *ngIf="contactForm.get('userName')?.errors?.['minlength']">Name must be at least 2 characters long.</div>
                 </div>
               </div>
-              <div class="form-group">
+              <div class="form-group mb-4 ">
                 <input
                   type="email"
                   class="form-control"
@@ -59,7 +59,7 @@
                   <div *ngIf="contactForm.get('userEmail')?.errors?.['email']">Please enter a valid email address.</div>
                 </div>
               </div>
-              <div class="form-group">
+              <div class="form-group mb-4">
                 <input
                   type="text"
                   class="form-control"
@@ -72,7 +72,7 @@
                   <div *ngIf="contactForm.get('userPhone')?.errors?.['pattern']">Phone number must be exactly 10 digits.</div>
                 </div>
               </div>
-              <div class="form-group">
+              <div class="form-group mb-4">
                 <textarea
                   class="form-control"
                   formControlName="userMessage"
@@ -97,7 +97,7 @@
   </section>
 
 
-<section class="promo-block-section ">
+<section class="promo-block-section  mb-5">
   <div class="container mt-4" id="service">
     <div class="row">
         <h3 class="text-center mt-5 mb-5"><span style="color:blue">Our Digital</span> Marketing Expertise</h3>
@@ -130,9 +130,8 @@
       style="text-align: center"
     >
       <div class="carousel-inner">
-        <h3 class="testimonial-heading theme-bg mt-4">
-          What Our Clients Are Saying  <span class="small-line"></span>
-          <span class="small-line2"></span>
+        <h3 class="testimonial-heading theme-bg mt-5">
+          What Our Clients Are Saying 
         </h3>
   
         <div class="carousel-item active">

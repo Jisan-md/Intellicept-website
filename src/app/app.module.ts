@@ -41,6 +41,7 @@ import { AdminCareerComponent } from './admin/admin-career/admin-career.componen
 import { AdminDigitalBusinessServicesComponent } from './admin/admin-digital-business-services/admin-digital-business-services.component';
 import { AdminServicesComponent } from './admin/admin-services/admin-services.component';
 import { SideNavComponent } from './admin/side-nav/side-nav.component';
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,6 +74,7 @@ import { SideNavComponent } from './admin/side-nav/side-nav.component';
     AdminServicesComponent,
     SideNavComponent
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
     BrowserModule,
     AppRoutingModule,

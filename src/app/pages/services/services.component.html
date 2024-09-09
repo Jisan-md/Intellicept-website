@@ -29,7 +29,8 @@
             <div class="container">
               <div class="row justify-content-around">
                 <div class="col-md-6">
-                  <div class="contact-us-form rounded p-4">
+                  <div class="contact-us-form rounded p-5">
+                    <h3 class="mb-4" style="text-align: center; color:#333"><b>Get in touch with us</b></h3>
                     <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
                       <div class="form-row">
                         <div class="col-12">
@@ -66,14 +67,14 @@
                           <div class="form-group">
                             <input
                               type="text"
-                              formControlName="userPhone"
+                              formControlName="phone"
                               class="form-control"
                               placeholder="Mobile No"
-                              [ngClass]="{'is-invalid': contactForm.get('userPhone')?.invalid && contactForm.get('userPhone')?.touched}"
+                              [ngClass]="{'is-invalid': contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched}"
                             />
-                            <div *ngIf="contactForm.get('userPhone')?.invalid && contactForm.get('userPhone')?.touched" class="invalid-feedback">
-                              <div *ngIf="contactForm.get('userPhone')?.errors?.['required']">Phone number is required.</div>
-                              <div *ngIf="contactForm.get('userPhone')?.errors?.['pattern']">Valid 10-digit phone number is required.</div>
+                            <div *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched" class="invalid-feedback">
+                              <div *ngIf="contactForm.get('phone')?.errors?.['required']">Phone number is required.</div>
+                              <div *ngIf="contactForm.get('phone')?.errors?.['pattern']">Valid 10-digit phone number is required.</div>
                             </div>
                           </div>
                         </div>
@@ -92,14 +93,19 @@
                             </div>
                           </div>
                         </div>
-                        <div class="col-sm-12 mt-3">
-                          <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">
+                        <div class="col-sm-12 mt-3 text-center">
+                          <button type="submit" class="btn submitBtn" [disabled]="contactForm.invalid">
                             Send Message
                           </button>
                         </div>
                       </div>
                     </form>
                     
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="leave-img">
+                    <img src="/assets/Leave_a_message.jpg" alt="contact-img">
                   </div>
                 </div>
               </div>

@@ -6,8 +6,12 @@ import { ToastrService } from 'ngx-toastr';
   providedIn: 'root'
 })
 export class CommonService {
-  private apiUrl = "https://78d9-203-92-37-218.ngrok-free.app/";
+  private apiUrl = "https://3335-203-92-37-218.ngrok-free.app/";
   private isAuthenticatedKey = 'isAuthenticated'; 
+
+  header: any = {
+    "ngrok-skip-browser-warning": "true",
+  }
 
   constructor(private http: HttpClient, private toastr: ToastrService) { }
 
@@ -42,5 +46,16 @@ export class CommonService {
 
   adminLogin(data: any) {
     return this.http.post(`${this.apiUrl}login`, data);
+  }
+
+  getContact() {
+    return this.http.get(`${this.apiUrl}get-contactUs`, { headers: this.header });
+  }
+
+  getDigitalServices() {
+    return this.http.get(`${this.apiUrl}get-digitalMarketing`, { headers: this.header });
+  }
+  getServices() {
+    return this.http.get(`${this.apiUrl}get-serviceData`, { headers: this.header });
   }
 }

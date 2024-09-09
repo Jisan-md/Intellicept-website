@@ -8,9 +8,11 @@
 
 .demo4{
     letter-spacing: .5px;
-}
+    line-height: 30px;
+    // font-size: 18px;
+  }
 .promo-block-section{
-  background-color: #f5f5f5;
+  // background-color: #f5f5f5;
 
 }
 .single-promo-block {
@@ -95,7 +97,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 70%, rgba(153,187,224,1)
     margin: 80px 0px 40px 0px;
 }
 .contact-us-form {
-    background-color: #e7e1e1;
+    // background-color: #e7e1e1;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -111,29 +113,12 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 70%, rgba(153,187,224,1)
     margin-bottom: 15px; 
 }
 
-.btn.secondary-solid-btn {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn.secondary-solid-btn:hover {
-    background-color: #0056b3;
-}
-
 .text-danger {
     font-size: 0.8rem;
     color: #dc3545;
     margin-top: 5px;
 }
 
-
-
-/* Ensure all cards have the same height */
 .single-promo-block {
     height: 100%;
     transition: height 0.3s ease-in-out;
@@ -148,7 +133,6 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 70%, rgba(153,187,224,1)
     max-height: none;
 }
 
-/* Adjust button styles */
 .btn {
     background-color: #0056b3;
     color: #fff;
@@ -167,14 +151,12 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 70%, rgba(153,187,224,1)
     outline: none;
 }
 
-/* Optional: Add responsive styling */
 @media (max-width: 768px) {
     .single-promo-block {
         height: auto;
     }
 }
 
-/* Container and Slider */
 .container {
     overflow: hidden;
     
@@ -243,14 +225,16 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 70%, rgba(153,187,224,1)
   }
   
   .author{
-    color: #007bff;
+    color: #fff;
     font-style: italic;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 400;
   }
   
   .carousel-item p {
-    font-style: italic; 
+    letter-spacing: .5px;
+    line-height: 30px;
+    // font-size: 18px;
     color: #fff;
     height: auto;
     width: auto;
