@@ -64,9 +64,8 @@ export class HeaderComponent {
     if (this.isHomePage && !this.isSticky) {
       return { background: 'transparent' };
     } else {
-      return { background: 'white' };
+      return { background: 'linear-gradient(75deg, #1351a8 5%, #162e66)' };
     }
   }
-  
 
 }
