@@ -28,6 +28,7 @@ import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 import { AdminCareerComponent } from './admin/admin-career/admin-career.component';
 import { AdminServicesComponent } from './admin/admin-services/admin-services.component';
 import { SideNavComponent } from './admin/side-nav/side-nav.component';
+import { AddJobsComponent } from './admin/add-jobs/add-jobs.component';
 
 
 const routes: Routes = [
@@ -141,9 +142,18 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'add-jobs',
+    component: AddJobsComponent,
+    canActivate: [AuthGuard]
+  },
+  {
     path: 'admin-login',    
     component: AdminLoginComponent
-  }
+  },
+  // {
+  //   path: '**',
+  //   component: PageNotFoundComponent
+  // }
 ];
 
 @NgModule({

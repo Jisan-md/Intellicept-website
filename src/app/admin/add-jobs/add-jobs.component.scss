@@ -1,0 +1,115 @@
+// for master and details ui
+@media(max-width: 768px){
+    #viewport {
+        
+            padding-left: 0 !important;
+    }
+}
+#viewport {
+    padding-left: 250px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.contact-item p{
+    margin: 0;
+}
+
+
+.modal.fade.show {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+.modal-dialog {
+    width: 100%;
+}
+th{
+    background-color: #f3f3f3;
+    color: #333;
+}
+.table th, .table td {
+    padding: 0.6rem;
+}
+
+.fixTableHead {
+    overflow-x: auto;
+}
+.fixTableHead thead th {
+    position: sticky;
+    top: 0;
+    background-color: #f8f9fa;
+}
+
+
+.header{
+    background-color: #1351a8;
+    padding: 10px;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+
+.apply_button {
+    background-color: #1351a8;
+    color: white !important; 
+    border: none;
+    padding: 6px 15px;
+    font-size: 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: rgba(19, 81, 168, 0.3) 0px 1px 2px 0px, rgba(19, 81, 168, 0.15) 0px 2px 6px 2px; /* Updated box-shadow with #1351a8 color */
+  }
+  
+  .apply_button:hover {
+    background-color: #0f3f87; 
+  }
+  
+  /* Accordion general styling */
+  .accordion-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    box-shadow: rgba(19, 81, 168, 0.3) 0px 1px 2px 0px, rgba(19, 81, 168, 0.15) 0px 2px 6px 2px; /* Same box shadow for the accordion */
+  }
+  
+  .accordion-button {
+    // background-color: #f8f9fa;
+    background-color: #cfe2ff;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .accordion-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+  
+  .panel {
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+  }
+  
+  .accordion-body h6 {
+    margin: 0 0 10px 0;
+  }
+  
+  .accordion-body p {
+    margin-bottom: 15px;
+  }
+  
+  @media (max-width: 576px) {
+    .apply_button {
+      width: 100%; 
+    }
+  }
+  

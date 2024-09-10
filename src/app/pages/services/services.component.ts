@@ -108,10 +108,7 @@ export class ServicesComponent {
       imgSrc: '/assets/socialMedia.png',
       altText: 'Social Media Marketing',
       title: 'Social Media Marketing',
-      description: `Intellicept's social media marketing services are designed to help businesses increase brand awareness, engage with their target audience, 
-      and drive more traffic to their website. No two strategies are alike, and our team of social media experts keeps the needs of clients in mind to create 
-      and execute strategies across various platforms to achieve measurable results. Boost your business profitability with social media! 
-      Reach potential customers through our targeted ads and engaging content. Let our expert social media team help you today.`,
+      description: `Intellicept's social media marketing services are tailored to boost brand awareness, engage your target audience, and drive website traffic. We customize every strategy to fit each client's unique needs, ensuring measurable results across multiple platforms. Maximize your business profitability with targeted ads and compelling content. Let our expert team elevate your social media presence and reach potential customers today.`,
       paddingBottom: '22px'
     },
     {
