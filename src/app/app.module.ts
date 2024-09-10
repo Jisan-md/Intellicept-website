@@ -41,6 +41,7 @@ import { AdminCareerComponent } from './admin/admin-career/admin-career.componen
 import { AdminDigitalBusinessServicesComponent } from './admin/admin-digital-business-services/admin-digital-business-services.component';
 import { AdminServicesComponent } from './admin/admin-services/admin-services.component';
 import { SideNavComponent } from './admin/side-nav/side-nav.component';
+import { AddJobsComponent } from './admin/add-jobs/add-jobs.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,7 +72,8 @@ import { SideNavComponent } from './admin/side-nav/side-nav.component';
     AdminCareerComponent,
     AdminDigitalBusinessServicesComponent,
     AdminServicesComponent,
-    SideNavComponent
+    SideNavComponent,
+    AddJobsComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [

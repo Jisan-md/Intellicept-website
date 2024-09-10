@@ -1,10 +1,13 @@
 .head-img {
     height: 300px;
 }
+p{
+    line-height: 30px;
+}
 
 
 h4.section-title, h4, h5 {
-    color: red; 
+    // color: red; 
     font-weight: bold;
 }
 
@@ -131,7 +134,7 @@ p[_ngcontent-ng-c662536361] {
 }
 
 h4 .highlight {
-    color: #1351a8;
+    color: red;
 }
 
 .quality-card {
