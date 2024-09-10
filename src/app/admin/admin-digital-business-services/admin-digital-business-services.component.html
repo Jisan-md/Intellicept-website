@@ -1,11 +1,5 @@
 <app-side-nav></app-side-nav>
-<!-- modal Add team body -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-    </div>
-  </div>
-</div>
+
 
 <div id="viewport">
   <div class="header">
@@ -13,12 +7,12 @@
   </div>
   <div class="">
     
-      <div class="col-12">
+      <div class="col-12" style="padding: 0 0;">
         <div class="panel">
           <div class="panel-body table-responsive">
             <div class="fixTableHead">
               <ng-container *ngIf="getData && getData.length > 0; else noData">
-                <table class="table text-center">
+                <table class="table table-bordered text-center">
                   <thead class="table-secondary">
                     <tr>
                       <th>S.No.</th>

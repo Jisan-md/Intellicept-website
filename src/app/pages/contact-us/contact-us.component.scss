@@ -88,12 +88,9 @@ a{
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  
-  .gray-light-bg {
-    background-color: #e7e1e1;
-  }
-  
+ 
   .rounded {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
   }
   
@@ -168,3 +165,13 @@ a{
   .invalid-feedback div{
     color: #dc3545;
   }
+
+.contact-us-content span, address {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+
+

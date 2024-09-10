@@ -2,7 +2,7 @@
 @media(max-width: 768px){
     #viewport {
         
-            padding-left: 0px;
+            padding-left: 0 !important;
     }
 }
 #viewport {
@@ -21,13 +21,15 @@
     align-items: center;
     justify-content: center;
 }
-/* Adjust the modal dialog's maximum width if needed */
 .modal-dialog {
     width: 100%;
 }
 th{
     background-color: #f3f3f3;
     color: #333;
+}
+.table th, .table td {
+    padding: 0.6rem;
 }
 
 

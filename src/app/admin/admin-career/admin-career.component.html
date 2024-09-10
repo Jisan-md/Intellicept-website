@@ -1,1 +1,47 @@
-<p>admin-career works!</p>
+<app-side-nav></app-side-nav>
+<div id="viewport">
+  <div class="header">
+    <h3> Career</h3>
+  </div>
+  <div class="">
+    
+      <div class="col-12" style="padding: 0 0;">
+        <div class="panel">
+          <div class="panel-body table-responsive">
+            <div class="fixTableHead">
+                <table class="table table-bordered text-center">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Description</th>
+                        <th>Resume</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let user of users">
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.name }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.phone }}</td>
+                        <td>{{ user.desc }}</td>
+                        <td>
+                          <a *ngIf="user.fileUrl" [href]="user.fileUrl" download><i class="fa fa-download" aria-hidden="true"></i>
+                          </a>
+                          <span *ngIf="!user.fileUrl">No File</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+            
+              <ng-template #noData>
+                <h5 style="text-align: center; margin-top: 30px;">No data found</h5>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
