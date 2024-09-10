@@ -1,4 +1,4 @@
-/* Transparent header for the home page */
+
 .transparent-header {
     background: transparent;
     transition: background 0.3s ease;
@@ -6,7 +6,6 @@
   
   
   .sticky {
-    // background: linear-gradient(75deg, #1351a8 5%, #162e66);
     transition: background 0.3s ease;
   }
   
@@ -76,7 +75,7 @@
 
 
 
-/* Base styles for the navbar */
+
 .navbar-area {
   position: fixed;
   width: 100%;
@@ -126,12 +125,10 @@
 
   .navbar-nav {
     width: 100%;
-    // text-align: center;
+    
   }
 
-  .navbar-nav .nav-item {
-    // margin: 10px 0;
-  }
+ 
 
   .navbar-toggler {
     margin-left: auto;
@@ -153,13 +150,13 @@
 
   .navbar-collapse.show {
     background: white;
-    // padding: 20px 0;
+  
   }
 
   .navbar-nav .nav-item a.active {
     color: #1351a8 !important;
     font-weight: bold;
-    // margin-left: 30px;
+   
   }
 
   .navbar-collapse {
@@ -173,3 +170,22 @@
     transition: max-height 0.5s ease-in-out;
   }
 }
+
+
+.navbar {
+  transition: background-color 0.5s ease, box-shadow 0.5s ease, padding 0.5s ease;
+}
+
+.navbar-brand img {
+  transition: height 0.3s ease;
+}
+
+.sticky .navbar-brand img {
+  height: 40px;
+}
+
+
+
+
+
+
