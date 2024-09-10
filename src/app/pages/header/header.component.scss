@@ -145,7 +145,7 @@
   .navbar-nav .nav-item a {
     color: black !important;
     font-weight: bold;
-    margin-left: 10px;
+    margin-left: 44px;
   }
 
   .navbar-collapse.show {
@@ -156,9 +156,13 @@
   .navbar-nav .nav-item a.active {
     color: #1351a8 !important;
     font-weight: bold;
+    font-size: 15px;
    
   }
-
+  .navbar-nav .nav-item a:hover {
+    color: #1351a8 !important;
+    font-weight: bold; 
+  }
   .navbar-collapse {
     transition: max-height 0.5s ease-in-out;
     max-height: 0;
@@ -184,6 +188,10 @@
   height: 40px;
 }
 
+.navbar {
+ 
+  padding: .5rem 0rem;
+}
 
 
 
