@@ -372,9 +372,7 @@ a:hover {
     padding: 20px;
 }
 
-.social {
-    margin-top: auto; 
-}
+
 
 .social i {
 
@@ -467,11 +465,19 @@ width: 40px;
 }
 
 .teacher {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
 }
 
 .social .ti-linkedin {
     font-size: 24px;
     color: #007bff;
+}
+
+.tech-feature-list div{
+    color: #707070;
+    line-height: 30px;
+}
+p,blockquote{
+    line-height: 30px;
 }
