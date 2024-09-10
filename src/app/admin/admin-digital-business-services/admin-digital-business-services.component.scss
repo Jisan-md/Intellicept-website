@@ -2,7 +2,7 @@
 @media(max-width: 768px){
     #viewport {
         
-            padding-left: 0px;
+            padding-left: 0 !important;
     }
 }
 #viewport {
@@ -29,7 +29,9 @@ th{
     background-color: #f3f3f3;
     color: #333;
 }
-
+.table th, .table td {
+    padding: 0.6rem;
+}
 
 .fixTableHead {
     overflow-x: auto;
@@ -38,4 +40,14 @@ th{
     position: sticky;
     top: 0;
     background-color: #f8f9fa;
+}
+
+.header{
+    background-color: #1351a8;
+    padding: 10px;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
 }

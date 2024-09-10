@@ -24,7 +24,7 @@
   .sidebar ul li a {
     color: #000;
     text-decoration: none;
-    padding-left: 10px;
+    padding: 10px 10px;
   }
   .sidebar ul li :hover {
     color: #fff;
@@ -32,8 +32,8 @@
     // background-color: rgb(8, 229, 229);
     background-color: #158DB1;
     // padding: 9px;
-    display: inline-block;
     width: 100%;
+    display: inline-block;
   }
   .sidebar ul li .active {
     color: #fff;
