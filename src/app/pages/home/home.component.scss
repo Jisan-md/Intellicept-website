@@ -435,12 +435,14 @@ width: 40px;
 }
   
 .close {
-    color: #1351a8;
     position: absolute;
-    top: 10px;
+    color: #1351a8;
+    top: 4px;
     right: 20px;
-    font-size: 28px;
+    font-size: 40px;
     font-weight: bold;
+    cursor: pointer;
+    width: 40px;
 }
   
 .close:hover,

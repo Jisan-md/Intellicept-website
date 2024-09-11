@@ -103,6 +103,7 @@
 .navbar-toggler {
   border: none;
   background-color: transparent;
+  margin-right: 20px;
 }
 
 .burger-menu {
@@ -115,6 +116,8 @@
   height: 3px;
   margin: 5px auto;
   transition: all 0.3s ease;
+  // margin-right: 10px;
+  
 }
 
 /* Mobile view */
