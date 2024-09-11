@@ -1,10 +1,9 @@
-// for master and details ui
 @media(max-width: 768px){
     #viewport {
-        
-            padding-left: 0 !important;
+        padding-left: 0 !important;
     }
 }
+
 #viewport {
     padding-left: 250px;
     -webkit-transition: all 0.5s ease;
@@ -13,23 +12,23 @@
     transition: all 0.5s ease;
 }
 
-.contact-item p{
+.contact-item p {
     margin: 0;
 }
 
+pre{
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+   color: #707070;
+   font-size: 17px;
+}
 
-.modal.fade.show {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-}
-.modal-dialog {
-    width: 100%;
-}
-th{
+th {
     background-color: #f3f3f3;
     color: #333;
 }
+
 .table th, .table td {
     padding: 0.6rem;
 }
@@ -37,79 +36,178 @@ th{
 .fixTableHead {
     overflow-x: auto;
 }
+
 .fixTableHead thead th {
     position: sticky;
     top: 0;
     background-color: #f8f9fa;
 }
 
-
-.header{
+.header {
     background-color: #1351a8;
     padding: 10px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    position: relative;
 }
-h3{
-    text-align: center;
-    font-weight: 600;
+
+.header h3 {
     color: #fff;
+    margin: 0;
 }
 
-
-
-.apply_button {
+.header ._button {
+    position: absolute;
+    right: 10px;
     background-color: #1351a8;
-    color: white !important; 
+    color: #fff !important;
     border: none;
     padding: 6px 15px;
-    font-size: 16px;
-    border-radius: 7px;
+    font-size: 17px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: rgba(19, 81, 168, 0.3) 0px 1px 2px 0px, rgba(19, 81, 168, 0.15) 0px 2px 6px 2px; /* Updated box-shadow with #1351a8 color */
+}
+
+.header ._button:hover {
+    color: #f3f3f3;
+}
+
+._button {
+    background-color: #fff;
+    color: red !important; 
+    border: none;
+    padding: 6px 15px;
+    font-size: 20px;
+    cursor: pointer;
   }
   
-  .apply_button:hover {
-    background-color: #0f3f87; 
+  ._button:hover {
+    color: #fa5353; 
   }
   
-  /* Accordion general styling */
-  .accordion-item {
+
+.accordion-item {
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 1rem;
-    box-shadow: rgba(19, 81, 168, 0.3) 0px 1px 2px 0px, rgba(19, 81, 168, 0.15) 0px 2px 6px 2px; /* Same box shadow for the accordion */
-  }
-  
-  .accordion-button {
-    // background-color: #f8f9fa;
+    box-shadow: rgba(19, 81, 168, 0.3) 0px 1px 2px 0px, rgba(19, 81, 168, 0.15) 0px 2px 6px 2px;
+}
+
+.accordion-button {
     background-color: #cfe2ff;
     font-size: 18px;
     color: #000;
     font-weight: bold;
-  }
-  
-  .accordion-button:disabled {
+}
+
+.accordion-button:disabled {
     cursor: not-allowed;
     opacity: 0.7;
-  }
-  
-  .panel {
+}
+
+.panel {
     padding: 15px;
     background-color: white;
     border-radius: 8px;
-  }
-  
-  .accordion-body h6 {
+}
+
+.accordion-body h6 {
     margin: 0 0 10px 0;
+}
+
+.accordion-body p {
+    margin-bottom: 15px;
+}
+
+@media (max-width: 576px) {
+    ._button {
+        width: 100%; 
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
   }
   
-  .accordion-body p {
+  .modal.open {
+    display: flex;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 550px;
+    position: relative;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .modal-title {
+    margin: 0;
+  }
+  
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .modal-body {
+    margin-top: 10px;
+  }
+  
+
+  .form-group {
     margin-bottom: 15px;
   }
   
-  @media (max-width: 576px) {
-    .apply_button {
-      width: 100%; 
-    }
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .invalid-feedback {
+    color: red;
+    font-size: 12px;
+  }
+  
+  .registerbtn {
+    background-color: #1351a8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    width: 100%;
+  }
+  
+  .registerbtn:hover {
+    background-color: #0e2b5f;
+  }
+  
+ 
+  
+  .modal-content {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
   }
   

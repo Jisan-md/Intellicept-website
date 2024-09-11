@@ -15,6 +15,7 @@ export class CommonService {
 
   constructor(private http: HttpClient, private toastr: ToastrService) { }
 
+  // Auth-related methods
   isLoggedIn(): boolean {
     const sessionStatus = localStorage.getItem(this.isAuthenticatedKey);
     return sessionStatus === 'true'; 
@@ -24,10 +25,12 @@ export class CommonService {
     localStorage.setItem(this.isAuthenticatedKey, String(status));
   }
 
+  // Toast notification
   showToast(action: 'success' | 'error' | 'info' | 'warning', message: string) {
     this.toastr[action](message, action + "!", { timeOut: 3000, progressBar: true, progressAnimation: 'decreasing', positionClass: 'toast-top-right' });
   }
 
+  // Form submission methods
   serviceForm(data: any) {
     return this.http.post(`${this.apiUrl}service`, data);
   }
@@ -48,6 +51,7 @@ export class CommonService {
     return this.http.post(`${this.apiUrl}login`, data);
   }
 
+  // Get data methods
   getContact() {
     return this.http.get(`${this.apiUrl}get-contactUs`, { headers: this.header });
   }
@@ -55,6 +59,7 @@ export class CommonService {
   getDigitalServices() {
     return this.http.get(`${this.apiUrl}get-digitalMarketing`, { headers: this.header });
   }
+
   getServices() {
     return this.http.get(`${this.apiUrl}get-serviceData`, { headers: this.header });
   }
@@ -62,5 +67,23 @@ export class CommonService {
   getCareerData() {
     return this.http.get(`${this.apiUrl}user-data`, { headers: this.header });
   }
+
+  // Job management methods
+  fetchJob() {
+    return this.http.get(`${this.apiUrl}get-jobs`, { headers: this.header });
+  }
+
+  addNewJob(data: any) {
+    return this.http.post(`${this.apiUrl}addJob`, data);
+  }
+
+  deleteJob(jobId: number) {
+    return this.http.delete(`${this.apiUrl}delete-job/${jobId}`, { headers: this.header });
+  }
+  
+  updateJob(job: any) {
+    return this.http.put(`${this.apiUrl}update-job/${job.id}`, job, { headers: this.header });
+  }
+  
 
 }

@@ -1,66 +1,173 @@
 <app-side-nav></app-side-nav>
 <div id="viewport">
-  <div class="header">
-    <h3>  Jobs</h3>
-  </div>
-  <div class="">
-    
-      <div class="col-12" style="padding: 0 0;">
-        <div class="panel">
-      
-             
-            <div id="accordionExample" class="accordion">
-                <div class="accordion-item mb-3">
-                  <h2 id="headingOne" class="accordion-header">
-                    <button type="button" aria-expanded="true" class="accordion-button" disabled>
-                        <h5><b>SAP Fresher(MM/SD)</b></h5>
-                    </button>
-                  </h2>
-                  <div id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample" class="accordion-collapse collapse show">
-                    <div class="accordion-body">
-                      <h6>Date of Opening: 01 Aug, 2024</h6>
-                      <h6>Job Location: Noida</h6>
-                      <p>
-                        1. Ready to work in Night shift (EST Zone).<br>
-                        2. Open to learn SAP IS Retail/S4 Fashion.<br>
-                        3. Ready to work in flexible shifts according to client needs.<br>
-                        4. 1 year experience.
-                      </p>
-                      <button class="apply_button mdc-button mat-mdc-button mat-unthemed mat-mdc-button-base">
-                        Apply
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-      </div>
-    </div>
-  </div>
+    <div class="header">
+        <h3>Jobs</h3>
 
-            
-                          <!-- <div id="accordionExample" class="accordion">
-                            <div class="accordion-item mb-3">
-                              <h2 id="headingOne" class="accordion-header">
-                                <button type="button" aria-expanded="true" class="accordion-button" disabled>
-                                  <h5>{{ jobData.job_title }}</h5>
+        <button class="_button" (click)="openModal()">Add Job</button>
+    </div>
+    <div class="col-12" style="padding: 0 0;">
+        <div class="panel">
+            <div *ngIf="jobData && jobData.length > 0; else noDataTemplate">
+                <div id="accordionExample" class="accordion">
+                    <div *ngFor="let job of jobData" class="accordion-item mb-3">
+                        <h2 id="heading{{ job.id }}" class="accordion-header">
+                            <button type="button" aria-expanded="true" class="accordion-button" disabled>
+                                <h5><b>{{ job.job_title }}</b></h5>
+                            </button>
+                        </h2>
+                        <div id="collapse{{ job.id }}" data-bs-parent="#accordionExample"
+                            class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <h6><b>Date of Opening: </b>{{ job.start_application_date | date }}</h6>
+                                <h6><b>No. of Positions: </b>{{ job.no_of_position }}</h6>
+                                <h6><b>Job Location: </b>{{ job.job_location }}</h6>
+                                <pre>{{ job.job_description }}</pre>
+                                <button class="_button" (click)="openEditModal(job)">
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                 </button>
-                              </h2>
-                              <div id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample" class="accordion-collapse collapse show">
-                                <div class="accordion-body">
-                                  <h6>Date of Opening: {{ jobData.start_application_date }}</h6>
-                                  <h6>Job Location: {{ jobData.job_location }}</h6>
-                                  <p>{{ jobData.job_description }}</p>
-                                  <button class="apply_button mdc-button mat-mdc-button mat-unthemed mat-mdc-button-base">
-                                    <span class="mdc-button__label">Apply</span>
-                                  </button>
-                                </div>
-                              </div>
+                                <button class="_button" (click)="deleteJob(job.id)">
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                </button>
                             </div>
-                          </div>
-                           -->
-                          
-                          <!-- <ng-template #noData>
-                            <h5 style="text-align: center; margin-top: 30px;">No data found</h5>
-                          </ng-template> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Edit Job Modal -->
+    <div *ngIf="isEditModalOpen" class="modal" tabindex="-1" role="dialog" style="display: block;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Job</h5>
+                    <button type="button" class="close" aria-label="Close" (click)="closeEditModal()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form [formGroup]="editJobForm" (ngSubmit)="onEditSubmit()">
+                        <div class="form-group">
+                            <label>Job Title</label>
+                            <input type="text" class="form-control" formControlName="job_title">
+                        </div>
+                        <div class="form-group">
+                            <label>Job Description</label>
+                            <textarea class="form-control" formControlName="job_description"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Date of Opening</label>
+                            <input type="date" class="form-control" formControlName="start_application_date">
+                        </div>
+                        <div class="form-group">
+                            <label>Job Location</label>
+                            <input type="text" class="form-control" formControlName="job_location">
+                        </div>
+                        <div class="form-group">
+                            <label>No. of Positions</label>
+                            <input type="number" class="form-control" formControlName="no_of_position">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <ng-template #noDataTemplate>
+        <h3 style="text-align: center;margin-top: 40px;"> No Data Found</h3>
+    </ng-template>
+
+</div>
+
+
+
+<div class="modal" [ngClass]="{ 'open': isModalOpen }">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Add New Job</h5>
+            <button type="button" class="close-btn" (click)="closeModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="addJobForm" (ngSubmit)="onSubmit()" class="form-group">
+                <div class="container1">
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" placeholder="Enter Job Title" formControlName="job_title"
+                                    id="job_title"
+                                    [ngClass]="{'is-invalid': addJobForm.get('job_title')?.invalid && addJobForm.get('job_title')?.touched}" />
+                                <div *ngIf="addJobForm.get('job_title')?.invalid && addJobForm.get('job_title')?.touched"
+                                    class="invalid-feedback">
+                                    <div *ngIf="addJobForm.get('job_title')?.errors?.['required']">Job title is required.
+                                    </div>
+                                    <div *ngIf="addJobForm.get('job_title')?.errors?.['minlength']">Job title must be at
+                                        least 2 characters long.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" placeholder="Enter Job Location" formControlName="job_location"
+                                    id="job_location"
+                                    [ngClass]="{'is-invalid': addJobForm.get('job_location')?.invalid && addJobForm.get('job_location')?.touched}" />
+                                <div *ngIf="addJobForm.get('job_location')?.invalid && addJobForm.get('job_location')?.touched"
+                                    class="invalid-feedback">
+                                    <div *ngIf="addJobForm.get('job_location')?.errors?.['required']">Job location is
+                                        required.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="date" placeholder="Start Application Date"
+                                    formControlName="start_application_date" id="start_application_date"
+                                    [ngClass]="{'is-invalid': addJobForm.get('start_application_date')?.invalid && addJobForm.get('start_application_date')?.touched}" />
+                                <div *ngIf="addJobForm.get('start_application_date')?.invalid && addJobForm.get('start_application_date')?.touched"
+                                    class="invalid-feedback">
+                                    <div *ngIf="addJobForm.get('start_application_date')?.errors?.['required']">Start
+                                        application date is required.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="number" placeholder="Enter Number of Positions"
+                                    formControlName="no_of_position" id="no_of_position"
+                                    [ngClass]="{'is-invalid': addJobForm.get('no_of_position')?.invalid && addJobForm.get('no_of_position')?.touched}" />
+                                <div *ngIf="addJobForm.get('no_of_position')?.invalid && addJobForm.get('no_of_position')?.touched"
+                                    class="invalid-feedback">
+                                    <div *ngIf="addJobForm.get('no_of_position')?.errors?.['required']">Number of
+                                        positions is required.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea formControlName="job_description" placeholder="Enter Job Description" rows="4"
+                            cols="50"
+                            [ngClass]="{'is-invalid': addJobForm.get('job_description')?.invalid && addJobForm.get('job_description')?.touched}"></textarea>
+                        <div *ngIf="addJobForm.get('job_description')?.invalid && addJobForm.get('job_description')?.touched"
+                            class="invalid-feedback">
+                            <div *ngIf="addJobForm.get('job_description')?.errors?.['required']">Job description is
+                                required.</div>
+                            <div *ngIf="addJobForm.get('job_description')?.errors?.['minlength']">Description must be at
+                                least 10 characters long.</div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="registerbtn" [disabled]="addJobForm.invalid">Submit</button>
+                    <span style="color:red;" *ngIf="errorMessage">{{ errorMessage }}</span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
