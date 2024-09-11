@@ -173,3 +173,14 @@ h4 .highlight {
     flex-direction: column;
     justify-content: center;
 }
+.secondary-solid-btn:hover {
+    background: transparent;
+    color: #1351a8;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.secondary-solid-btn {
+    color: #fff;
+    background: #1351a8;
+    border: 1px solid #1351a8;
+}

@@ -1,15 +1,15 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav class="sidebar" #sidenav mode="side" [opened]="isSidenavOpen" [fixedInViewport]="isSidenavFixed">
     <mat-toolbar class="menu-bar">
-      <img src="assets/Logo1.png " alt="" routerLink="/" style="margin-top: 80px;">
+      <img src="assets/Logo1.png " alt="" routerLink="/" style="margin-top: 50px;">
     </mat-toolbar>
 
-    <hr style="color: #000; margin-top: 40px;">
+    <hr >
 
     <ul class="mt" (click)="closeSidenav()">
       <li>
         <a routerLink="/admin-digital-business-services" routerLinkActive="active">
-          <i class="fa-solid fa-business-time" style="display: contents;"></i>&nbsp; Digital Business Services
+          <i class="fas fa-business-time" style="display: contents;"></i>&nbsp; Digital Business Services
         </a>
       </li>
       <li>
@@ -20,24 +20,24 @@
       <li>
         <a routerLink="/admin-career" routerLinkActive="active">
           <i class="fa fa-line-chart" aria-hidden="true" style="display: contents;"></i>
-&nbsp; Career
+          &nbsp; Career
         </a>
       </li>
       <li>
         <a routerLink="/admin-services" routerLinkActive="active">
-          <i class="fa-solid fa-concierge-bell" style="display: contents;"></i>&nbsp; Services
+          <i class="fa fa-wrench" style="display: contents;"></i>&nbsp; Services
         </a>
       </li>
 
       <li>
         <a routerLink="/add-jobs" routerLinkActive="active">
-          <i class="fa-solid fa-concierge-bell" style="display: contents;"></i>&nbsp; Add Job
+          <i class="fa-solid fa fa-user" style="display: contents;"></i>&nbsp; Add Job
         </a>
       </li>
     </ul>
 
     <ul style="position: absolute; bottom: 0; left: 0; width: 100%;">
-      <hr style=" border-bottom: 1.5px solid #000;">
+      <hr>
       <li>
         <a (click)="logout()" style="cursor: pointer;">
           &nbsp; Logout &nbsp;
@@ -54,8 +54,6 @@
       </button>
       <span>Menu</span>
     </mat-toolbar>
-
-    <!-- Page content goes here -->
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -11,7 +11,7 @@ export class HomeComponent {
   teamData = {
     modalOne: {
       name: 'Anurag Varshney',
-      title: 'PRESIDENT / CHIEF ARCHITECT',
+      title: 'Managing Partner / Chief Architect',
       image: '/assets/AnuragVarshney.jpg',
       linkedin: 'https://www.linkedin.com/in/varshneyanurag/',
       description: `Anurag is an accomplished IT & SAP Executive and expert in SAP S/4 HANA Retail & CAR with 
@@ -27,7 +27,7 @@ export class HomeComponent {
     },
     modalTwo: {
       name: 'Mayank Gupta',
-      title: 'Lead Designer',
+      title: 'SAP Fashion Architect (Sr Director)',
       image: '/assets/mayankGupta.jpg',
       linkedin: 'https://www.linkedin.com/in/mayank-gupta-500171128/',
       description: `Mayank is an experienced and certified SAP professional with a demonstrated history of working 
@@ -41,7 +41,7 @@ export class HomeComponent {
     },
     modalThree: {
       name: 'Gaurav Mishra',
-      title: 'Managing Director',
+      title: 'VP of Business Development and Pre-Sales',
       image: '/assets/gauravMishra.jpg',
       linkedin: 'https://www.linkedin.com/in/gaurav-mishra-924a6a9/',
       description: `High-energy, results driven client services and strategic business development professional with 
