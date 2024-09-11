@@ -37,7 +37,7 @@ export class SideNavComponent {
     // Handle screen size changes
     this.breakpointObserver.observe([Breakpoints.Handset]).subscribe(result => {
       this.isMobileView = result.matches;
-      this.isSidenavOpen = !this.isMobileView; // Close sidenav on mobile view
+      this.isSidenavOpen = !this.isMobileView; 
     });
   }
 

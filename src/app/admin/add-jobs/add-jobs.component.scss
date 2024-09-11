@@ -1,7 +1,20 @@
-@media(max-width: 768px){
-    #viewport {
-        padding-left: 0 !important;
-    }
+
+@media (max-width: 575.98px) {
+  #viewport {
+      padding-left: 0 !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #viewport {
+      padding-left: 0 !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #viewport {
+      padding-left: 0 !important;
+  }
 }
 
 #viewport {
@@ -55,7 +68,11 @@ th {
 .header h3 {
     color: #fff;
     margin: 0;
+    text-align: center;
+    font-weight: 600;
 }
+
+
 
 .header ._button {
     position: absolute;
@@ -71,7 +88,6 @@ th {
 .header ._button:hover {
     color: #f3f3f3;
 }
-
 ._button {
     background-color: #fff;
     color: red !important; 
@@ -80,12 +96,26 @@ th {
     font-size: 20px;
     cursor: pointer;
   }
-  
   ._button:hover {
     color: #fa5353; 
   }
-  
-
+  .editButton{
+    text-align: center;
+    margin-top: 10px;
+    float: right;
+    margin-right:5px;
+  }
+  .editButton ._button {
+    background-color: #1351a8;
+    color: #fff !important; 
+    border: none;
+    padding: 6px 15px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .editButton ._button:hover {
+    color: #2f84fa; 
+  }
 .accordion-item {
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -101,7 +131,7 @@ th {
 }
 
 .accordion-button:disabled {
-    cursor: not-allowed;
+    // cursor: not-allowed;
     opacity: 0.7;
 }
 
@@ -119,11 +149,7 @@ th {
     margin-bottom: 15px;
 }
 
-@media (max-width: 576px) {
-    ._button {
-        width: 100%; 
-    }
-}
+
 
 .modal {
     display: none;
@@ -167,6 +193,10 @@ th {
     cursor: pointer;
   }
   
+  .close-btn:hover {
+    color: #707070;
+  }
+  
   .modal-body {
     margin-top: 10px;
   }
@@ -202,9 +232,7 @@ th {
   .registerbtn:hover {
     background-color: #0e2b5f;
   }
-  
- 
-  
+
   .modal-content {
     padding: 20px;
     border-radius: 8px;

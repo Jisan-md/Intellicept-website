@@ -5,6 +5,9 @@
 
         <button class="_button" (click)="openModal()">Add Job</button>
     </div>
+    <ng-template #noDataTemplate>
+        <h5 style="text-align: center;margin-top: 30px;"> No Data Found</h5>
+    </ng-template>
     <div class="col-12" style="padding: 0 0;">
         <div class="panel">
             <div *ngIf="jobData && jobData.length > 0; else noDataTemplate">
@@ -42,42 +45,52 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Edit Job</h5>
-                    <button type="button" class="close" aria-label="Close" (click)="closeEditModal()">
-                        <span aria-hidden="true">&times;</span>
+                    <button type="button" class="close-btn" aria-label="Close" (click)="closeEditModal()">
+                       &times;
                     </button>
                 </div>
                 <div class="modal-body">
                     <form [formGroup]="editJobForm" (ngSubmit)="onEditSubmit()">
-                        <div class="form-group">
-                            <label>Job Title</label>
-                            <input type="text" class="form-control" formControlName="job_title">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label>Job Title.</label>
+                                <input type="text" class="form-control" formControlName="job_title">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Job Location.</label>
+                                <input type="text" class="form-control" formControlName="job_location">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label>Job Description</label>
-                            <textarea class="form-control" formControlName="job_description"></textarea>
+    
+                        <div class="row">
+                             <div class="col-md-6 form-group">
+                                <label>No. of Positions.</label>
+                                <input type="number" class="form-control" formControlName="no_of_position">
+                            </div>
+                           
+                            <div class="col-md-6 form-group">
+                                <label>Date of Opening.</label>
+                                <input type="date" class="form-control" formControlName="start_application_date">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label>Date of Opening</label>
-                            <input type="date" class="form-control" formControlName="start_application_date">
+    
+                        <div class="row">
+                           
+                             <div class="col-md-12 form-group">
+                                <label>Job Description.</label>
+                                <textarea class="form-control" formControlName="job_description" rows="4"></textarea>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label>Job Location</label>
-                            <input type="text" class="form-control" formControlName="job_location">
+                        <div class="row editButton">
+                        <button type="submit" class="btn _button">Save </button>
                         </div>
-                        <div class="form-group">
-                            <label>No. of Positions</label>
-                            <input type="number" class="form-control" formControlName="no_of_position">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
     
-    <ng-template #noDataTemplate>
-        <h3 style="text-align: center;margin-top: 40px;"> No Data Found</h3>
-    </ng-template>
+   
 
 </div>
 
