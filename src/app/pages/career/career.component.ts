@@ -12,12 +12,19 @@ export class CareerComponent {
   applyForm!: FormGroup;
   errorMessage: string = '';
   file: File | null = null;
+  isModalOpen = false; 
+  isSaveModalOpen = false; 
+  jobData: any = {};  
+  selectedJob: any = null; 
+
 
   constructor(private fb: FormBuilder, private commonService: CommonService) {
    
   }
 
   ngOnInit() {
+    this.fetchJob();
+
     this.applyForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -31,6 +38,17 @@ export class CareerComponent {
       this.file = event.target.files[0];
     }
   }
+
+  openSaveModal() {
+    this.isSaveModalOpen = true;
+  
+  }
+  
+  
+  closeSaveModal() {
+      this.isSaveModalOpen = false;
+    }
+  
 
   onSubmit() {
     if (this.applyForm.valid) {
@@ -49,7 +67,6 @@ export class CareerComponent {
       });
 
       this.commonService.careerForm(formData).subscribe((res: any) => {
-        // console.log('Form submitted successfully:', res);
         this.commonService.showToast('success', "Form submission successful");
         this.applyForm.reset();
         this.applyForm.markAsPristine();
@@ -58,9 +75,19 @@ export class CareerComponent {
       });
 
     } else {
-      // this.errorMessage = 'Please fill in all required fields.';
       this.commonService.showToast('error', "Form submission failed.");
     }
   }
   
+  fetchJob() {
+    this.commonService.fetchJob().subscribe(
+      (res: any) => {
+        this.jobData = res;
+        console.log('Job data:', this.jobData);
+      },
+      (error) => {
+        console.error('Error fetching job data:', error);
+      }
+    );
+  }
 }

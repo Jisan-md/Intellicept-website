@@ -1,10 +1,22 @@
 // for master and details ui
-@media(max-width: 768px){
+@media (max-width: 575.98px) {
     #viewport {
-        
-            padding-left: 0 !important;
+        padding-left: 0 !important;
     }
-}
+  }
+  
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    #viewport {
+        padding-left: 0 !important;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    #viewport {
+        padding-left: 0 !important;
+    }
+  }
+  
 #viewport {
     padding-left: 250px;
     -webkit-transition: all 0.5s ease;
