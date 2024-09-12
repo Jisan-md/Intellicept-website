@@ -52,39 +52,42 @@
                 <div class="modal-body">
                     <form [formGroup]="editJobForm" (ngSubmit)="onEditSubmit()">
                         <div class="row">
-                            <div class="col-md-6 form-group">
-                                <label>Job Title.</label>
-                                <input type="text" class="form-control" formControlName="job_title">
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <label>Job Location.</label>
-                                <input type="text" class="form-control" formControlName="job_location">
-                            </div>
+                          <div class="col-md-6 form-group">
+                            <label>Job Title</label>
+                            <input type="text" class="form-control" formControlName="job_title">
+                          </div>
+                          <div class="col-md-6 form-group">
+                            <label>Job Location</label>
+                            <input type="text" class="form-control" formControlName="job_location">
+                          </div>
                         </div>
-    
+                      
                         <div class="row">
-                             <div class="col-md-6 form-group">
-                                <label>No. of Positions.</label>
-                                <input type="number" class="form-control" formControlName="no_of_position">
-                            </div>
-                           
-                            <div class="col-md-6 form-group">
-                                <label>Date of Opening.</label>
-                                <input type="date" class="form-control" formControlName="start_application_date">
-                            </div>
+                          <div class="col-md-6 form-group">
+                            <label>No. of Positions</label>
+                            <input type="number" class="form-control" formControlName="no_of_position">
+                          </div>
+                      
+                          <div class="col-md-6 form-group">
+                            <label>Date of Opening</label>
+                            <input type="date" class="form-control" formControlName="start_application_date">
+                          </div>
                         </div>
-    
+                      
                         <div class="row">
-                           
-                             <div class="col-md-12 form-group">
-                                <label>Job Description.</label>
-                                <textarea class="form-control" formControlName="job_description" rows="4"></textarea>
-                            </div>
+                          <div class="col-md-12 form-group">
+                            <label>Job Description</label>
+                            <textarea class="form-control" formControlName="job_description" rows="4"></textarea>
+                          </div>
                         </div>
+                      
                         <div class="row editButton">
-                        <button type="submit" class="btn _button">Save </button>
+                          <div class="col-md-12 d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                          </div>
                         </div>
-                    </form>
+                      </form>
+                      
                 </div>
             </div>
         </div>

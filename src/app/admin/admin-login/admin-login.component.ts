@@ -44,7 +44,7 @@ export class AdminLoginComponent {
 
         if (res.status === 'success') {
           this.commonService.setLoginStatus(true);  
-          this.router.navigate(['/sidenav']);      
+          this.router.navigate(['/admin-career']);      
           this.commonService.showToast('success', 'Login Successfully!');
         } else {
           this.commonService.showToast('error', 'Login failed');

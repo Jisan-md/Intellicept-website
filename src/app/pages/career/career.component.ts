@@ -71,6 +71,7 @@ export class CareerComponent {
         this.applyForm.reset();
         this.applyForm.markAsPristine();
         this.applyForm.markAsUntouched();
+        this.closeSaveModal();
 
       });
 
@@ -78,16 +79,16 @@ export class CareerComponent {
       this.commonService.showToast('error', "Form submission failed.");
     }
   }
-  
   fetchJob() {
     this.commonService.fetchJob().subscribe(
       (res: any) => {
-        this.jobData = res;
-        console.log('Job data:', this.jobData);
+        this.jobData = res.filter((job: any) => job.isActive === true);
+        console.log('Filtered Job data:', this.jobData);
       },
       (error) => {
         console.error('Error fetching job data:', error);
       }
     );
   }
+  
 }

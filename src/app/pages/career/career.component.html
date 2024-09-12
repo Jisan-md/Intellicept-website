@@ -1,60 +1,110 @@
 <app-header></app-header>
 
-    <!--header section start-->
-    <section class="head-img" style="background: url('/assets/career5.png')no-repeat center center / cover;margin-top: 85px;">
-      <div class="row justify-content-center">
-        <div class="text-header">
-          <h1 class="text-white mb-0">Career</h1>
-        </div>
-      </div>
-    </section>
-    <!--header section end-->
-  
-    <!--client section start-->
-    <div class="container mt-5">
-      <div class="clearfix">
-        <div id="content">
-          <p style="line-height: 30px;">A day in life at Intellicept comprises of fun, challenge, and appreciation. Our employees are our wealth, and we invest in their career. The focus of our workforce is “Work Hard, Play Harder”.</p>
-        </div>
-      </div>
-    </div>
+<!--header section start-->
+<section class="head-img" style="
+    background: url('/assets/career5.png') no-repeat center center / cover;
+    margin-top: 85px;
+  ">
+  <div class="text-header">
+    <h1 class="text-white mb-0">Career</h1>
+  </div>
+</section>
+<!--header section end-->
 
-    <div class="container">
-          <div class="col-12" style="padding: 0 0;">
-            <div class="panel">
-              <ng-template #noDataTemplate>
-                <h5 style="text-align: center;margin-top: 30px;"> No Data Found</h5>
-            </ng-template>
-              <div *ngIf="jobData && jobData.length > 0; else noDataTemplate">
-                  <div id="accordionExample" class="accordion">
-                      <div *ngFor="let job of jobData" class="accordion-item mb-3">
-                          <h2 id="heading{{ job.id }}" class="accordion-header">
-                              <button type="button" aria-expanded="true" class="accordion-button" disabled>
-                                  <h5><b>{{ job.job_title }}</b></h5>
-                              </button>
-                          </h2>
-                          <div id="collapse{{ job.id }}" data-bs-parent="#accordionExample"
-                              class="accordion-collapse collapse show">
-                              <div class="accordion-body">
-                                  <h6><b>Date of Opening: </b>{{ job.start_application_date | date }}</h6>
-                                  <h6><b>No. of Positions: </b>{{ job.no_of_position }}</h6>
-                                  <h6><b>Job Location: </b>{{ job.job_location }}</h6>
-                                  <pre>{{ job.job_description }}</pre>
-                                  <button class="apply_button" (click)="openSaveModal()">
-Apply                                  </button>
-                                 
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+<!--client section start-->
+<div class="container ">
+  <div class="col-12 mt-5">
+    <p style="line-height: 30px">
+      A day in life at Intellicept comprises of fun, challenge, and
+      appreciation. Our employees are our wealth, and we invest in their
+      career. The focus of our workforce is “Work Hard, Play Harder”.
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col-12 text-center mt-5">
+    <h2> <b>We Are
+    <span style="color: #1351a8">Hiring</span></b> </h2>
+  </div>
+  <div class="col-12" style="padding: 0 0">
+    <div class="panel">
+      <ng-template #noDataTemplate>
+        <h5 style="text-align: center; margin-top: 30px">No Data Found</h5>
+      </ng-template>
+      <div *ngIf="jobData && jobData.length > 0; else noDataTemplate">
+        <div id="accordionExample" class="accordion">
+          <div *ngFor="let job of jobData" class="accordion-item mb-3">
+            <h2 id="heading{{ job.id }}" class="accordion-header">
+              <button type="button" aria-expanded="true" class="accordion-button" disabled>
+                <h5>
+                  <b>{{ job.job_title }}</b>
+                </h5>
+              </button>
+            </h2>
+            <div id="collapse{{ job.id }}" data-bs-parent="#accordionExample" class="accordion-collapse collapse show">
+              <div class="accordion-body">
+                <h6>
+                  <b>Date of Opening: </b>{{ job.start_application_date | date }}
+                </h6>
+                <h6><b>No. of Positions: </b>{{ job.no_of_position }}</h6>
+                <h6><b>Job Location: </b>{{ job.job_location }}</h6>
+                <pre>{{ job.job_description }}</pre>
+                <button class="apply_button" (click)="openSaveModal()">
+                  Apply
+                </button>
               </div>
+            </div>
           </div>
+        </div>
+      </div>
     </div>
-    </div>
+  </div>
+</div>
 
-       
-   <!-- Edit Job Modal -->
-<div *ngIf="isSaveModalOpen" class="modal" tabindex="-1" role="dialog" style="display: block;">
+
+<div class="container">
+  <div class="row ">
+    <div class=" col-lg-6  d-flex justify-content-center align-items-center">
+
+      <div class="contact-item">
+        <div class="section-title text-center ">
+          <h2><b>
+              Talk to Our
+              <span style="color: #1351a8">Experts</span></b>
+          </h2>
+          <p style="text-align: center;">
+            We will contact you within 48 hours after receiving your request.
+          </p>
+        </div>
+        <div routerLink="/contact-us" class="section-title " style="cursor: pointer" tabindex="0">
+          <div class="section-title d-flex justify-content-center align-items-center">
+            <img src="/assets/Untitled-2.png" alt="image" />
+          </div>
+          <h4 style="margin-left: -1.5rem; color: #1351a8; text-align: center; font-weight: 600;">
+            Learn More
+          </h4>
+        </div>
+      </div>
+
+    </div>
+    <div class=" col-lg-6">
+      <div class="card border-0 shadow-sm text-white">
+        <img src="/assets/Leave_a_message.jpg" alt="" class="img-fluid rounded shadow-sm" />
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<!-- Edit Job Modal -->
+<div *ngIf="isSaveModalOpen" class="modal" tabindex="-1" role="dialog" style="display: block">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -72,94 +122,111 @@ Apply                                  </button>
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Enter Your Name"
-                    formControlName="name"
-                    id="name"
-                    [ngClass]="{'is-invalid': applyForm.get('name')?.invalid && applyForm.get('name')?.touched}"
-                  />
-                  <div *ngIf="applyForm.get('name')?.invalid && applyForm.get('name')?.touched" class="invalid-feedback">
-                    <div *ngIf="applyForm.get('name')?.errors?.['required']">Name is required.</div>
-                    <div *ngIf="applyForm.get('name')?.errors?.['minlength']">Name must be at least 2 characters long.</div>
+                  <input type="text" class="form-control" placeholder="Enter Your Name" formControlName="name" id="name"
+                    [ngClass]="{
+                      'is-invalid':
+                        applyForm.get('name')?.invalid &&
+                        applyForm.get('name')?.touched
+                    }" />
+                  <div *ngIf="
+                      applyForm.get('name')?.invalid &&
+                      applyForm.get('name')?.touched
+                    " class="invalid-feedback">
+                    <div *ngIf="applyForm.get('name')?.errors?.['required']">
+                      Name is required.
+                    </div>
+                    <div *ngIf="applyForm.get('name')?.errors?.['minlength']">
+                      Name must be at least 2 characters long.
+                    </div>
                   </div>
                 </div>
               </div>
 
               <div class="col-md-6">
                 <div class="form-group">
-                  <input
-                    type="email"
-                    class="form-control"
-                    placeholder="Enter Email"
-                    formControlName="email"
-                    id="email"
-                    [ngClass]="{'is-invalid': applyForm.get('email')?.invalid && applyForm.get('email')?.touched}"
-                  />
-                  <div *ngIf="applyForm.get('email')?.invalid && applyForm.get('email')?.touched" class="invalid-feedback">
-                    <div *ngIf="applyForm.get('email')?.errors?.['required']">Email is required.</div>
-                    <div *ngIf="applyForm.get('email')?.errors?.['email']">Valid email is required.</div>
+                  <input type="email" class="form-control" placeholder="Enter Email" formControlName="email" id="email"
+                    [ngClass]="{
+                      'is-invalid':
+                        applyForm.get('email')?.invalid &&
+                        applyForm.get('email')?.touched
+                    }" />
+                  <div *ngIf="
+                      applyForm.get('email')?.invalid &&
+                      applyForm.get('email')?.touched
+                    " class="invalid-feedback">
+                    <div *ngIf="applyForm.get('email')?.errors?.['required']">
+                      Email is required.
+                    </div>
+                    <div *ngIf="applyForm.get('email')?.errors?.['email']">
+                      Valid email is required.
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="row">
-            <div class="col-md-6">
-            <!-- Phone Number -->
-            <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Enter Phone No."
-                formControlName="phone"
-                id="phone"
-                [ngClass]="{'is-invalid': applyForm.get('phone')?.invalid && applyForm.get('phone')?.touched}"
-              />
-              <div *ngIf="applyForm.get('phone')?.invalid && applyForm.get('phone')?.touched" class="invalid-feedback">
-                <div *ngIf="applyForm.get('phone')?.errors?.['required']">Phone number is required.</div>
-                <div *ngIf="applyForm.get('phone')?.errors?.['pattern']">Valid 10-digit phone number is required.</div>
+              <div class="col-md-6">
+                <!-- Phone Number -->
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Enter Phone No." formControlName="phone"
+                    id="phone" [ngClass]="{
+                      'is-invalid':
+                        applyForm.get('phone')?.invalid &&
+                        applyForm.get('phone')?.touched
+                    }" />
+                  <div *ngIf="
+                      applyForm.get('phone')?.invalid &&
+                      applyForm.get('phone')?.touched
+                    " class="invalid-feedback">
+                    <div *ngIf="applyForm.get('phone')?.errors?.['required']">
+                      Phone number is required.
+                    </div>
+                    <div *ngIf="applyForm.get('phone')?.errors?.['pattern']">
+                      Valid 10-digit phone number is required.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <textarea formControlName="desc" class="form-control" placeholder="Any Other Details..." rows="1"
+                    [ngClass]="{
+                      'is-invalid':
+                        applyForm.get('desc')?.invalid &&
+                        applyForm.get('desc')?.touched
+                    }"></textarea>
+                  <div *ngIf="
+                      applyForm.get('desc')?.invalid &&
+                      applyForm.get('desc')?.touched
+                    " class="invalid-feedback">
+                    <div *ngIf="applyForm.get('desc')?.errors?.['required']">
+                      Description is required.
+                    </div>
+                    <div *ngIf="applyForm.get('desc')?.errors?.['minlength']">
+                      Description must be at least 10 characters long.
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-md-6">
+            <!-- File Upload -->
             <div class="form-group">
-              <textarea
-                formControlName="desc"
-                class="form-control"
-                placeholder="Any Other Details..."
-                rows="1"
-                [ngClass]="{'is-invalid': applyForm.get('desc')?.invalid && applyForm.get('desc')?.touched}"
-              ></textarea>
-              <div *ngIf="applyForm.get('desc')?.invalid && applyForm.get('desc')?.touched" class="invalid-feedback">
-                <div *ngIf="applyForm.get('desc')?.errors?.['required']">Description is required.</div>
-                <div *ngIf="applyForm.get('desc')?.errors?.['minlength']">Description must be at least 10 characters long.</div>
-              </div>
+              <label for="fileUpload"><b>Upload Resume:</b> &nbsp;</label>
+              <input type="file" class="form-control" (change)="onFileChange($event)" accept=".doc, .docx, .pdf"
+                id="fileUpload" />
             </div>
-
-          </div>
-        </div>
-
-           
-              <!-- File Upload -->
-              <div class="form-group">
-                <label for="fileUpload"><b>Upload Resume:</b> &nbsp;</label>
-                <input
-                  type="file"
-                  class="form-control"
-                  (change)="onFileChange($event)"
-                  accept=".doc, .docx, .pdf"
-                  id="fileUpload"
-                />
-              </div>
-
 
             <hr />
-            <p>By applying you agree to our <a href="#">Terms &amp; Privacy</a>.</p>
+            <p>
+              By applying you agree to our <a href="#">Terms &amp; Privacy</a>.
+            </p>
             <div class="form-btn d-flex justify-content-center">
-              <button type="submit" class="btn apply_button" >Submit  </button>
-            <span style="color:red;" *ngIf="errorMessage">{{ errorMessage }}</span>
+              <button type="submit" class="btn apply_button">Submit</button>
+              <span style="color: red" *ngIf="errorMessage">{{
+                errorMessage
+                }}</span>
             </div>
           </div>
         </form>
@@ -168,10 +235,9 @@ Apply                                  </button>
   </div>
 </div>
 
-    <app-footer></app-footer>
+<app-footer></app-footer>
 
-
-    <!--   
+<!--   
     <section class="about-us-section ptb-10">
       <div class="container">
         <div class="row justify-content-between align-items-center">

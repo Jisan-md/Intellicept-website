@@ -78,11 +78,11 @@ export class CommonService {
   }
 
   deleteJob(jobId: number) {
-    return this.http.delete(`${this.apiUrl}delete-job/${jobId}`, { headers: this.header });
+    return this.http.post(`${this.apiUrl}deleteJob/${jobId}`, { headers: this.header });
   }
   
   updateJob(job: any) {
-    return this.http.put(`${this.apiUrl}update-job/${job.id}`, job, { headers: this.header });
+    return this.http.post(`${this.apiUrl}updateJobs/${job.id}`, job, { headers: this.header });
   }
   
 

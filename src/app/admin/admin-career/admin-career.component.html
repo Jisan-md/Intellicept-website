@@ -12,7 +12,7 @@
                 <table class="table table-bordered text-center">
                     <thead>
                       <tr>
-                        <th>ID</th>
+                        <th>S.No.</th>
                         <th>Name</th>
                         <th>Email</th>
                         <th>Phone</th>
@@ -21,8 +21,8 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr *ngFor="let user of users">
-                        <td>{{ user.id }}</td>
+                      <tr *ngFor="let user of users ; index as i;">
+                        <td>{{ i + 1 }}</td>
                         <td>{{ user.name }}</td>
                         <td>{{ user.email }}</td>
                         <td>{{ user.phone }}</td>

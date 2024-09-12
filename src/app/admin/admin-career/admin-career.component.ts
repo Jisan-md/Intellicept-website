@@ -15,7 +15,8 @@ export class AdminCareerComponent {
   fetchUserData(): void {
     this.commonService.getCareerData().subscribe(
       (data: any) => {  
-        this.users = (data as { users: any[] }).users;  
+        this.users = (data as { users: any[] }).users; 
+        console.log(this.users); 
       },
       (error) => {
         console.error('Error fetching user data:', error);
