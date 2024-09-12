@@ -31,10 +31,10 @@ export class HeaderComponent {
     if (this.isHomePage) {
       if (window.pageYOffset > 50) {
         this.isSticky = true;
-        this.logoSrc = 'assets/intellicept.png'; // Change to sticky logo
+        this.logoSrc = 'assets/intellicept.png'; 
       } else {
         this.isSticky = false;
-        this.logoSrc = 'assets/Logo1.png'; // Change back to original logo
+        this.logoSrc = 'assets/Logo1.png'; 
       }
     }
   }

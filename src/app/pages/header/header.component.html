@@ -1,7 +1,7 @@
-<div class="navbar-area" [ngClass]="{ 'sticky': isSticky, 'transparent-header': isHomePage && !isSticky, 'solid-header': !isHomePage || isSticky }">
+<div class="navbar-area " [ngClass]="{ 'sticky': isSticky, 'transparent-header': isHomePage && !isSticky, 'solid-header': !isHomePage || isSticky }">
   <nav class="navbar navbar-expand-lg" [ngStyle]="getNavbarStyle()">
     <a class="navbar-brand" routerLink="/">
-      <img [src]="logoSrc" alt="logo" style="height: 60px" />
+      <img [src]="logoSrc" alt="logo" style="max-height: 64px;/* width: auto; */" />
 
       <!-- <img src="assets/intellicept.png" alt="logo" style="height: 60px" /> -->
     </a>
