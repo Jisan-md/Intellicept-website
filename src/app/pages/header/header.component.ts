@@ -9,7 +9,7 @@ import { Router, NavigationEnd } from '@angular/router';
 export class HeaderComponent {
   isSticky: boolean = false;
   isHomePage: boolean = false;
-
+  logoSrc: string = 'assets/intellicept.png'; 
   constructor(public router: Router) {
     this.checkIfHomePage();
 
@@ -26,17 +26,18 @@ export class HeaderComponent {
   }
 
   @HostListener('window:scroll', ['$event'])
-  onWindowScroll() {
  
+  onWindowScroll() {
     if (this.isHomePage) {
       if (window.pageYOffset > 50) {
         this.isSticky = true;
+        this.logoSrc = 'assets/intellicept.png'; 
       } else {
         this.isSticky = false;
+        this.logoSrc = 'assets/Logo1.png'; 
       }
     }
   }
-
   closeNav() {
     const navbar = document.querySelector('.navbar-collapse');
     if (navbar) {
@@ -48,7 +49,8 @@ export class HeaderComponent {
     if (this.isHomePage && !this.isSticky) {
       return { background: 'transparent' };
     } else {
-      return { background: 'linear-gradient(75deg, #1351a8 5%, #162e66)' };
+      // return { background: 'linear-gradient(75deg, #1351a8 5%, #162e66)' };
+      return { background: 'white)' };
     }
   }
 
