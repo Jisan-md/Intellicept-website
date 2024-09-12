@@ -6,7 +6,7 @@ import { ToastrService } from 'ngx-toastr';
   providedIn: 'root'
 })
 export class CommonService {
-  private apiUrl = "https://dece-203-92-37-218.ngrok-free.app/";
+  private apiUrl = "https://d30d-203-92-37-218.ngrok-free.app/";
   private isAuthenticatedKey = 'isAuthenticated'; 
 
   header: any = {
@@ -15,7 +15,6 @@ export class CommonService {
 
   constructor(private http: HttpClient, private toastr: ToastrService) { }
 
-  // Auth-related methods
   isLoggedIn(): boolean {
     const sessionStatus = localStorage.getItem(this.isAuthenticatedKey);
     return sessionStatus === 'true'; 

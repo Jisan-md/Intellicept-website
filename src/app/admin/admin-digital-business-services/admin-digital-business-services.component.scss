@@ -42,7 +42,8 @@ th{
     color: #333;
 }
 .table th, .table td {
-    padding: 0.6rem;
+    padding: 0.3rem;
+    font-size: 16px;
 }
 
 .fixTableHead {
@@ -55,11 +56,13 @@ th{
 }
 
 .header{
-    background-color: #1351a8;
+    background-color: #fff;
     padding: 10px;
+    box-shadow: rgba(19, 81, 168, 0.3) 0px 1px 2px 0px, rgba(19, 81, 168, 0.15) 0px 2px 6px 2px;
+
 }
 h3{
     text-align: center;
     font-weight: 600;
-    color: #fff;
+    color: #333;
 }
