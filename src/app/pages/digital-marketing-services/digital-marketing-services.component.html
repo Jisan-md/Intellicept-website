@@ -1,226 +1,208 @@
 <app-header></app-header>
-<section class="head-img" style="background: url('/assets/drive-traffics.jpg')no-repeat center center / cover ; margin-top: 85px;">
-    <div class="row justify-content-center">
-            <div class="text-header">
-                <!-- <h1 class="text-white mb-0"></h1> -->
-               
-                </div>
-            </div>
+<section class="head-img"
+  style="background: url('/assets/drive-traffics.jpg')no-repeat center center / cover ; margin-top: 85px;">
 </section>
 
 
 <section class="about-us-section mt-5 mb-5">
-    <div class="container">
-      <div class="row justify-content-between align-items-center">
-        <!-- Left Side Text -->
-        <div class="col-md-6 col-lg-5">
-          <div class="video-promo-content mb-md-4 mb-lg-0">
-            <h2 style="color: #000;">Digital Business Services</h2>
-            <p class="demo4">
-              Intellicept is a leading digital marketing service provider that offers a comprehensive range of solutions to help businesses achieve their marketing goals. Our team of experts is highly skilled in various aspects of digital marketing, including SEO, PPC, social media marketing, content marketing, and more.
-            </p>
-            <p class="demo4">
-              We use data-driven strategies to deliver results that are tailored to our clients' unique needs, and we are committed to helping our clients grow their online presence and drive revenue.
-            </p>
-            <p class="demo4">
-              With our expertise and experience, we can help your business achieve success in the highly competitive world of digital marketing.
-            </p>
-          </div>
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      <!-- Left Side Text -->
+      <div class="col-md-6 col-lg-5">
+        <div class="video-promo-content mb-md-4 mb-lg-0">
+          <h2 style="color: #000;">Digital Business Services</h2>
+          <p class="demo4">
+            Intellicept is a leading digital marketing service provider that offers a comprehensive range of solutions
+            to help businesses achieve their marketing goals. Our team of experts is highly skilled in various aspects
+            of digital marketing, including SEO, PPC, social media marketing, content marketing, and more.
+          </p>
+          <p class="demo4">
+            We use data-driven strategies to deliver results that are tailored to our clients' unique needs, and we are
+            committed to helping our clients grow their online presence and drive revenue.
+          </p>
+          <p class="demo4">
+            With our expertise and experience, we can help your business achieve success in the highly competitive world
+            of digital marketing.
+          </p>
         </div>
-  
-        <!-- Right Side Form -->
-        <div class="col-md-6 col-lg-6">
-          <div class="contact-us-form  rounded p-5" >
-            <h3 id="get" class="text-center mb-4 " style="color:#333"> <b> Get in touch with us </b></h3>
-            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-              <div class="form-group  mb-4">
-                <input
-                  type="text"
-                  class="form-control"
-                  formControlName="userName"
-                  placeholder="Enter name"
-                  [ngClass]="{'is-invalid': contactForm.get('userName')?.invalid && contactForm.get('userName')?.touched}"
-                />
-                <div *ngIf="contactForm.get('userName')?.invalid && contactForm.get('userName')?.touched" class="invalid-feedback">
-                  <div *ngIf="contactForm.get('userName')?.errors?.['required']">Name is required.</div>
-                  <div *ngIf="contactForm.get('userName')?.errors?.['minlength']">Name must be at least 2 characters long.</div>
+      </div>
+
+      <!-- Right Side Form -->
+      <div class="col-md-6 col-lg-6">
+        <div class="contact-us-form  rounded p-5">
+          <h3 id="get" class="text-center mb-4 " style="color:#333"> <b> Get in touch with us </b></h3>
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="form-group  mb-4">
+              <input type="text" class="form-control" formControlName="userName" placeholder="Enter name"
+                [ngClass]="{'is-invalid': contactForm.get('userName')?.invalid && contactForm.get('userName')?.touched}" />
+              <div *ngIf="contactForm.get('userName')?.invalid && contactForm.get('userName')?.touched"
+                class="invalid-feedback">
+                <div *ngIf="contactForm.get('userName')?.errors?.['required']">Name is required.</div>
+                <div *ngIf="contactForm.get('userName')?.errors?.['minlength']">Name must be at least 2 characters long.
                 </div>
               </div>
-              <div class="form-group mb-4 ">
-                <input
-                  type="email"
-                  class="form-control"
-                  formControlName="userEmail"
-                  placeholder="Enter email"
-                  [ngClass]="{'is-invalid': contactForm.get('userEmail')?.invalid && contactForm.get('userEmail')?.touched}"
-                />
-                <div *ngIf="contactForm.get('userEmail')?.invalid && contactForm.get('userEmail')?.touched" class="invalid-feedback">
-                  <div *ngIf="contactForm.get('userEmail')?.errors?.['required']">Email is required.</div>
-                  <div *ngIf="contactForm.get('userEmail')?.errors?.['email']">Please enter a valid email address.</div>
+            </div>
+            <div class="form-group mb-4 ">
+              <input type="email" class="form-control" formControlName="userEmail" placeholder="Enter email"
+                [ngClass]="{'is-invalid': contactForm.get('userEmail')?.invalid && contactForm.get('userEmail')?.touched}" />
+              <div *ngIf="contactForm.get('userEmail')?.invalid && contactForm.get('userEmail')?.touched"
+                class="invalid-feedback">
+                <div *ngIf="contactForm.get('userEmail')?.errors?.['required']">Email is required.</div>
+                <div *ngIf="contactForm.get('userEmail')?.errors?.['email']">Please enter a valid email address.</div>
+              </div>
+            </div>
+            <div class="form-group mb-4">
+              <input type="text" class="form-control" formControlName="userPhone" placeholder="Mobile No"
+                [ngClass]="{'is-invalid': contactForm.get('userPhone')?.invalid && contactForm.get('userPhone')?.touched}" />
+              <div *ngIf="contactForm.get('userPhone')?.invalid && contactForm.get('userPhone')?.touched"
+                class="invalid-feedback">
+                <div *ngIf="contactForm.get('userPhone')?.errors?.['required']">Phone number is required.</div>
+                <div *ngIf="contactForm.get('userPhone')?.errors?.['pattern']">Phone number must be exactly 10 digits.
                 </div>
               </div>
-              <div class="form-group mb-4">
-                <input
-                  type="text"
-                  class="form-control"
-                  formControlName="userPhone"
-                  placeholder="Mobile No"
-                  [ngClass]="{'is-invalid': contactForm.get('userPhone')?.invalid && contactForm.get('userPhone')?.touched}"
-                />
-                <div *ngIf="contactForm.get('userPhone')?.invalid && contactForm.get('userPhone')?.touched" class="invalid-feedback">
-                  <div *ngIf="contactForm.get('userPhone')?.errors?.['required']">Phone number is required.</div>
-                  <div *ngIf="contactForm.get('userPhone')?.errors?.['pattern']">Phone number must be exactly 10 digits.</div>
-                </div>
-              </div>
-              <div class="form-group mb-4">
-                <textarea
-                  class="form-control"
-                  formControlName="userMessage"
-                  rows="4"
-                  placeholder="Message"
-                  [ngClass]="{'is-invalid': contactForm.get('userMessage')?.invalid && contactForm.get('userMessage')?.touched}"
-                ></textarea>
-                <!-- <div *ngIf="contactForm.get('userMessage')?.invalid && contactForm.get('userMessage')?.touched" class="invalid-feedback">
+            </div>
+            <div class="form-group mb-4">
+              <textarea class="form-control" formControlName="userMessage" rows="4" placeholder="Message"
+                [ngClass]="{'is-invalid': contactForm.get('userMessage')?.invalid && contactForm.get('userMessage')?.touched}"></textarea>
+              <!-- <div *ngIf="contactForm.get('userMessage')?.invalid && contactForm.get('userMessage')?.touched" class="invalid-feedback">
                   <div *ngIf="contactForm.get('userMessage')?.errors?.['required']">Message is required.</div>
                   <div *ngIf="contactForm.get('userMessage')?.errors?.['minlength']">Message must be at least 10 characters long.</div>
                 </div> -->
-              </div>
-              <div class="text-center">
-                <button class="btn btn-primary" type="submit">Send Message</button>
-              </div>
-            </form>
-            
-          </div>
+            </div>
+            <div class="text-center">
+              <button class="btn btn-primary" type="submit">Send Message</button>
+            </div>
+          </form>
+
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 
 <section class="promo-block-section  mb-5">
   <div class="container mt-4" id="service">
     <div class="row">
-        <h3 class="text-center mt-5 mb-5"><span style="color:blue">Our Digital</span> Marketing Expertise</h3>
-        <div class="col-md-4 col-lg-4 mb-4" *ngFor="let card of cards">
-          <div class="single-promo-block p-5 rounded" [ngClass]="{'expanded': card.expanded}">
-            <img [src]="card.imageSrc" alt="promo" class="mb-3" [width]="card.imageWidth">
-            <div class="promo-block-content">
-              <h5>{{ card.title }}</h5>
-              <p>
-                {{ card.descriptionShort }}
-                <span id="dots">{{ card.expanded ? '' : '...' }}</span>
-                <span id="more" *ngIf="card.expanded">{{ card.descriptionFull }}</span>
-              </p>
-              <button class="btn" (click)="toggleReadMore(card)">
-                {{ card.expanded ? 'Read less' : 'Read more' }}
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <div class="dark-bg ">
-    <div
-      id="testimonialCarousel"
-      class="carousel slide"
-      data-bs-ride="carousel"
-      style="text-align: center"
-    >
-      <div class="carousel-inner">
-        <h3 class="testimonial-heading theme-bg mt-5">
-          What Our Clients Are Saying 
-        </h3>
-  
-        <div class="carousel-item active">
-          <p>
-            We have been using Intellicept's social media marketing service for several months now, and the results have been impressive. Their team has helped us build a strong online presence and increase our engagement with our target audience.
-          <br><br><span class="author">David Lee</span></p>
-        </div>
-        <div class="carousel-item">
-          <p>
-            Intellicept's email marketing campaign service has been critical in helping us stay connected with our customers and drive repeat business. Their team is professional, creative, and always goes above and beyond to deliver effective campaigns.
-            <br><br><span class="author">Emily Chen</span></p>
-                </div>
-        <div class="carousel-item">
-          <p>
-            We have been impressed with Intellicept's Google Ads service, which has helped us reach a wider audience and increase our online visibility. Their team is highly skilled and committed to delivering results that help us grow our business.
-            <br><br><span class="author">Michael Wong</span> </p>
-        </div>
-        <div class="carousel-item">
-          <p>
-            Intellicept's digital marketing services have been instrumental in helping us grow our business. Their team is highly skilled and dedicated to delivering results. We highly recommend their services.
-            <br><br><span class="author">John Smith</span> </p>
-        </div>
-        <div class="carousel-item">
+      <h3 class="text-center mt-5 mb-5"><span style="color:blue">Our Digital</span> Marketing Expertise</h3>
+      <div class="col-md-4 col-lg-4 mb-4" *ngFor="let card of cards">
+        <div class="single-promo-block p-5 rounded" [ngClass]="{'expanded': card.expanded}">
+          <img [src]="card.imageSrc" alt="promo" class="mb-3" [width]="card.imageWidth">
+          <div class="promo-block-content">
+            <h5>{{ card.title }}</h5>
             <p>
-                Thanks to Intellicept's SEO service, we have seen a significant improvement in our search engine rankings and website traffic. Their team is responsive, knowledgeable, and committed to delivering results.
-                 <br><br><span class="author">Sarah Johnson</span> </p>
+              {{ card.descriptionShort }}
+              <span id="dots">{{ card.expanded ? '' : '...' }}</span>
+              <span id="more" *ngIf="card.expanded">{{ card.descriptionFull }}</span>
+            </p>
+            <button class="btn" (click)="toggleReadMore(card)">
+              {{ card.expanded ? 'Read less' : 'Read more' }}
+            </button>
           </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#testimonialCarousel"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#testimonialCarousel"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
-  
-
-
-  <div class="container h-100 mt-5 mb-5">
-    <div class="row align-items-center h-100">
-      <div class="container rounded">
-        <h1 class="text-center  mb-3" style="color: #333;">Our Clients</h1>
-        <div class="slider">
-          <div class="logos">
-              <img class="LogoImg" src="/assets/infosys.jpg" alt="">
-              <img class="LogoImg" src="/assets/glenmark1.png" alt="">
-           <img class="LogoImg" src="/assets/apos.png" alt="">
-            <img class="LogoImg" src="/assets/hvr.png" alt="">   
-            <img class="LogoImg" src="/assets/hinduja.png" alt="">
-           <img class="LogoImg" src="/assets/marsicon.png" alt="">
-           <img class="LogoImg" src="/assets/leapwork.png" alt="">
-            <img class="LogoImg" src="/assets/tmobilelogo.png" alt="">   
-            <img class="LogoImg" src="/assets/transsions.png" alt="">
-       
-            <img class="LogoImg" src="/assets/infosys.jpg" alt="">
-            <img class="LogoImg" src="/assets/glenmark1.png" alt="">
-         <img class="LogoImg" src="/assets/apos.png" alt="">
-          <img class="LogoImg" src="/assets/hvr.png" alt="">   
-          <img class="LogoImg" src="/assets/hinduja.png" alt="">
-         <img class="LogoImg" src="/assets/marsicon.png" alt="">
-         <img class="LogoImg" src="/assets/leapwork.png" alt="">
-          <img class="LogoImg" src="/assets/tmobilelogo.png" alt="">   
-          <img class="LogoImg" src="/assets/transsions.png" alt="">
-      </div>
         </div>
       </div>
     </div>
-  
+  </div>
+</section>
+
+
+<div class="dark-bg ">
+  <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" style="text-align: center">
+    <div class="carousel-inner">
+      <h3 class="testimonial-heading theme-bg mt-5">
+        What Our Clients Are Saying
+      </h3>
+
+      <div class="carousel-item active">
+        <p>
+          We have been using Intellicept's social media marketing service for several months now, and the results have
+          been impressive. Their team has helped us build a strong online presence and increase our engagement with our
+          target audience.
+          <br><br><span class="author">David Lee</span>
+        </p>
+      </div>
+      <div class="carousel-item">
+        <p>
+          Intellicept's email marketing campaign service has been critical in helping us stay connected with our
+          customers and drive repeat business. Their team is professional, creative, and always goes above and beyond to
+          deliver effective campaigns.
+          <br><br><span class="author">Emily Chen</span>
+        </p>
+      </div>
+      <div class="carousel-item">
+        <p>
+          We have been impressed with Intellicept's Google Ads service, which has helped us reach a wider audience and
+          increase our online visibility. Their team is highly skilled and committed to delivering results that help us
+          grow our business.
+          <br><br><span class="author">Michael Wong</span>
+        </p>
+      </div>
+      <div class="carousel-item">
+        <p>
+          Intellicept's digital marketing services have been instrumental in helping us grow our business. Their team is
+          highly skilled and dedicated to delivering results. We highly recommend their services.
+          <br><br><span class="author">John Smith</span>
+        </p>
+      </div>
+      <div class="carousel-item">
+        <p>
+          Thanks to Intellicept's SEO service, we have seen a significant improvement in our search engine rankings and
+          website traffic. Their team is responsive, knowledgeable, and committed to delivering results.
+          <br><br><span class="author">Sarah Johnson</span>
+        </p>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+
+
+<div class="container h-100 mt-5 mb-5">
+  <div class="row align-items-center h-100">
+    <div class="container rounded">
+      <h1 class="text-center  mb-3" style="color: #333;">Our Clients</h1>
+      <div class="slider">
+        <div class="logos">
+          <img class="LogoImg" src="/assets/infosys.jpg" alt="">
+          <img class="LogoImg" src="/assets/glenmark1.png" alt="">
+          <img class="LogoImg" src="/assets/apos.png" alt="">
+          <img class="LogoImg" src="/assets/hvr.png" alt="">
+          <img class="LogoImg" src="/assets/hinduja.png" alt="">
+          <img class="LogoImg" src="/assets/marsicon.png" alt="">
+          <img class="LogoImg" src="/assets/leapwork.png" alt="">
+          <img class="LogoImg" src="/assets/tmobilelogo.png" alt="">
+          <img class="LogoImg" src="/assets/transsions.png" alt="">
+
+          <img class="LogoImg" src="/assets/infosys.jpg" alt="">
+          <img class="LogoImg" src="/assets/glenmark1.png" alt="">
+          <img class="LogoImg" src="/assets/apos.png" alt="">
+          <img class="LogoImg" src="/assets/hvr.png" alt="">
+          <img class="LogoImg" src="/assets/hinduja.png" alt="">
+          <img class="LogoImg" src="/assets/marsicon.png" alt="">
+          <img class="LogoImg" src="/assets/leapwork.png" alt="">
+          <img class="LogoImg" src="/assets/tmobilelogo.png" alt="">
+          <img class="LogoImg" src="/assets/transsions.png" alt="">
+        </div>
+      </div>
+    </div>
   </div>
 
+</div>
 
 
 
 
 
 
-  
-  
+
+
+
 <app-footer></app-footer>
