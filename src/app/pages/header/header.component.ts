@@ -20,7 +20,9 @@ export class HeaderComponent {
       }
     });
   }
-
+ngOnInit() {
+  this.onWindowScroll()
+}
   checkIfHomePage() {
     this.isHomePage = this.router.url === '/';
   }

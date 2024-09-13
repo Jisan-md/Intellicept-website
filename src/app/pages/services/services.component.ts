@@ -20,7 +20,7 @@ export class ServicesComponent {
       userName: ['', [Validators.required, Validators.minLength(2)]],
       userEmail: ['', [Validators.required, Validators.email]],
       phone: ['', [Validators.required, Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')]],
-      userMessage: ['', [Validators.required]]
+      userMessage: ['']
     });
   }
   
