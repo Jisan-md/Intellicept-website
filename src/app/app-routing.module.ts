@@ -151,6 +151,7 @@ const routes: Routes = [
     path: 'login',    
     component: AdminLoginComponent
   },
+
   {
     path: '**',
     component: NotFoundComponent

@@ -20,8 +20,9 @@ export class AddJobsComponent implements OnInit {
     // Initialize form for adding a new job
     this.addJobForm = this.fb.group({
       job_title: ['', [Validators.required, Validators.minLength(2)]],
-      job_description: ['', [Validators.required, Validators.minLength(10)]],
+      job_description: ['', Validators.required],
       start_application_date: ['', Validators.required],
+      end_application_date: ['', Validators.required], // Added End Date
       job_location: ['', Validators.required],
       no_of_position: ['', [Validators.required, Validators.min(1)]],
     });
@@ -31,6 +32,7 @@ export class AddJobsComponent implements OnInit {
       job_title: ['', [Validators.required, Validators.minLength(2)]],
       job_description: ['', [Validators.required, Validators.minLength(10)]],
       start_application_date: ['', Validators.required],
+      end_application_date: ['', Validators.required], // Added End Date
       job_location: ['', Validators.required],
       no_of_position: ['', [Validators.required, Validators.min(1)]],
     });
@@ -49,33 +51,33 @@ export class AddJobsComponent implements OnInit {
   }
 
   openEditModal(job: any) {
-    this.selectedJob = job; // Save the selected job for reference
+    this.selectedJob = job;
     this.isEditModalOpen = true;
   
-    // Format the date correctly (if needed) before patching values
     const formattedDate = new Date(job.start_application_date).toISOString().split('T')[0];
+    const formattedEndDate = new Date(job.end_application_date).toISOString().split('T')[0];
   
-    // Patch the values from the selected job into the edit form
     this.editJobForm.patchValue({
       job_title: job.job_title,
       job_description: job.job_description,
-      start_application_date: formattedDate, // Format the date to YYYY-MM-DD
+      start_application_date: formattedDate, 
+      end_application_date: formattedEndDate, 
       job_location: job.job_location,
       no_of_position: job.no_of_position
     });
   }
   
   onEditSubmit() {
+    console.log(this.editJobForm.value);
     if (this.editJobForm.valid && this.selectedJob) {
       const updatedJob = { ...this.selectedJob, ...this.editJobForm.value };
   
-      // Make API call to update the job
       this.commonService.updateJob(updatedJob).subscribe(
         (res: any) => {
           console.log('Job updated successfully:', res);
           this.commonService.showToast('success', 'Job updated successfully');
           this.closeEditModal();
-          this.fetchJob();  // Refresh the list after update
+          this.fetchJob(); 
         },
         (error) => {
           console.error('Error updating job:', error);
@@ -86,7 +88,7 @@ export class AddJobsComponent implements OnInit {
   }
   
   closeEditModal() {
-    this.isEditModalOpen = false;  // Close the edit modal
+    this.isEditModalOpen = false;  
   }
   
   onSubmit() {

@@ -45,13 +45,14 @@ export class DigitalMarketingServicesComponent implements OnInit {
 
     if (this.contactForm.valid) {
       this.commonService.digitalMarketingForm(this.contactForm.value).subscribe((res: any) => {
-        console.log('Form submitted successfully:', res);
-      }, (err: any) => {
-        // console.error('Form submission failed:', err);
+        // console.log('Form submitted successfully:', res);
         this.commonService.showToast('success', "Form submission successful");
         this.contactForm.reset();
         this.contactForm.markAsPristine();
         this.contactForm.markAsUntouched();
+
+      }, (err: any) => {
+        // console.error('Form submission failed:', err);
 
       });
     } else {

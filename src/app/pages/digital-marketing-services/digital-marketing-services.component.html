@@ -80,6 +80,77 @@
               <textarea class="form-control" formControlName="userMessage" rows="4" placeholder="Message"
                 [ngClass]="{'is-invalid': contactForm.get('userMessage')?.invalid && contactForm.get('userMessage')?.touched}"></textarea>
               <!-- <div *ngIf="contactForm.get('userMessage')?.invalid && contactForm.get('userMessage')?.touched" class="invalid-feedback">
+    <div class="container">
+      <div class="row justify-content-between align-items-center">
+        <!-- Left Side Text -->
+        <div class="col-md-6 col-lg-5">
+          <div class="video-promo-content mb-md-4 mb-lg-0">
+            <h2 style="color: #000;">Digital Business Services</h2>
+            <p class="demo4">
+              Intellicept is a leading digital marketing service provider that offers a comprehensive range of solutions to help businesses achieve their marketing goals. Our team of experts is highly skilled in various aspects of digital marketing, including SEO, PPC, social media marketing, content marketing, and more.
+            </p>
+            <p class="demo4">
+              We use data-driven strategies to deliver results that are tailored to our clients' unique needs, and we are committed to helping our clients grow their online presence and drive revenue.
+            </p>
+            <p class="demo4">
+              With our expertise and experience, we can help your business achieve success in the highly competitive world of digital marketing.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Right Side Form -->
+        <div class="col-md-6 col-lg-6">
+          <div class="contact-us-form  rounded p-5 my-2" >
+            <h3 id="get" class="text-center mb-4 " style="color:#333"> <b> Get in touch with us </b></h3>
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+              <div class="form-group  mb-4">
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="userName"
+                  placeholder="Enter name"
+                  [ngClass]="{'is-invalid': contactForm.get('userName')?.invalid && contactForm.get('userName')?.touched}"
+                />
+                <div *ngIf="contactForm.get('userName')?.invalid && contactForm.get('userName')?.touched" class="invalid-feedback">
+                  <div *ngIf="contactForm.get('userName')?.errors?.['required']">Name is required.</div>
+                  <div *ngIf="contactForm.get('userName')?.errors?.['minlength']">Name must be at least 2 characters long.</div>
+                </div>
+              </div>
+              <div class="form-group mb-4 ">
+                <input
+                  type="email"
+                  class="form-control"
+                  formControlName="userEmail"
+                  placeholder="Enter email"
+                  [ngClass]="{'is-invalid': contactForm.get('userEmail')?.invalid && contactForm.get('userEmail')?.touched}"
+                />
+                <div *ngIf="contactForm.get('userEmail')?.invalid && contactForm.get('userEmail')?.touched" class="invalid-feedback">
+                  <div *ngIf="contactForm.get('userEmail')?.errors?.['required']">Email is required.</div>
+                  <div *ngIf="contactForm.get('userEmail')?.errors?.['email']">Please enter a valid email address.</div>
+                </div>
+              </div>
+              <div class="form-group mb-4">
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="userPhone"
+                  placeholder="Mobile No"
+                  [ngClass]="{'is-invalid': contactForm.get('userPhone')?.invalid && contactForm.get('userPhone')?.touched}"
+                />
+                <div *ngIf="contactForm.get('userPhone')?.invalid && contactForm.get('userPhone')?.touched" class="invalid-feedback">
+                  <div *ngIf="contactForm.get('userPhone')?.errors?.['required']">Phone number is required.</div>
+                  <div *ngIf="contactForm.get('userPhone')?.errors?.['pattern']">Phone number must be exactly 10 digits.</div>
+                </div>
+              </div>
+              <div class="form-group mb-4">
+                <textarea
+                  class="form-control"
+                  formControlName="userMessage"
+                  rows="4"
+                  placeholder="Message"
+                  [ngClass]="{'is-invalid': contactForm.get('userMessage')?.invalid && contactForm.get('userMessage')?.touched}"
+                ></textarea>
+                <!-- <div *ngIf="contactForm.get('userMessage')?.invalid && contactForm.get('userMessage')?.touched" class="invalid-feedback">
                   <div *ngIf="contactForm.get('userMessage')?.errors?.['required']">Message is required.</div>
                   <div *ngIf="contactForm.get('userMessage')?.errors?.['minlength']">Message must be at least 10 characters long.</div>
                 </div> -->
@@ -94,6 +165,17 @@
     </div>
   </div>
 </section>
+              </div>
+              <div class="text-center ">
+                <button class="btn btn-primary" type="submit">Send Message</button>
+              </div>
+            </form>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 <section class="promo-block-section  mb-5">
