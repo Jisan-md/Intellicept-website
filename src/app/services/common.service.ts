@@ -24,12 +24,10 @@ export class CommonService {
     localStorage.setItem(this.isAuthenticatedKey, String(status));
   }
 
-  // Toast notification
   showToast(action: 'success' | 'error' | 'info' | 'warning', message: string) {
     this.toastr[action](message, action + "!", { timeOut: 3000, progressBar: true, progressAnimation: 'decreasing', positionClass: 'toast-top-right' });
   }
 
-  // Form submission methods
   serviceForm(data: any) {
     return this.http.post(`${this.apiUrl}service`, data);
   }
@@ -67,7 +65,6 @@ export class CommonService {
     return this.http.get(`${this.apiUrl}user-data`, { headers: this.header });
   }
 
-  // Job management methods
   fetchJob() {
     return this.http.get(`${this.apiUrl}get-jobs`, { headers: this.header });
   }

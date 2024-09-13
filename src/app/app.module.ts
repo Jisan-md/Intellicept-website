@@ -43,6 +43,7 @@ import { AdminServicesComponent } from './admin/admin-services/admin-services.co
 import { SideNavComponent } from './admin/side-nav/side-nav.component';
 import { AddJobsComponent } from './admin/add-jobs/add-jobs.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -75,7 +76,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     AdminServicesComponent,
     SideNavComponent,
     AddJobsComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
@@ -91,7 +92,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     RouterModule.forRoot([]),
     MatSidenavModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

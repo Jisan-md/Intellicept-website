@@ -1,17 +1,20 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CommonService } from '../../services/common.service';
+import {ToastrService} from 'ngx-toastr'
+
+
 
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
-  styleUrls: ['./contact-us.component.scss'] // Corrected to styleUrls
+  styleUrls: ['./contact-us.component.scss']
 })
 export class ContactUsComponent {
 
   contactForm!: FormGroup;
 
-  constructor(private fb: FormBuilder, private commonService: CommonService) { }
+  constructor(private fb: FormBuilder, private commonService: CommonService, private toastr: ToastrService) { }
 
   ngOnInit() {
     this.contactForm = this.fb.group({
@@ -21,6 +24,7 @@ export class ContactUsComponent {
       message: ['']
     });
   }
+
 
   onSubmit() {
     if (this.contactForm.valid) {

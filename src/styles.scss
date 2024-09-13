@@ -14,3 +14,12 @@
 p, li,blockquote,span,address{
     color: #707070;
 }
+
+
+  .toast-top-right {
+    position: fixed !important;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+  

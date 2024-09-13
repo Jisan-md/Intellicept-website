@@ -83,7 +83,7 @@
                             <textarea
                               formControlName="userMessage"
                               class="form-control"
-                              rows="7"
+                              rows="4"
                               placeholder="Message"
                               [ngClass]="{'is-invalid': contactForm.get('userMessage')?.invalid && contactForm.get('userMessage')?.touched}"
                             ></textarea>
@@ -93,8 +93,8 @@
                             </div> -->
                           </div>
                         </div>
-                        <div class="col-sm-12 mt-3 text-center">
-                          <button type="submit" class="btn submitBtn" [disabled]="contactForm.invalid">
+                        <div class="col-sm-12 mt-2 text-center">
+                          <button type="submit" class="btn submitBtn" >
                             Send Message
                           </button>
                         </div>

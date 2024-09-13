@@ -212,9 +212,15 @@ th {
     margin-bottom: 15px;
   }
   
-  input, textarea {
+  input {
     width: 100%;
     padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  textarea {
+    width: 100%;
+    padding: 0px 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
