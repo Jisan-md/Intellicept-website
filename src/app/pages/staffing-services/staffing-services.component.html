@@ -1,4 +1,13 @@
 <app-header></app-header>
+
+<div class="loading-dots" *ngIf="isLoading">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+  
+  <div *ngIf="!isLoading">
 <div class="banner">
     <img src="assets/staffing-service.jpg" alt="Banner Image" style="margin-top: 85px;">
 </div>
@@ -689,3 +698,4 @@
 </div>
 
 <app-footer></app-footer>
+</div>

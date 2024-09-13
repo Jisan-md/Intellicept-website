@@ -55,6 +55,7 @@ export class HomeComponent {
                     lifecycle management and business process outsourcing contract engagements.`
     }
   };
+  isLoading: boolean=true;
 
   openModal(modalId: 'modalOne' | 'modalTwo' | 'modalThree') {
     console.log(modalId);
@@ -65,5 +66,14 @@ export class HomeComponent {
   closeModal() {
     this.modalData = null;
     this.isModalOpen = false;
+  }
+  ngOnInit(): void {
+    this.simulateLoading();
+  }
+
+  simulateLoading(): void {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 300); 
   }
 }

@@ -10,18 +10,26 @@ import { CommonService } from '../../services/common.service';
 export class ServicesComponent {
 
   contactForm!: FormGroup;
+  isLoading: boolean = true;
 
   constructor(private fb: FormBuilder, private commonService: CommonService) {
    
   }
 
   ngOnInit() {
+    this.simulateLoading();
     this.contactForm = this.fb.group({
       userName: ['', [Validators.required, Validators.minLength(2)]],
       userEmail: ['', [Validators.required, Validators.email]],
       phone: ['', [Validators.required, Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')]],
       userMessage: ['']
     });
+  }
+  
+  simulateLoading(): void {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 300); 
   }
   
   onSubmit() {

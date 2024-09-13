@@ -1,4 +1,12 @@
 <app-header></app-header>
+<div class="loading-dots" *ngIf="isLoading">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+  
+  <div *ngIf="!isLoading">
 <section class="hero-section ptb-10" id="demo5" style="background: url('assets/industries.png')no-repeat center center / cover;margin-top: 85px;">
     <div class="hero-bottom-shape-two"></div>
     <div class="container">
@@ -102,3 +110,4 @@
     </div>
 </section>
 <app-footer></app-footer>
+</div>

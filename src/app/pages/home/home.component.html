@@ -1,5 +1,16 @@
 <app-header></app-header>
 <!-- <app-header></app-header> -->
+  
+  <div class="loading-dots" *ngIf="isLoading">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+  
+
+
+<div *ngIf="!isLoading">
 <section class="hero-equal-height pt-165 pb-100"
     style="background: url('/assets/bg-illustration.png') no-repeat center center / cover">
     <div class="hero-bottom-shape-two" style="background: url('assets/hero-bottom-shape.png') no-repeat bottom center">
@@ -543,3 +554,4 @@
     </div>
 </section>
 <app-footer></app-footer>
+</div>
