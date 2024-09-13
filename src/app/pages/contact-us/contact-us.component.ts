@@ -10,10 +10,12 @@ import { CommonService } from '../../services/common.service';
 export class ContactUsComponent {
 
   contactForm!: FormGroup;
+  isLoading: boolean = true;
 
   constructor(private fb: FormBuilder, private commonService: CommonService) { }
 
   ngOnInit() {
+    this.simulateLoading()
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -21,6 +23,12 @@ export class ContactUsComponent {
       message: ['']
     });
   }
+ 
+   simulateLoading(){
+     setTimeout(()=>{
+       this.isLoading = false;
+     },300);
+   }
 
   onSubmit() {
     if (this.contactForm.valid) {

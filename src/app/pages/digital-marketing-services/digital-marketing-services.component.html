@@ -1,4 +1,19 @@
 <app-header></app-header>
+<div class="loading-dots" *ngIf="isLoading">
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+</div>
+
+<div *ngIf="!isLoading">
+<section class="head-img" style="background: url('/assets/drive-traffics.jpg')no-repeat center center / cover ; margin-top: 85px;">
+    <div class="row justify-content-center">
+            <div class="text-header">
+                <!-- <h1 class="text-white mb-0"></h1> -->
+               
+                </div>
+            </div>
 <section class="head-img"
   style="background: url('/assets/drive-traffics.jpg')no-repeat center center / cover ; margin-top: 85px;">
 </section>
@@ -190,6 +205,12 @@
           <img class="LogoImg" src="/assets/leapwork.png" alt="">
           <img class="LogoImg" src="/assets/tmobilelogo.png" alt="">
           <img class="LogoImg" src="/assets/transsions.png" alt="">
+      </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
         </div>
       </div>
     </div>
@@ -206,3 +227,4 @@
 
 
 <app-footer></app-footer>
+</div>

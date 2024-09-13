@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './staffing-services.component.scss'
 })
 export class StaffingServicesComponent {
+  isLoading: boolean = true;
+  ngOnInit(): void {
+    this.simulateLoading();
+  }
 
+  simulateLoading(): void {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 300); 
+  }
 }
