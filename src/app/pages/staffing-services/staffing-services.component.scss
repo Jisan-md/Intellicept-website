@@ -86,7 +86,8 @@ h1,
 h2,
 h3,
 h4,
-h5,h6 {
+h5,
+h6 {
     margin: 0 0 1rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -316,15 +317,16 @@ h2 {
 
 .info-item i {
     margin-right: 10px;
-    color : #64559f;
+    color: #64559f;
 }
+
 .loading-dots {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .dot {
+}
+
+.dot {
     width: 10px;
     height: 10px;
     margin: 0 5px;
@@ -332,26 +334,29 @@ h2 {
     background-color: #000;
     border-radius: 50%;
     animation: bounce 1.5s infinite ease-in-out;
-  }
-  
-  .dot:nth-child(2) {
-    animation-delay: 0.3s;
-  }
-  
-  .dot:nth-child(3) {
-    animation-delay: 0.6s;
-  }
-  
-  @keyframes bounce {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.5);
-    }
-  }
-    color: #64559f;
 }
+
+.dot:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+}
+
+
 
 img {
     max-width: 100%;
@@ -444,6 +449,7 @@ svg {
     font-size: 22px;
     font-weight: 600;
 }
+
 .col4 .quality-card {
     background-color: #edf2fe;
 }
