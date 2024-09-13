@@ -12,6 +12,14 @@ export class CareerComponent {
   applyForm!: FormGroup;
   errorMessage: string = '';
   file: File | null = null;
+  isModalOpen = false; 
+  isSaveModalOpen = false; 
+  jobData: any = {};  
+  selectedJob: any = null; 
+  isLoading: boolean = true;
+  constructor(private fb: FormBuilder, private commonService: CommonService) {
+   
+  }
   isSaveModalOpen = false;
   jobData: any[] = [];
   selectedJob: any = null;
@@ -20,13 +28,22 @@ export class CareerComponent {
 
   ngOnInit() {
     this.fetchJob();
-
+    this.simulateLoading()
     this.applyForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
       desc: [''],
     });
+  }
+
+ 
+   simulateLoading(){
+     setTimeout(()=>{
+       this.isLoading = false;
+     },300);
+   }
+   
   }
 
   isEndDateExpired(endDate: string): boolean {

@@ -1,5 +1,14 @@
 <app-header></app-header>
 
+
+<div class="loading-dots" *ngIf="isLoading">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+  
+<div *ngIf="!isLoading">
 <div class="main" style="margin-top: 85px;">
 
     <!--header section start-->
@@ -434,3 +443,4 @@
     </div>
 </div>
 <app-footer></app-footer>
+</div>

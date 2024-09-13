@@ -1,5 +1,16 @@
 <app-header></app-header>
 <!-- <app-header></app-header> -->
+  
+  <div class="loading-dots" *ngIf="isLoading">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+  
+
+
+<div *ngIf="!isLoading">
 <section class="hero-equal-height pt-165 pb-100"
     style="background: url('/assets/bg-illustration.png') no-repeat center center / cover">
     <div class="hero-bottom-shape-two" style="background: url('assets/hero-bottom-shape.png') no-repeat bottom center">
@@ -8,7 +19,7 @@
         <div class="row align-items-center">
             <div class="col-md-12 col-lg-6">
                 <div class="hero-slider-content text-white z-index position-relative">
-                    <h1 class="text-white" id="res" style="font-size: 55px;">Digital Transformation</h1>
+                    <h1 class="text-white" id="res" style="font-size: 51px;">Digital Transformation</h1>
                     <h2 class="text-white">Enabled for tomorrow’s business</h2>
                     <p class="lead">Transform the way you do business by providing an extremely engaging experience for
                         your customer.</p>
@@ -543,3 +554,4 @@
     </div>
 </section>
 <app-footer></app-footer>
+</div>

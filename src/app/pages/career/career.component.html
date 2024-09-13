@@ -1,5 +1,12 @@
 <app-header></app-header>
+<div class="loading-dots" *ngIf="isLoading">
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+</div>
 
+<div *ngIf="!isLoading">
 <!--header section start-->
 <section class="head-img" style="
     background: url('/assets/career5.png') no-repeat center center / cover;

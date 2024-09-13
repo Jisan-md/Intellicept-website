@@ -1,4 +1,13 @@
 <app-header></app-header>
+<div class="loading-dots" *ngIf="isLoading">
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+</div>
+
+<div *ngIf="!isLoading">
+
         <section class="head-img" style="background: url('/assets/Services.jpg')no-repeat center center / cover;margin-top: 85px;">
                 <div class="row justify-content-center">
                         <div class="text-header">
@@ -120,3 +129,4 @@
     <!--bottom to top button end-->
     
     <app-footer></app-footer>
+    </div>
