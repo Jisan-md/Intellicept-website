@@ -42,6 +42,7 @@ import { AdminDigitalBusinessServicesComponent } from './admin/admin-digital-bus
 import { AdminServicesComponent } from './admin/admin-services/admin-services.component';
 import { SideNavComponent } from './admin/side-nav/side-nav.component';
 import { AddJobsComponent } from './admin/add-jobs/add-jobs.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,7 +74,8 @@ import { AddJobsComponent } from './admin/add-jobs/add-jobs.component';
     AdminDigitalBusinessServicesComponent,
     AdminServicesComponent,
     SideNavComponent,
-    AddJobsComponent
+    AddJobsComponent,
+    NotFoundComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [

@@ -9,7 +9,7 @@
         <h5 style="text-align: center;margin-top: 30px;"> No Data Found</h5>
     </ng-template>
     <div class="col-12" style="padding: 0 0;">
-        <div class="panel">
+        <div class="panel mt-2">
             <div *ngIf="jobData && jobData.length > 0; else noDataTemplate">
                 <div id="accordionExample" class="accordion">
                     <div *ngFor="let job of jobData" class="accordion-item mb-3">
@@ -39,63 +39,64 @@
         </div>
     </div>
     
-    <!-- Edit Job Modal -->
-    <div *ngIf="isEditModalOpen" class="modal" tabindex="-1" role="dialog" style="display: block;">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Edit Job</h5>
-                    <button type="button" class="close-btn" aria-label="Close" (click)="closeEditModal()">
-                       &times;
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form [formGroup]="editJobForm" (ngSubmit)="onEditSubmit()">
-                        <div class="row">
-                          <div class="col-md-6 form-group">
+  
+</div><!--viewport div -->
+
+
+ <!-- Edit Job Modal -->
+<div *ngIf="isEditModalOpen" class="modal" tabindex="-1" role="dialog" style="display: block;">
+    <div class="modal-dialog modal-lg" role="document"> 
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Job</h5>
+                <button type="button" class="close-btn" aria-label="Close" (click)="closeEditModal()">
+                   &times;
+                </button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="editJobForm" (ngSubmit)="onEditSubmit()">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 form-group">
                             <label>Job Title</label>
                             <input type="text" class="form-control" formControlName="job_title">
-                          </div>
-                          <div class="col-md-6 form-group">
+                        </div>
+                        <div class="col-12 col-sm-6 form-group">
                             <label>Job Location</label>
                             <input type="text" class="form-control" formControlName="job_location">
-                          </div>
                         </div>
-                      
-                        <div class="row">
-                          <div class="col-md-6 form-group">
+                    </div>
+                  
+                    <div class="row">
+                        <div class="col-12 col-sm-6 form-group">
                             <label>No. of Positions</label>
                             <input type="number" class="form-control" formControlName="no_of_position">
-                          </div>
-                      
-                          <div class="col-md-6 form-group">
+                        </div>
+                  
+                        <div class="col-12 col-sm-6 form-group">
                             <label>Date of Opening</label>
                             <input type="date" class="form-control" formControlName="start_application_date">
-                          </div>
                         </div>
-                      
-                        <div class="row">
-                          <div class="col-md-12 form-group">
+                    </div>
+                  
+                    <div class="row">
+                        <div class="col-12 form-group">
                             <label>Job Description</label>
                             <textarea class="form-control" formControlName="job_description" rows="4"></textarea>
-                          </div>
                         </div>
-                      
-                        <div class="row editButton">
-                          <div class="col-md-12 d-flex justify-content-center">
-                            <button type="submit" class="btn btn-primary">Save</button>
-                          </div>
+                    </div>
+                  
+                    <div class="row editButton">
+                        <div class="col-12 d-flex justify-content-center">
+                            <button type="submit" class="btn _button">Update</button>
                         </div>
-                      </form>
-                      
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    
-   
-
 </div>
+
+
 
 
 

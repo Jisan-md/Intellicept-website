@@ -18,7 +18,7 @@ export class DigitalMarketingServicesComponent implements OnInit {
       userName: ['', [Validators.required, Validators.minLength(2)]],
       userEmail: ['', [Validators.required, Validators.email]],
       userPhone: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
-      userMessage: ['', [Validators.required, Validators.minLength(10)]]
+      userMessage: ['']
     });
   }
 

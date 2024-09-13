@@ -29,7 +29,7 @@ export class CareerComponent {
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
-      desc: ['', [Validators.required, Validators.minLength(10)]],
+      desc: [''],
     });
   }
 

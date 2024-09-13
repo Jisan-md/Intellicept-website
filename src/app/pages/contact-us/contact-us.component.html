@@ -132,8 +132,8 @@
                     [ngClass]="{'is-invalid': contactForm.get('message')?.invalid && contactForm.get('message')?.touched}"
                   ></textarea>
                   <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="invalid-feedback">
-                    <div *ngIf="contactForm.get('message')?.errors?.['required']">Message is required.</div>
-                    <div *ngIf="contactForm.get('message')?.errors?.['minlength']">Message must be at least 10 characters long.</div>
+                    <!-- <div *ngIf="contactForm.get('message')?.errors?.['required']">Message is required.</div> -->
+                    <!-- <div *ngIf="contactForm.get('message')?.errors?.['minlength']">Message must be at least 10 characters long.</div> -->
                   </div>
                 </div>
               </div>
@@ -178,6 +178,8 @@
       allowfullscreen=""
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
+      style="  box-shadow: rgba(19, 81, 168, 0.3) 0px 1px 2px 0px, rgba(19, 81, 168, 0.15) 0px 2px 6px 2px;
+"
     ></iframe>
   </div>
 </div>
