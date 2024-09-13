@@ -20,11 +20,6 @@ export class CareerComponent {
   constructor(private fb: FormBuilder, private commonService: CommonService) {
    
   }
-  isSaveModalOpen = false;
-  jobData: any[] = [];
-  selectedJob: any = null;
-
-  constructor(private fb: FormBuilder, private commonService: CommonService) {}
 
   ngOnInit() {
     this.fetchJob();
@@ -43,10 +38,7 @@ export class CareerComponent {
        this.isLoading = false;
      },300);
    }
-   
-  }
-
-  isEndDateExpired(endDate: string): boolean {
+   isEndDateExpired(endDate: string): boolean {
     const currentDate = new Date();
     const endApplicationDate = new Date(endDate);
     return endApplicationDate < currentDate; 
@@ -60,7 +52,6 @@ export class CareerComponent {
       this.openSaveModal();
     }
   }
-
   onFileChange(event: any) {
     if (event.target.files.length > 0) {
       this.file = event.target.files[0];
