@@ -9,7 +9,6 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class AboutUsComponent {
   modalData: any = null;
   isModalOpen = false;
-  isLoading: boolean = true;
 
 
   // Owl Carousel options
@@ -107,13 +106,7 @@ export class AboutUsComponent {
     this.isModalOpen = false;
   }
   ngOnInit():void{
-   this.simulateLoading()
   }
 
-  simulateLoading(){
-    setTimeout(()=>{
-      this.isLoading = false;
-    },300);
-  }
-
+ 
 }

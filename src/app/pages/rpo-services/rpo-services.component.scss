@@ -22,9 +22,8 @@
 }
 
 .faq-section {
-    background-color: #f8f8f8;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .faq-section .container-fluid {
@@ -201,3 +200,11 @@ h3{
     }
   }
   
+  .box {
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

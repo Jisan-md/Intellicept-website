@@ -1,13 +1,6 @@
 <app-header></app-header>
 
-<div class="loading-dots" *ngIf="isLoading">
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-</div>
 
-<div *ngIf="!isLoading">
     <div class="banner">
         <img src="assets/staffing-service.jpg" alt="Banner Image" style="margin-top: 85px;">
     </div>
@@ -74,7 +67,7 @@
         </section>
 
 
-        <section class="py-5 bg-light">
+        <section class="py-5">
 
             <div class="challenge-section bg-shape-right-top pb-2 my-4">
                 <div class="container-fluid py-4">
@@ -208,7 +201,25 @@
             </div>
 
         </div>
-     
+        <!-- <div class="row justify-content-center">
+        <div class="col-md-10" style="text-align:justify; margin-top:60px;">
+            <div class="section-heading text-center mb-3">
+                <h2>Adobe Skill Sets</h2>
+            </div>
+            <div class="info-list">
+                <div class="info-item">
+                    <i class="fa fa-check-circle mr-2 color-secondary"></i>Senior Solution Consultants
+                </div>
+                <div class="info-item">
+                    <i class="fa fa-check-circle mr-2 color-secondary"></i>Senior Engineering Manager
+                </div>
+                <div class="info-item">
+                    <i class="fa fa-check-circle mr-2 color-secondary"></i>Solution Architect
+                </div>
+            </div>
+
+        </div>
+    </div> -->
 
 
         <div class="feature-section mt-4 mb-2">
@@ -253,64 +264,60 @@
             </div>
 
         </div>
-
-        <div class="row justify-content-center" style="background-color: #f5f5f5;">
+        <div class="row justify-content-center">
             <div class="col-md-10" style="text-align:justify">
-                <div class="section-heading text-center mb-5">
-                    <h2>Staffing Methodology </h2>
+                <div class="section-heading text-center my-5">
+                    <h2>Staffing Methodology</h2>
                 </div>
-
             </div>
         </div>
-
-        <div class="flow1" style="background-color: #f5f5f5;">
+        
+        <div class="flow1 ">
             <div class="box">
                 <p>Requirement from client in the form of JD</p>
-
             </div>
-            <div class="right-arrow">→</div>
+            <div class="arrow right-arrow desktop-only">→</div> 
+            <div class="arrow down-arrow mobile-only">↓</div>
+            
             <div class="box">
                 <p>JD shared with the Recruitment Team <br>same Day</p>
-
             </div>
-            <div class="right-arrow">→</div>
+            <div class="arrow right-arrow desktop-only">→</div>
+            <div class="arrow down-arrow mobile-only">↓</div>
+        
             <div class="box">
                 <p>Recruitment Team Analyze the <br>position check Internal <br>availability</p>
             </div>
         </div>
-        <div class="down-arrow mb-3">↓</div>
-        <div class="flow1" style="background-color: #f5f5f5;">
+        
+        <div class="arrow down-arrow my-3 downn">↓</div>
+        
+        <div class="flow1 flow11">
             <div class="box">
                 <p>Sales Share it with client along with T&amp;M cost</p>
             </div>
-            <div class="left-arrow">←</div>
+            <div class="arrow left-arrow desktop-only">←</div>
+            <div class="arrow down-arrow mobile-only">↓</div> 
+        
             <div class="box">
-                <p>Yes than Share the credentials forward <br>to Sales</p>
+                <p>Yes, then Share the credentials forward <br>to Sales</p>
             </div>
-            <div class="left-arrow">←</div>
-            <div class="box mt-5">
-                <p>If Resource is not available <br>Internally than Market search <br>is done and best possible
-                    candidate is
-                    provided</p>
+            <div class="arrow left-arrow desktop-only">←</div>
+            <div class="arrow down-arrow mobile-only ">↓</div> 
+        
+            <div class="box mt">
+                <p>If Resource is not available Internally, market search is done and the best possible candidate is provided</p>
             </div>
-
         </div>
-        <div class="down-arrow">↓</div>
-        <div class="flow1 pb-5" style="background-color: #f5f5f5;">
-            <div class="box " style="visibility: hidden;">
-                <p>Sales Share it with client along with T&amp;M cost</p>
-            </div>
-
-            <div class="box" style="visibility: hidden;">
-                <p>Yes than Share the credentials forward <br>to Sales</p>
-            </div>
-
-            <div class="box desktop-only ">
+        
+        <div class="arrow down-arrow downn my-3">↓</div>
+        
+        <div class="flow1 downn1 pb-5" >
+            <div class="box ">
                 <p>Only for long <br>term engagement</p>
-
             </div>
-
         </div>
+        
         <div class="row justify-content-center">
             <div class="col-md-10" style="text-align:justify; margin-top:60px;">
                 <div class="section-heading text-center mb-5">
@@ -366,7 +373,7 @@
                         <a href="https://www.youtube.com/watch?v=9No-FiEInLA" class="popup-youtube video-play-icon color-bip shadow"><span class="ti-control-play"></span> </a>
                     </div> -->
                     </div>
-                </div>
+                </div><br>
                 <div class="col-md-12 col-lg-5">
 
                     <div class="video-promo-content mb-md-4 mb-lg-0">
@@ -390,7 +397,7 @@
 
         <div class="row justify-content-center mt-2">
             <div class="col-md-10" style="text-align:justify; margin-top:137px;">
-                <div class="section-heading text-center mb-5">
+                <div class="section-heading text-center my-5">
                     <h2>Appendix</h2>
                     <p class="lead"><span style="font-weight: 600;color: black;">Success Stories of SAP Implementation
                             by
@@ -486,7 +493,9 @@
 <hr >
 
 
-        <h2 style="text-align: center;">Our SAP Success Stories</h2>
+
+        <div class="container">
+            <h2 class="mt-5">Our SAP Success Stories</h2>
 
         <!-- Section 1 -->
         <div class="story-wrapper">
@@ -584,14 +593,14 @@
             </div>
 
 
-            <div class="story">
-                <h3>Consumer Electronics Retailer - CPG
-                </h3>
-                <div class="card-group">
-                    <div class="card">
-                        <i class="icon problem-icon"></i>
-                        <h4>Problem</h4>
-                        <p>No Single Source of Truth
+                <div class="story mb-4">
+                    <h3>Consumer Electronics Retailer - CPG
+                    </h3>
+                    <div class="card-group">
+                        <div class="card">
+                            <i class="icon problem-icon"></i>
+                            <h4>Problem</h4>
+                            <p>No Single Source of Truth
 
                         </p>
                         <p>Multiple systems and people in silos
@@ -623,4 +632,3 @@
 
     </div>
     <app-footer></app-footer>
-</div>

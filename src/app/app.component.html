@@ -1,2 +1,7 @@
-<router-outlet />
-<ngx-scrolltop></ngx-scrolltop>
+<div *ngIf="isLoading" class="preloader">
+    <div class="spinner"></div>
+  </div>
+  
+  <router-outlet></router-outlet>
+  <ngx-scrolltop></ngx-scrolltop>
+  

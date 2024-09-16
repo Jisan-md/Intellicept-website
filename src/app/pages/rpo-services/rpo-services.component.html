@@ -1,127 +1,161 @@
 <app-header></app-header>
-<div class="loading-dots" *ngIf="isLoading">
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-  </div>
 
-  <div *ngIf="!isLoading">
-<section class="hero-section ptb-10 gradient" id="demo6" style="background: url('assets/rpo-service.png')no-repeat center center / cover;margin-top: 85px;">
-    <div class="hero-bottom-shape-two"></div>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-7">
-                <div class="page-header-content text-white text-center pt-sm-5 pt-md-5 pt-lg-0">
-                    <h1 class="text-white mb-0">RPO Services</h1>
+
+    <section class="hero-section ptb-10 gradient" id="demo6"
+        style="background: url('assets/rpo-service.png')no-repeat center center / cover;margin-top: 85px;">
+        <div class="hero-bottom-shape-two"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-7">
+                    <div class="page-header-content text-white text-center pt-sm-5 pt-md-5 pt-lg-0">
+                        <h1 class="text-white mb-0">RPO Services</h1>
                     </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Recruitment Section -->
+            <div class="col-md-7">
+                <h2 class="recr" id="rec" data-toggle="collapse" data-target="#demo" aria-expanded="true"
+                    aria-controls="collapseOne"><span style="color: #000;">Recruitment</span></h2>
+                <div class="recr" style="text-align:justify;line-height: 30px; color: #707070;">
+                    <b style="color: #333;">Intellicept</b> provides full-time dedicated recruiters who possess years of
+                    industry experience.
+                    Our team of dedicated offshore recruiters is highly beneficial for the companies that need a
+                    complete control over human and technical resources involved in the recruiting process.<br>
+
+                    All of our Offshore Dedicated Recruiters are acquainted with all the necessary skills, tools,
+                    and technologies to support your recruitment process efficiently. Our offshore dedicated team
+                    or a dedicated resource will work as an extension of your team and fulfill your manpower needs
+                    at a fraction of the cost.<br>
+
+                    Our Recruitment Manager can closely analyze the open positions based on the business requirements
+                    and scrutinize the process of evaluation so as to bring in the best talent available that can fuel
+                    the growth of your organization.<br>
+                    Extremely useful and beneficial for all medium-sized to large corporate sectors, our Offshore
+                    Recruitment Manager can bridge the gap between acquiring quality manpower with optimal
+                    results.
+
+                </div>
+            </div>
+
+            <!-- Help Section -->
+            <div class="col-md-5 text-center mt-4 p-4">
+                <div class="help-section  text-white p-4 rounded">
+                    <h1>Need Help?</h1>
+                    <p>Prefer speaking with a human to filling out a form? Call our corporate office and we will connect
+                        you with a team member who can help.</p>
+                    <a href="contact-us">
+                        <button type="button" class="btn btn-primary btn-lg center">SCHEDULE YOUR APPOINTMENT</button>
+                    </a>
+                    <br><br>
+                    <i class="fa fa-phone" style="font-size:24px;">&nbsp;&nbsp; +1 888 727 2497</i>
+                    <i class="fa fa-envelope" style="font-size:22px;">&nbsp;&nbsp; information&#64;intellicept.com</i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container my-4">
+        <h3 class="text-center mb-4">You Can Count On Our Resource For:</h3>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="box" style="background-color: #f2d7d5;">
+                    <i class="fa fa-check-circle"></i> Analysis of Positions &amp; Requirements
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="box" style="background-color: #d5f5e3;">
+                    <i class="fa fa-check-circle"></i> Candidate Research
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="box" style="background-color: #d6eaf8;">
+                    <i class="fa fa-check-circle"></i> Candidate Screening
                 </div>
             </div>
         </div>
     
-</section>
-
-<div class="container mt-5">
-    <div class="row">
-        <!-- Recruitment Section -->
-        <div class="col-md-7">
-            <h2 class="recr" id="rec" data-toggle="collapse" data-target="#demo" aria-expanded="true"
-                aria-controls="collapseOne"><span style="color: #000;">Recruitment</span></h2>
-            <div class="recr"  style="text-align:justify;line-height: 30px; color: #707070;">
-                <b style="color: #333;">Intellicept</b> provides full-time dedicated recruiters who possess years of industry experience.
-                Our team of dedicated offshore recruiters is highly beneficial for the companies that need a
-                complete control over human and technical resources involved in the recruiting process.<br>
-
-                All of our Offshore Dedicated Recruiters are acquainted with all the necessary skills, tools,
-                and technologies to support your recruitment process efficiently. Our offshore dedicated team
-                or a dedicated resource will work as an extension of your team and fulfill your manpower needs
-                at a fraction of the cost.<br>
-
-                Our Recruitment Manager can closely analyze the open positions based on the business requirements
-                and scrutinize the process of evaluation so as to bring in the best talent available that can fuel
-                the growth of your organization.<br>
-                Extremely useful and beneficial for all medium-sized to large corporate sectors, our Offshore
-                Recruitment Manager can bridge the gap between acquiring quality manpower with optimal
-                results. <br>
-                <br>
-                <h3>You Can Count On Our Resource For:</h3>
-                <div>
-                    <div>
-                        <i class="fas fa-mars-stroke-h"></i> Analysis of Positions &amp; Requirements
-                    </div>
-                    <div>
-                        <i class="fas fa-mars-stroke-h"></i> Candidate Research
-                    </div>
-                    <div>
-                        <i class="fas fa-mars-stroke-h"></i> Candidate Screening
-                    </div>
-                    <div>
-                        <i class="fas fa-mars-stroke-h"></i> Setting up Interviews
-                    </div>
-                    <div>
-                        <i class="fas fa-mars-stroke-h"></i> Issuing Job Offer
-                    </div>
-                    <div>
-                        <i class="fas fa-mars-stroke-h"></i> Acceptance &amp; Joining
-                    </div>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="box" style="background-color: #f9e79f;">
+                    <i class="fa fa-check-circle"></i> Setting up Interviews
                 </div>
-                
-                <h3>An Outline of Service:</h3>
-                
-                <div>
-                    <i class="fas fa-mars-stroke-h"></i> Dedicated Recruiter
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="box" style="background-color: #fad7a0;">
+                    <i class="fa fa-check-circle"></i> Issuing Job Offer
                 </div>
-                <div>
-                    <i class="fas fa-mars-stroke-h"></i> 4+ years of experience
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="box" style="background-color: #e8daef;">
+                    <i class="fa fa-check-circle"></i> Acceptance &amp; Joining
                 </div>
-                <div>
-                    <i class="fas fa-mars-stroke-h"></i> Experience working on all kinds of positions such as full-time, C2H, and Contract requirements
-                </div>
-                <div>
-                    <i class="fas fa-mars-stroke-h"></i> Working in US time zone
-                </div>
-                <div>
-                    <i class="fas fa-mars-stroke-h"></i> Covers at least three jobs per day
-                </div>
-                <div>
-                    <i class="fas fa-mars-stroke-h"></i> Sourcing tools and Job boards (Dice, Career Builder, Monster, Net-Temps, Ladders, Jobs Circle, Indeed, Google, Internal Database)
-                </div>
-                <div>
-                    <i class="fas fa-mars-stroke-h"></i> Social Media Platforms (LinkedIn, Facebook, etc.) profile sourcing
-                </div>
-                
             </div>
         </div>
-
-        <!-- Help Section -->
-        <div class="col-md-5 text-center mt-4 p-4" >
-            <div class="help-section  text-white p-4 rounded">
-                <h1>Need Help?</h1>
-                <p>Prefer speaking with a human to filling out a form? Call our corporate office and we will connect you with a team member who can help.</p>
-                <a href="contact-us">
-                    <button type="button" class="btn btn-primary btn-lg center">SCHEDULE YOUR APPOINTMENT</button>
-                </a>
-                <br><br>
-                <i class="fa fa-phone" style="font-size:24px;">&nbsp;&nbsp; +1 888 727 2497</i>
-                <i class="fa fa-envelope" style="font-size:22px;">&nbsp;&nbsp; information&#64;intellicept.com</i>
+    
+        <h3 class="text-center my-4">An Outline of Service:</h3>
+    
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="box" style="background-color: #fcf3cf;">
+                    <i class="fa fa-check-circle"></i> Dedicated Recruiter
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="box" style="background-color: #d1f2eb;">
+                    <i class="fa fa-check-circle"></i> 4+ years of experience
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="box" style="background-color: #f5c6cb;">
+                    <i class="fa fa-check-circle"></i> Experience working on all kinds of positions
+                </div>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="box" style="background-color: #e6b0aa;">
+                    <i class="fa fa-check-circle"></i> Working in US time zone
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="box" style="background-color: #a3e4d7;">
+                    <i class="fa fa-check-circle"></i> Covers at least three jobs per day
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="box" style="background-color: #d7bde2;">
+                    <i class="fa fa-check-circle"></i> Sourcing tools and Job boards
+                </div>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="box" style="background-color: #a9cce3;">
+                    <i class="fa fa-check-circle"></i> Social Media Platforms (LinkedIn, Facebook, etc.)
+                </div>
             </div>
         </div>
     </div>
-</div>
+    
+
+    <div class="faq-section pt-100 ">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-5 order-2 order-lg-1 col-md-12">
+                    <div class="faq-item-image text-center position-relative">
+                        <img src="assets/eim_crucial.png" alt="about" class="main-image" />
 
 
-
-
-
-<div class="faq-section pt-100 bg-f8f8f8">
-    <div class="container-fluid">
-        <div class="row align-items-center">
-            <div class="col-lg-5 order-2 order-lg-1 col-md-12">
-                <div class="faq-item-image text-center position-relative">
-                    <img src="assets/eim_crucial.png" alt="about" class="main-image" />
-
-
-                    <!-- <div class="faq-item-shape position-absolute"
+                        <!-- <div class="faq-item-shape position-absolute"
                         style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
                         <div class="faq-shape-image">
                             <img src="assets/faq-shape-1.png" alt="shape" />
@@ -130,135 +164,155 @@
                             <img src="assets/faq-shape-2.png" alt="shape" />
                         </div>
                     </div> -->
-                </div>
-            </div>
-
-            <div class="col-lg-7 order-1 order-lg-2 col-md-12">
-                <div class="faq-content">
-
-
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >
-                                    Sourcing Services
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body" style="line-height: 30px;">
-                                    Now stay ahead of your competition even when you sleep with dedicated night sourcing
-                                    specialist from <strong>Intellicept</strong>. Our dedicated night sourcing
-                                    specialist can provide you
-                                    with one of the best night sourcing services that can help you get a talented
-                                    workforce. <br>
-                                    Our night sourcing specialist will be responsible for sending your recruitment team
-                                    qualified resumes of the candidate, matching the profile, for their approval. They
-                                    source resumes from top-notch job boards including Dice, Career Builder, Monster,
-                                    Net-Temps, Ladders, Job Circle, Indeed, Google, and many others. <br>
-                                    Intellicept’s sourcing specialists are flexible and they change their sourcing
-                                    strategies for meeting your recruitment requirements. Our resume sourcing service is
-                                    one of the most sought after services especially for companies and recruiters who do
-                                    not have the time to search for the candidates themselves. <br>
-                                    <h4> An Outline of Service:</h4>
-                                    Dedicated night sourcing specialist <br>
-                                    3+ years of experience <br>
-                                    Works in US night time zone <br>
-                                    2-3 job orders covered on a daily basis <br>
-                                    Sourcing tools and Job boards (Dice, Career Builder, Monster, Net-Temps, Ladders,
-                                    Jobs Circle, Indeed, Google, Internal Database)
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Bench Marketing
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body" style="line-height: 30px;">
-                                    We, at <strong>Intellicept </strong>, provide qualified recruiters that represents
-                                    themselves as your
-                                    organization’s recruiters and handle all the intricacies involved in marketing your
-                                    consultants. With years of experience, our recruiters implement innovative
-                                    strategies to market your bench candidates for right jobs that are relevant to their
-                                    skills and knowledge. <br>
-                                    Our recruiters utilize popular internet recruiting portals such as Dice, Indeed USA,
-                                    Monster, Career builder, and LinkedIn, to successfully place your bench consultants
-                                    to prospective job openings, from fulltime to C2H requirements.
-                                    We offer one-of-a-kind bench marketing RPO services following complete marketing
-                                    cycle to get your consultants placed at the right position, and in the right firm.
-                                    From applying to job to negotiation, our recruiters identify, assess, prioritize,
-                                    qualify and close business opportunities in minimum time, and as per the
-                                    consultant’s ability.
-                                    <h4> An Outline of Service: </h4>
-                                    <strong> The prime role of Bench Marketing Recruiter involves the following
-                                        prerequisites: </strong>
-                                    Dedicated bench marketing specialist <br>
-                                    4+ years of experience <br>
-                                    Expertise in bench marketing <br>
-                                    Works in US night time zone <br>
-                                    Sourcing tools and Job boards (Dice, Career Builder, Monster, Net-Temps, Ladders,
-                                    Jobs Circle, Indeed, Google)
-                                    Coordinate for phone/Skype interviews with consultants <br>
-                                    Daily & weekly activity report to be submitted directly at the end of the day/ week
-                                    <br>
-                                    Performance Review / Feedback call Bi-weekly or Monthly with Relationship Manager
-                                    <br>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    IT professionals
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body" style="line-height: 30px;">
-                                    Dedicated Developers to scale up your Product <br>
-
-                                    <strong> Save up to 80% on Development/Maintenance/Support Cost <br>
-                                        Leverage Our Development Expertise in Order to Work Better Together</strong>
-                                    <br>
-                                    Intellicept has skilled Developers and Designers having 4 to 6 years of experience.
-                                    We have achieved unprecedented levels of customer satisfaction for 1000+ businesses
-                                    of varying sizes. We ensure credibility by helping you accomplish clear business
-                                    results with our communication and team culture.
-
-                                    <h4> How We Helped Rutly to Scale Up Their Operations</h4>
-                                    Creating the infrastructure to enable scaling (i.e., Creating systems to be able to
-                                    manage any number of customers, despite the customer size -Beehive)
-                                    Updating and refactor code to meet current best practices and standards
-                                    Migrating from AWS to GCP
-                                    Optimizing costs by migrating, reconciling, and eliminating any unnecessary
-                                    services.
-                                    Constantly updating the way we access, store, and utilize the data received from
-                                    customers via the various APIs. <br>
-                                    <h4> Benefits with Intellicept </h4>
-                                    Benefits With Intellicept. Dedicated Developers | 160 Working Hours/Month with
-                                    Flexible Hiring Models
-                                    Simple & Transparent Pricing | Agile Methodology | 5 Days Risk-Free Trial
-                                    Faster Resource Accessibility
-                                    Focus on Your Core Business
-                                    Large Technical Pool with wider Technology Stack
-                                    Client Satisfaction is Our Highest Priority
-                                </div>
-                            </div>
-                        </div>
                     </div>
+                </div>
 
+                <div class="col-lg-7 order-1 order-lg-2 col-md-12">
+                    <div class="faq-content">
+
+
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Sourcing Services
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body" style="line-height: 30px;">
+                                        Now stay ahead of your competition even when you sleep with dedicated night
+                                        sourcing
+                                        specialist from <strong>Intellicept</strong>. Our dedicated night sourcing
+                                        specialist can provide you
+                                        with one of the best night sourcing services that can help you get a talented
+                                        workforce. <br>
+                                        Our night sourcing specialist will be responsible for sending your recruitment
+                                        team
+                                        qualified resumes of the candidate, matching the profile, for their approval.
+                                        They
+                                        source resumes from top-notch job boards including Dice, Career Builder,
+                                        Monster,
+                                        Net-Temps, Ladders, Job Circle, Indeed, Google, and many others. <br>
+                                        Intellicept’s sourcing specialists are flexible and they change their sourcing
+                                        strategies for meeting your recruitment requirements. Our resume sourcing
+                                        service is
+                                        one of the most sought after services especially for companies and recruiters
+                                        who do
+                                        not have the time to search for the candidates themselves. <br>
+                                        <h4> An Outline of Service:</h4>
+                                        Dedicated night sourcing specialist <br>
+                                        3+ years of experience <br>
+                                        Works in US night time zone <br>
+                                        2-3 job orders covered on a daily basis <br>
+                                        Sourcing tools and Job boards (Dice, Career Builder, Monster, Net-Temps,
+                                        Ladders,
+                                        Jobs Circle, Indeed, Google, Internal Database)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Bench Marketing
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body" style="line-height: 30px;">
+                                        We, at <strong>Intellicept </strong>, provide qualified recruiters that
+                                        represents
+                                        themselves as your
+                                        organization’s recruiters and handle all the intricacies involved in marketing
+                                        your
+                                        consultants. With years of experience, our recruiters implement innovative
+                                        strategies to market your bench candidates for right jobs that are relevant to
+                                        their
+                                        skills and knowledge. <br>
+                                        Our recruiters utilize popular internet recruiting portals such as Dice, Indeed
+                                        USA,
+                                        Monster, Career builder, and LinkedIn, to successfully place your bench
+                                        consultants
+                                        to prospective job openings, from fulltime to C2H requirements.
+                                        We offer one-of-a-kind bench marketing RPO services following complete marketing
+                                        cycle to get your consultants placed at the right position, and in the right
+                                        firm.
+                                        From applying to job to negotiation, our recruiters identify, assess,
+                                        prioritize,
+                                        qualify and close business opportunities in minimum time, and as per the
+                                        consultant’s ability.
+                                        <h4> An Outline of Service: </h4>
+                                        <strong> The prime role of Bench Marketing Recruiter involves the following
+                                            prerequisites: </strong>
+                                        Dedicated bench marketing specialist <br>
+                                        4+ years of experience <br>
+                                        Expertise in bench marketing <br>
+                                        Works in US night time zone <br>
+                                        Sourcing tools and Job boards (Dice, Career Builder, Monster, Net-Temps,
+                                        Ladders,
+                                        Jobs Circle, Indeed, Google)
+                                        Coordinate for phone/Skype interviews with consultants <br>
+                                        Daily & weekly activity report to be submitted directly at the end of the day/
+                                        week
+                                        <br>
+                                        Performance Review / Feedback call Bi-weekly or Monthly with Relationship
+                                        Manager
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        IT professionals
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body" style="line-height: 30px;">
+                                        Dedicated Developers to scale up your Product <br>
+
+                                        <strong> Save up to 80% on Development/Maintenance/Support Cost <br>
+                                            Leverage Our Development Expertise in Order to Work Better Together</strong>
+                                        <br>
+                                        Intellicept has skilled Developers and Designers having 4 to 6 years of
+                                        experience.
+                                        We have achieved unprecedented levels of customer satisfaction for 1000+
+                                        businesses
+                                        of varying sizes. We ensure credibility by helping you accomplish clear business
+                                        results with our communication and team culture.
+
+                                        <h4> How We Helped Rutly to Scale Up Their Operations</h4>
+                                        Creating the infrastructure to enable scaling (i.e., Creating systems to be able
+                                        to
+                                        manage any number of customers, despite the customer size -Beehive)
+                                        Updating and refactor code to meet current best practices and standards
+                                        Migrating from AWS to GCP
+                                        Optimizing costs by migrating, reconciling, and eliminating any unnecessary
+                                        services.
+                                        Constantly updating the way we access, store, and utilize the data received from
+                                        customers via the various APIs. <br>
+                                        <h4> Benefits with Intellicept </h4>
+                                        Benefits With Intellicept. Dedicated Developers | 160 Working Hours/Month with
+                                        Flexible Hiring Models
+                                        Simple & Transparent Pricing | Agile Methodology | 5 Days Risk-Free Trial
+                                        Faster Resource Accessibility
+                                        Focus on Your Core Business
+                                        Large Technical Pool with wider Technology Stack
+                                        Client Satisfaction is Our Highest Priority
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<app-footer></app-footer>
-</div>
+    <app-footer></app-footer>
