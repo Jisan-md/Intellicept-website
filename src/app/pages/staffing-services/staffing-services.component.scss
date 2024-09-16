@@ -54,7 +54,7 @@ button:not(:disabled) {
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
-    text-align: center;
+    // text-align: center;
     background-color: #f1f1f1;
     height: 300px;
 }
@@ -89,7 +89,6 @@ h4,
 h5,
 h6 {
     margin: 0 0 1rem;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     line-height: 1.21;
     color: initial;
@@ -102,89 +101,6 @@ h6 {
 
 .no-bullets li {
     margin-bottom: 10px;
-    /* Optional: adds space between list items */
-}
-
-.flow1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-
-
-.flow1 {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    text-align: center;
-}
-
-.box {
-    flex: 1;
-    min-width: 250px;
-    max-width: 300px;
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.right-arrow,
-.left-arrow,
-.down-arrow {
-    font-size: 2rem;
-    color: #64559f;
-    padding: 0 10px;
-}
-
-.down-arrow {
-    // display: block;
-    position: relative;
-    right: 20%;
-    float: right;
-}
-
-@media (max-width: 768px) {
-    .flow1 {
-        flex-direction: column;
-    }
-
-    .right-arrow,
-    .down-arrow {
-        margin: 20px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .box p {
-        font-size: 14px;
-
-    }
-
-    .right-arrow,
-    .down-arrow {
-        font-size: 1.5rem;
-    }
-}
-
-/* Desktop-specific styles */
-@media (min-width: 769px) {
-    .desktop-only {
-        margin-left: 150px;
-        margin-top: 5rem;
-    }
-}
-
-/* Mobile and tablet views - these styles will hide the element */
-@media (max-width: 768px) {
-    .desktop-only {
-        margin-left: 0;
-        margin-top: 0;
-    }
 }
 
 .container {
@@ -234,12 +150,6 @@ h6 {
 .gray-light-bg {
     background: #e7e1e1;
 }
-
-.ptb-100 {
-    padding: 100px 0;
-}
-
-
 .sap-success-stories {
     padding: 30px;
     background-color: #e7e1e1;
@@ -422,7 +332,6 @@ svg {
         display: inline-block;
         color: #3f7cd1;
         box-shadow: var(--boxShadow);
-        // background-color:#3f7cd1;
 
     }
 
@@ -461,16 +370,8 @@ svg {
     position: relative;
     padding: 30px;
 }
-
-
-
-
-
-/* Container */
 .container {
-    padding: 40px;
-    background-color: #f7f8fc;
-    font-family: 'Open Sans', sans-serif;
+    // padding: 40px;
     color: #333;
     text-align: center;
 }
@@ -482,7 +383,6 @@ h2 {
     margin-bottom: 30px;
 }
 
-/* Story Wrapper */
 .story-wrapper {
     display: grid;
     gap: 40px;
@@ -495,7 +395,6 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Card Group */
 .card-group {
     display: flex;
     justify-content: space-between;
@@ -503,7 +402,6 @@ h2 {
     padding: 20px;
 }
 
-/* Individual Cards */
 .card {
     flex-basis: 30%;
     background-color: white;
@@ -532,7 +430,7 @@ h2 {
     color: #555;
 }
 
-/* Icons */
+
 .icon {
     font-size: 30px;
     color: #007BFF;
@@ -540,18 +438,16 @@ h2 {
 }
 
 .problem-icon:before {
-    content: "🛠"; /* Replace with appropriate icon */
+    content: "🛠";
 }
 
 .solution-icon:before {
-    content: "💡"; /* Replace with appropriate icon */
+    content: "💡";
 }
-
 .outcome-icon:before {
-    content: "🎯"; /* Replace with appropriate icon */
+    content: "🎯";
 }
 
-/* Responsive Adjustments */
 @media (max-width: 900px) {
     .card-group {
         flex-direction: column;
@@ -561,5 +457,83 @@ h2 {
     .card {
         flex-basis: 100%;
         margin-bottom: 20px;
+    }
+}
+
+
+
+.flow1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.box {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.arrow {
+    font-size: 2rem;
+    color: #64559f;
+    padding: 0 10px;
+}
+
+
+.downn{
+margin-left: 65%;
+}
+
+/* Desktop Only (for larger screens) */
+@media (min-width: 769px) {
+    .desktop-only {
+        display: inline; /* Show right and left arrows on desktop */
+    }
+
+    .mobile-only {
+        display: none; /* Hide new down arrows on desktop */
+    }
+    
+   
+}
+
+/* Mobile Styles (For screens smaller than 768px) */
+@media (max-width: 768px) {
+    .flow1 {
+        flex-direction: column;
+    }
+    .downn{
+        margin-left: 0;
+    }
+
+    .right-arrow,
+    .left-arrow {
+        display: none; /* Hide left and right arrows on mobile */
+    }
+
+    .flow11 {
+        flex-direction: column-reverse !important; 
+    }
+
+    .mobile-only {
+        display: inline; /* Show new down arrows on mobile */
+    }
+
+    .down-arrow {
+        font-size: 1.5rem;
+        display: block; /* Display down arrows for mobile */
+    }
+
+    .box p {
+        font-size: 14px;
+    }
+
+    .desktop-only {
+        display: none; /* Hide desktop-specific arrows/boxes for mobile */
     }
 }
