@@ -10,16 +10,7 @@ import { Meta } from '@angular/platform-browser';
 export class RPOServicesComponent {
   oneAtATime = true;
   isFirstOpen = true;
-  isLoading: boolean = true;
   constructor( private meta: Meta){}
 
-  ngOnInit(): void {
-    this.simulateLoading();
-  }
-
-  simulateLoading(): void {
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 300); 
-  }
+ 
 }

@@ -476,6 +476,7 @@ h2 {
     background-color: #f8f9fa;
     padding: 20px;
     border-radius: 8px;
+    text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .arrow {
@@ -486,7 +487,10 @@ h2 {
 
 
 .downn{
-margin-left: 65%;
+margin-left: 80%;
+}
+.downn1{
+    margin-left: 65%;
 }
 
 /* Desktop Only (for larger screens) */
@@ -508,6 +512,9 @@ margin-left: 65%;
         flex-direction: column;
     }
     .downn{
+        margin-left: 46%;
+    }
+    .downn1{
         margin-left: 0;
     }
 

@@ -10,12 +10,10 @@ import { CommonService } from '../../services/common.service';
 export class DigitalMarketingServicesComponent implements OnInit {
 
   contactForm!: FormGroup;
-  isLoading: boolean = true;
 
   constructor(private fb: FormBuilder, private commonService: CommonService) {}
 
   ngOnInit() {
-    this.simulateLoading();
     this.contactForm = this.fb.group({
       userName: ['', [Validators.required, Validators.minLength(2)]],
       userEmail: ['', [Validators.required, Validators.email]],
@@ -24,11 +22,7 @@ export class DigitalMarketingServicesComponent implements OnInit {
     });
   }
 
-  simulateLoading(): void {
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 300); 
-  }
+ 
 
   onSubmit() {
     console.log('Form Values on Submit:', this.contactForm.value);

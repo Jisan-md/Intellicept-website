@@ -1,12 +1,5 @@
 <app-header></app-header>
-<div class="loading-dots" *ngIf="isLoading">
-  <div class="dot"></div>
-  <div class="dot"></div>
-  <div class="dot"></div>
-  <div class="dot"></div>
-</div>
 
-<div *ngIf="!isLoading">
 <section class="head-img" style="background: url('/assets/drive-traffics.jpg')no-repeat center center / cover ; margin-top: 85px;">
     <div class="row justify-content-center">
             <div class="text-header">
@@ -44,7 +37,7 @@
 
       <!-- Right Side Form -->
       <div class="col-md-6 col-lg-6">
-        <div class="contact-us-form  rounded p-5">
+        <div class="contact-us-form  rounded p-5 mb-3">
           <h3 id="get" class="text-center mb-4 " style="color:#333"> <b> Get in touch with us </b></h3>
           <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
             <div class="form-group  mb-4">
@@ -99,7 +92,7 @@
 <section class="promo-block-section  mb-5">
   <div class="container mt-4" id="service">
     <div class="row">
-      <h3 class="text-center mt-5 mb-5"><span style="color:blue">Our Digital</span> Marketing Expertise</h3>
+      <h3 class="text-center mt-3 mb-5"><span style="color:blue">Our Digital</span> Marketing Expertise</h3>
       <div class="col-md-4 col-lg-4 mb-4" *ngFor="let card of cards">
         <div class="single-promo-block p-5 rounded" [ngClass]="{'expanded': card.expanded}">
           <img [src]="card.imageSrc" alt="promo" class="mb-3" [width]="card.imageWidth">

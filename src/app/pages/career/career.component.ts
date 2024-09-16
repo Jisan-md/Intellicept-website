@@ -16,14 +16,12 @@ export class CareerComponent {
   isSaveModalOpen = false; 
   jobData: any = {};  
   selectedJob: any = null; 
-  isLoading: boolean = true;
   constructor(private fb: FormBuilder, private commonService: CommonService) {
    
   }
 
   ngOnInit() {
     this.fetchJob();
-    this.simulateLoading()
     this.applyForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -33,11 +31,7 @@ export class CareerComponent {
   }
 
  
-   simulateLoading(){
-     setTimeout(()=>{
-       this.isLoading = false;
-     },300);
-   }
+  
    isEndDateExpired(endDate: string): boolean {
     const currentDate = new Date();
     const endApplicationDate = new Date(endDate);
