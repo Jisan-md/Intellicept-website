@@ -121,7 +121,7 @@ export class AddJobsComponent implements OnInit {
   
 
   deleteJob(jobId: number) {
-    if (confirm('Are you sure you want to delete this job?')) {
+    
       this.commonService.deleteJob(jobId).subscribe(
         (res: any) => {
           console.log('Job deleted successfully:', res);
@@ -133,6 +133,6 @@ export class AddJobsComponent implements OnInit {
           this.commonService.showToast('error', 'Failed to delete job');
         }
       );
-    }
+    
   }
 }
