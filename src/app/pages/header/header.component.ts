@@ -55,5 +55,21 @@ ngOnInit() {
       return { background: 'white)' };
     }
   }
+  toggleNav() {
+    const navbar = document.querySelector('.navbar-collapse') as HTMLElement;
+  
+    if (navbar) {
+      if (navbar.classList.contains('show')) {
+        navbar.classList.remove('show');
+        navbar.style.maxHeight = '0'; 
+      } else {
+        navbar.classList.add('show');
+        navbar.style.maxHeight = `${navbar.scrollHeight}px`; 
+      }
+    }
+  }
+  
+  
+  
 
 }
