@@ -281,15 +281,15 @@ svg {
 
 .safer-world-content .features-list li {
     position: relative;
-    padding: 15px;
-    margin: 5px 0;
+    padding: 20px;
+    margin: 10px 50px;
     color: #000;
     font-weight: bold;
     background-color: #fff;
-    transition: background-position 0.5s ease;
+    transition: background-position 0.9s ease;
     background-size: 200% 100%;
     background-position: right bottom;
-    background-image: linear-gradient(to left, #fff 50%, #3f7cd1 50%);
+    background-image: linear-gradient(to left, #fff 50%, #3f7cd1 5%,#162e66);
 }
 
 

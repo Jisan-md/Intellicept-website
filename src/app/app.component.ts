@@ -19,7 +19,16 @@ export class AppComponent {
         this.isLoading = true;
       } else if (event instanceof NavigationEnd || event instanceof NavigationCancel || event instanceof NavigationError) {
         setTimeout(() => this.isLoading = false, 500); 
+        
+        if (event instanceof NavigationEnd) {
+          window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth' 
+          });
+        }
       }
     });
   }
+  
 }

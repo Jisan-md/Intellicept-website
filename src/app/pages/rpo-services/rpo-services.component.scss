@@ -36,6 +36,7 @@
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    filter: drop-shadow(2px 2px 20px gray);
 }
 
 .faq-item-shape .faq-shape-image img {
@@ -155,9 +156,7 @@
 li{
     list-style: none;
 }
-div {
-    margin-bottom: 8px;
-}
+
 
 div > i {
     margin-right: 8px;
@@ -207,4 +206,15 @@ h3{
     font-size: 16px;
     font-weight: 500;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
 }
+
+
+
+
+
+
+
+
+
+
