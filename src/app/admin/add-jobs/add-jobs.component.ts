@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 import { CommonService } from '../../services/common.service';
 
 @Component({
@@ -14,32 +14,54 @@ export class AddJobsComponent implements OnInit {
   editJobForm: FormGroup; 
   errorMessage: string | null = null;
   jobData: any = {};  
-  selectedJob: any = null; 
+  selectedJob: any = null;
 
   constructor(private fb: FormBuilder, private commonService: CommonService) { 
-    // Initialize form for adding a new job
+    // Initialize form for adding a new job with date comparison validator
     this.addJobForm = this.fb.group({
-      job_title: ['', [Validators.required, Validators.minLength(2)]],
+      job_title: ['', [Validators.required]],
       job_description: ['', Validators.required],
       start_application_date: ['', Validators.required],
-      end_application_date: ['', Validators.required], // Added End Date
+      end_application_date: ['', Validators.required], 
       job_location: ['', Validators.required],
-      no_of_position: ['', [Validators.required, Validators.min(1)]],
-    });
+      no_of_position: ['', [Validators.required, Validators.min(1), Validators.max(100)]],
+    }, { validator: this.endDateAfterStartDateValidator('start_application_date', 'end_application_date') });
 
-    // Initialize form for editing an existing job
+    // Initialize form for editing an existing job with date comparison validator
     this.editJobForm = this.fb.group({
+      id: [null], 
       job_title: ['', [Validators.required, Validators.minLength(2)]],
-      job_description: ['', [Validators.required, Validators.minLength(10)]],
+      job_description: ['', [Validators.required]],
       start_application_date: ['', Validators.required],
-      end_application_date: ['', Validators.required], // Added End Date
+      end_application_date: ['', Validators.required],
       job_location: ['', Validators.required],
-      no_of_position: ['', [Validators.required, Validators.min(1)]],
-    });
+      no_of_position: ['', [Validators.required, Validators.min(1), Validators.max(100)]],
+    }, { validator: this.endDateAfterStartDateValidator('start_application_date', 'end_application_date') });
   }
 
   ngOnInit() {
     this.fetchJob();
+  }
+
+  // Custom validator to ensure end date is after start date
+  endDateAfterStartDateValidator(startDateControlName: string, endDateControlName: string): ValidatorFn {
+    return (formGroup: AbstractControl): ValidationErrors | null => {
+      const startDateControl = formGroup.get(startDateControlName);
+      const endDateControl = formGroup.get(endDateControlName);
+
+      if (!startDateControl || !endDateControl) {
+        return null; // If either control doesn't exist, skip validation
+      }
+
+      const startDate = new Date(startDateControl.value);
+      const endDate = new Date(endDateControl.value);
+
+      if (startDateControl.value && endDateControl.value && endDate <= startDate) {
+        return { endDateBeforeStartDate: true }; // Error if end date is before or equal to start date
+      }
+
+      return null; // Validation passed
+    };
   }
 
   openModal() {
@@ -58,6 +80,7 @@ export class AddJobsComponent implements OnInit {
     const formattedEndDate = new Date(job.end_application_date).toISOString().split('T')[0];
   
     this.editJobForm.patchValue({
+      id: job.id, 
       job_title: job.job_title,
       job_description: job.job_description,
       start_application_date: formattedDate, 
@@ -66,37 +89,45 @@ export class AddJobsComponent implements OnInit {
       no_of_position: job.no_of_position
     });
   }
-  
+
+  closeEditModal() {
+    this.isEditModalOpen = false;  
+  }
+
   onEditSubmit() {
-    console.log(this.editJobForm.value);
-    if (this.editJobForm.valid && this.selectedJob) {
-      const updatedJob = { ...this.selectedJob, ...this.editJobForm.value };
-  
-      this.commonService.updateJob(updatedJob).subscribe(
+    if (this.editJobForm.invalid) {
+      this.editJobForm.markAllAsTouched();
+      return;
+    }
+
+    if (this.editJobForm.valid) {
+      this.commonService.updateJob(this.editJobForm.value).subscribe(
         (res: any) => {
           console.log('Job updated successfully:', res);
           this.commonService.showToast('success', 'Job updated successfully');
+          this.editJobForm.reset();
           this.closeEditModal();
-          this.fetchJob(); 
+          this.fetchJob();
         },
         (error) => {
-          console.error('Error updating job:', error);
-          this.commonService.showToast('error', 'Failed to update job');
+          this.commonService.showToast('error', 'Job update failed');
         }
       );
     }
   }
-  
-  closeEditModal() {
-    this.isEditModalOpen = false;  
-  }
-  
+
   onSubmit() {
+    if (this.addJobForm.invalid) {
+      this.addJobForm.markAllAsTouched();
+      return;
+    }
+
     if (this.addJobForm.valid) {
       this.commonService.addNewJob(this.addJobForm.value).subscribe(
         (res: any) => {
           console.log('Job added successfully:', res);
           this.commonService.showToast('success', 'Job added successfully');
+          this.addJobForm.reset();
           this.closeModal();
           this.fetchJob();
         },
@@ -106,7 +137,7 @@ export class AddJobsComponent implements OnInit {
       );
     }
   }
-  
+
   fetchJob() {
     this.commonService.fetchJob().subscribe(
       (res: any) => {
@@ -118,21 +149,18 @@ export class AddJobsComponent implements OnInit {
       }
     );
   }
-  
 
   deleteJob(jobId: number) {
-    
-      this.commonService.deleteJob(jobId).subscribe(
-        (res: any) => {
-          console.log('Job deleted successfully:', res);
-          this.commonService.showToast('success', 'Job deleted successfully');
-          this.fetchJob();  
-        },
-        (error) => {
-          console.error('Error deleting job:', error);
-          this.commonService.showToast('error', 'Failed to delete job');
-        }
-      );
-    
+    this.commonService.deleteJob(jobId).subscribe(
+      (res: any) => {
+        console.log('Job deleted successfully:', res);
+        this.commonService.showToast('success', 'Job deleted successfully');
+        this.fetchJob();  
+      },
+      (error) => {
+        console.error('Error deleting job:', error);
+        this.commonService.showToast('error', 'Failed to delete job');
+      }
+    );
   }
 }
