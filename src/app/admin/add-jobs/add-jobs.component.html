@@ -80,65 +80,109 @@
         <form [formGroup]="editJobForm" (ngSubmit)="onEditSubmit()">
           <div class="row">
             <div class="col-12 col-sm-6 form-group">
-              <label>Job Title</label>
+              <label>Job Title*</label>
               <input
                 type="text"
                 class="form-control"
                 formControlName="job_title"
+                [ngClass]="{
+                  'is-invalid': editJobForm.get('job_title')?.invalid && editJobForm.get('job_title')?.touched
+                }"
               />
+              <div class="text-danger" *ngIf="editJobForm.get('job_title')?.invalid && editJobForm.get('job_title')?.touched">
+                <span *ngIf="editJobForm.get('job_title')?.errors?.['required']">Job title is required.</span>
+              </div>
             </div>
             <div class="col-12 col-sm-6 form-group">
-              <label>Job Location</label>
+              <label>Job Location*</label>
               <input
                 type="text"
                 class="form-control"
                 formControlName="job_location"
+                [ngClass]="{
+                  'is-invalid': editJobForm.get('job_location')?.invalid && editJobForm.get('job_location')?.touched
+                }"
               />
+              <div class="text-danger" *ngIf="editJobForm.get('job_location')?.invalid && editJobForm.get('job_location')?.touched">
+                <span *ngIf="editJobForm.get('job_location')?.errors?.['required']">Job location is required.</span>
+              </div>
             </div>
           </div>
+        
           <div class="row">
-            
             <div class="col-12 col-sm-6 form-group">
-              <label>Date of Opening</label>
+              <label>Date of Opening*</label>
               <input
                 type="date"
                 class="form-control"
                 formControlName="start_application_date"
+                [ngClass]="{
+                  'is-invalid': editJobForm.get('start_application_date')?.invalid && editJobForm.get('start_application_date')?.touched
+                }"
               />
+              <div class="text-danger" *ngIf="editJobForm.get('start_application_date')?.invalid && editJobForm.get('start_application_date')?.touched">
+                <span *ngIf="editJobForm.get('start_application_date')?.errors?.['required']">Start date is required.</span>
+              </div>
             </div>
             <div class="col-12 col-sm-6 form-group">
-                <label>Job End Date</label>
-                <input
-                  type="date"
-                  class="form-control"
-                  formControlName="end_application_date"
-                />
-                <!-- Added End Date -->
+              <label>Job End Date*</label>
+              <input
+                type="date"
+                class="form-control"
+                formControlName="end_application_date"
+                [ngClass]="{
+                  'is-invalid': editJobForm.get('end_application_date')?.invalid && editJobForm.get('end_application_date')?.touched
+                }"
+              />
+              <div class="text-danger" *ngIf="editJobForm.get('end_application_date')?.invalid && editJobForm.get('end_application_date')?.touched">
+                <span *ngIf="editJobForm.get('end_application_date')?.errors?.['required']">End date is required.</span>
+                <span *ngIf="editJobForm.hasError('endDateBeforeStartDate') && editJobForm.get('end_application_date')?.touched">
+                  End date should be after the start date.
+                </span>
               </div>
+            </div>
           </div>
+        
           <div class="row">
             <div class="col-12 col-sm-6 form-group">
-                <label>No. of Positions</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  formControlName="no_of_position"
-                />
+              <label>No. of Positions*</label>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="no_of_position"
+                [ngClass]="{
+                  'is-invalid': editJobForm.get('no_of_position')?.invalid && editJobForm.get('no_of_position')?.touched
+                }"
+              />
+              <div class="text-danger" *ngIf="editJobForm.get('no_of_position')?.invalid && editJobForm.get('no_of_position')?.touched">
+                <span *ngIf="editJobForm.get('no_of_position')?.errors?.['required']">Number of positions is required.</span>
+                <span *ngIf="editJobForm.get('no_of_position')?.errors?.['min']">Must be at least 1.</span>
+                <span *ngIf="editJobForm.get('no_of_position')?.errors?.['max']">Can not exceed 100.</span>
               </div>
+            </div>
+        
             <div class="col-12 col-sm-6 form-group">
-              <label>Job Description</label>
+              <label>Job Description*</label>
               <textarea
                 class="form-control"
                 formControlName="job_description"
+                [ngClass]="{
+                  'is-invalid': editJobForm.get('job_description')?.invalid && editJobForm.get('job_description')?.touched
+                }"
               ></textarea>
+              <div class="text-danger" *ngIf="editJobForm.get('job_description')?.invalid && editJobForm.get('job_description')?.touched">
+                <span *ngIf="editJobForm.get('job_description')?.errors?.['required']">Job description is required.</span>
+              </div>
             </div>
           </div>
+        
           <div class="row editButton">
             <div class="col-12 d-flex justify-content-center">
               <button type="submit" class="btn _button">Update</button>
             </div>
           </div>
         </form>
+        
       </div>
     </div>
   </div>
@@ -159,160 +203,136 @@
           <div class="row">
             <div class="col-6">
               <div class="form-group">
-                <label for="job_title">Job Title :</label>
+                <label for="job_title">Job Title*</label>
                 <input
                   type="text"
                   formControlName="job_title"
                   id="job_title"
                   [ngClass]="{
-                    'is-invalid':
-                      addJobForm.get('job_title')?.invalid &&
-                      addJobForm.get('job_title')?.touched
+                    'is-invalid': addJobForm.get('job_title')?.invalid && addJobForm.get('job_title')?.touched
                   }"
                 />
-                <div
-                  *ngIf="
-                    addJobForm.get('job_title')?.invalid &&
-                    addJobForm.get('job_title')?.touched
-                  "
-                  class="invalid-feedback"
-                ></div>
+                <span class="text-danger" *ngIf="addJobForm.get('job_title')?.invalid && addJobForm.get('job_title')?.touched">
+                  <span *ngIf="addJobForm.get('job_title')?.errors?.['required']">Job title is required.</span>
+                  <span *ngIf="addJobForm.get('job_title')?.errors?.['minlength']">
+                    Job title must be at least 2 characters long.
+                  </span>
+                </span>
               </div>
             </div>
+      
             <div class="col-6">
               <div class="form-group">
-                <label for="job_location">Job Location :</label>
+                <label for="job_location">Job Location*</label>
                 <input
                   type="text"
                   formControlName="job_location"
                   id="job_location"
                   [ngClass]="{
-                    'is-invalid':
-                      addJobForm.get('job_location')?.invalid &&
-                      addJobForm.get('job_location')?.touched
+                    'is-invalid': addJobForm.get('job_location')?.invalid && addJobForm.get('job_location')?.touched
                   }"
                 />
-                <div
-                  *ngIf="
-                    addJobForm.get('job_location')?.invalid &&
-                    addJobForm.get('job_location')?.touched
-                  "
-                  class="invalid-feedback"
-                ></div>
+                <span class="text-danger" *ngIf="addJobForm.get('job_location')?.invalid && addJobForm.get('job_location')?.touched">
+                  <span *ngIf="addJobForm.get('job_location')?.errors?.['required']">Job location is required.</span>
+                </span>
               </div>
             </div>
           </div>
+      
           <div class="row">
             <div class="col-6">
               <div class="form-group">
-                <label for="start_application_date">Start Application Date :</label>
+                <label for="start_application_date">Start Application Date*</label>
                 <input
                   type="date"
                   formControlName="start_application_date"
                   id="start_application_date"
                   [ngClass]="{
-                    'is-invalid':
-                      addJobForm.get('start_application_date')?.invalid &&
-                      addJobForm.get('start_application_date')?.touched
+                    'is-invalid': addJobForm.get('start_application_date')?.invalid && addJobForm.get('start_application_date')?.touched
                   }"
                 />
-                <div
-                  *ngIf="
-                    addJobForm.get('start_application_date')?.invalid &&
-                    addJobForm.get('start_application_date')?.touched
-                  "
-                  class="invalid-feedback"
-                ></div>
+                <span class="text-danger" *ngIf="addJobForm.get('start_application_date')?.invalid && addJobForm.get('start_application_date')?.touched">
+                  <span *ngIf="addJobForm.get('start_application_date')?.errors?.['required']">
+                    Start application date is required.
+                  </span>
+                </span>
               </div>
             </div>
+      
             <div class="col-6">
               <div class="form-group">
-                <label for="end_application_date"> End Application Date :</label>
+                <label for="end_application_date">End Application Date*</label>
                 <input
                   type="date"
                   formControlName="end_application_date"
                   id="end_application_date"
                   [ngClass]="{
-                    'is-invalid':
-                      addJobForm.get('end_application_date')?.invalid &&
-                      addJobForm.get('end_application_date')?.touched
+                    'is-invalid': addJobForm.get('end_application_date')?.invalid && addJobForm.get('end_application_date')?.touched
                   }"
                 />
-                <div
-                  *ngIf="
-                    addJobForm.get('end_application_date')?.invalid &&
-                    addJobForm.get('end_application_date')?.touched
-                  "
-                  class="invalid-feedback"
-                ></div>
+                <span class="text-danger" *ngIf="addJobForm.get('end_application_date')?.invalid && addJobForm.get('end_application_date')?.touched">
+                  <span *ngIf="addJobForm.get('end_application_date')?.errors?.['required']">
+                    End application date is required.
+                  </span>
+                </span>
+      
+                <!-- Error message for custom date validation -->
+                <span class="text-danger" *ngIf="addJobForm.hasError('endDateBeforeStartDate') && addJobForm.get('end_application_date')?.touched">
+                  End date should be after the start date.
+                </span>
               </div>
             </div>
           </div>
+      
           <div class="row">
             <div class="col-6">
               <div class="form-group">
-                <label for="no_of_position">No of Positions :</label>
+                <label for="no_of_position">No of Positions*</label>
                 <input
                   type="number"
                   formControlName="no_of_position"
                   id="no_of_position"
                   [ngClass]="{
-                    'is-invalid':
-                      addJobForm.get('no_of_position')?.invalid &&
-                      addJobForm.get('no_of_position')?.touched
+                    'is-invalid': addJobForm.get('no_of_position')?.invalid && addJobForm.get('no_of_position')?.touched
                   }"
                 />
-                <div
-                  *ngIf="
-                    addJobForm.get('no_of_position')?.invalid &&
-                    addJobForm.get('no_of_position')?.touched
-                  "
-                  class="invalid-feedback"
-                >
-                  <div
-                    *ngIf="addJobForm.get('no_of_position')?.errors?.['required']"
-                  >
+                <span class="text-danger" *ngIf="addJobForm.get('no_of_position')?.invalid && addJobForm.get('no_of_position')?.touched">
+                  <span *ngIf="addJobForm.get('no_of_position')?.errors?.['required']">
                     Number of positions is required.
-                  </div>
-                </div>
+                  </span>
+                  <span *ngIf="addJobForm.get('no_of_position')?.errors?.['min']">
+                    The number of positions must be at least 1.
+                  </span>
+                  <span *ngIf="addJobForm.get('no_of_position')?.errors?.['max']">
+                    The number of positions cannot exceed 100.
+                  </span>
+                </span>
               </div>
-
             </div>
-
-              <div class="col-6">
-                <div class="form-group">
-                  <label for="job_description">Job Description :</label>
-                  <textarea
-                    formControlName="job_description"
-                    [ngClass]="{
-                      'is-invalid':
-                        addJobForm.get('job_description')?.invalid &&
-                        addJobForm.get('job_description')?.touched
-                    }"
-                  ></textarea>
-                  <div
-                    *ngIf="
-                      addJobForm.get('job_description')?.invalid &&
-                      addJobForm.get('job_description')?.touched
-                    "
-                    class="invalid-feedback"
-                  ></div>
-                </div>
+      
+            <div class="col-6">
+              <div class="form-group">
+                <label for="job_description">Job Description*</label>
+                <textarea
+                  formControlName="job_description"
+                  id="job_description"
+                  [ngClass]="{
+                    'is-invalid': addJobForm.get('job_description')?.invalid && addJobForm.get('job_description')?.touched
+                  }"
+                ></textarea>
+                <span class="text-danger" *ngIf="addJobForm.get('job_description')?.invalid && addJobForm.get('job_description')?.touched">
+                  <span *ngIf="addJobForm.get('job_description')?.errors?.['required']">Job description is required.</span>
+                </span>
               </div>
+            </div>
           </div>
-              <button
-                type="submit"
-                class="registerbtn"
-                [disabled]="addJobForm.invalid"
-              >
-                Submit
-              </button>
-              <span style="color: red" *ngIf="errorMessage">{{
-                errorMessage
-              }}</span>
-            
+      
+          <button type="submit" class="registerbtn">Submit</button>
+          <span style="color: red" *ngIf="errorMessage">{{ errorMessage }}</span>
         </div>
       </form>
+      
+      
     </div>
   </div>
 </div>

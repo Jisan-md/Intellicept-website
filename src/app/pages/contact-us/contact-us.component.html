@@ -81,7 +81,7 @@
                     type="text"
                     class="form-control"
                     formControlName="name"
-                    placeholder="Enter name"
+                    placeholder="Enter Name"
                     [ngClass]="{'is-invalid': contactForm.get('name')?.invalid && contactForm.get('name')?.touched}"
                   />
                   <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="invalid-feedback">
@@ -96,7 +96,7 @@
                     type="text"
                     class="form-control"
                     formControlName="phone"
-                    placeholder="Enter phone number"
+                    placeholder="Enter Phone Number"
                     [ngClass]="{'is-invalid': contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched}"
                   />
                   <div *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched" class="invalid-feedback">
@@ -112,7 +112,7 @@
                     type="email"
                     class="form-control"
                     formControlName="email"
-                    placeholder="Enter email"
+                    placeholder="Enter Email"
                     [ngClass]="{'is-invalid': contactForm.get('email')?.invalid && contactForm.get('email')?.touched}"
                   />
                   <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="invalid-feedback">
@@ -144,8 +144,6 @@
               </div>
             </div>
           </form>
-          
-          
         </div>
       </div>
       <div class="col-md-5">

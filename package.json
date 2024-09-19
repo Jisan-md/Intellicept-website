@@ -24,6 +24,7 @@
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "font-awesome": "^4.7.0",
+    "git": "^0.1.5",
     "ngx-bootstrap": "^18.0.2",
     "ngx-owl-carousel-o": "^18.0.0",
     "ngx-toastr": "^19.0.0",
