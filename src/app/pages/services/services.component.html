@@ -1,125 +1,111 @@
 <app-header></app-header>
 
 
-        <section class="head-img" style="background: url('/assets/Services.jpg')no-repeat center center / cover;margin-top: 85px;">
-                <div class="row justify-content-center">
-                        <div class="text-header">
-                            <!-- <h1 class="text-white mb-0">Our Services</h1> -->
-                           
-                            </div>
-                        </div>
-            </section>
-        
-            <section class="promo-block mt-5">
-                <div class="container">
-                  <div class="row">
-                    <div *ngFor="let promo of promoBlocks" class="col-md-4 col-lg-4 mt-4">
-                      <div class="single-promo-block shadow-lg rounded" [ngStyle]="{ 'height': '100%' }">
-                        <img [src]="promo.imgSrc" [alt]="promo.altText" class="mb-3" width="100">
-                        <div class="promo-block-content" [ngStyle]="{ 'padding-bottom': promo.paddingBottom }">
-                          <h5>{{ promo.title }}</h5>
-                          <p>{{ promo.description }}</p>
-                          <a *ngIf="promo.link" [href]="promo.link" class="detail-link mt-4">{{ promo.linkText }} <span class="ti-arrow-right"></span></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              
-        <section class="contact-us-section ">
-            <div class="container">
-              <div class="row justify-content-around">
-                <div class="col-md-6">
-                  <div class="contact-us-form rounded p-5">
-                    <h3 class="mb-4" style="text-align: center; color:#333"><b>Get in touch with us</b></h3>
-                    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-                      <div class="form-row">
-                        <div class="col-12">
-                          <div class="form-group">
-                            <input
-                              type="text"
-                              formControlName="userName"
-                              class="form-control"
-                              placeholder="Enter name"
-                              [ngClass]="{'is-invalid': contactForm.get('userName')?.invalid && contactForm.get('userName')?.touched}"
-                            />
-                            <div *ngIf="contactForm.get('userName')?.invalid && contactForm.get('userName')?.touched" class="invalid-feedback">
-                              <div *ngIf="contactForm.get('userName')?.errors?.['required']">Name is required.</div>
-                              <div *ngIf="contactForm.get('userName')?.errors?.['minlength']">Name must be at least 2 characters long.</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <div class="form-group">
-                            <input
-                              type="email"
-                              formControlName="userEmail"
-                              class="form-control"
-                              placeholder="Enter email"
-                              [ngClass]="{'is-invalid': contactForm.get('userEmail')?.invalid && contactForm.get('userEmail')?.touched}"
-                            />
-                            <div *ngIf="contactForm.get('userEmail')?.invalid && contactForm.get('userEmail')?.touched" class="invalid-feedback">
-                              <div *ngIf="contactForm.get('userEmail')?.errors?.['required']">Email is required.</div>
-                              <div *ngIf="contactForm.get('userEmail')?.errors?.['email']">Valid email is required.</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <div class="form-group">
-                            <input
-                              type="text"
-                              formControlName="phone"
-                              class="form-control"
-                              placeholder="Mobile No"
-                              [ngClass]="{'is-invalid': contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched}"
-                            />
-                            <div *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched" class="invalid-feedback">
-                              <div *ngIf="contactForm.get('phone')?.errors?.['required']">Phone number is required.</div>
-                              <div *ngIf="contactForm.get('phone')?.errors?.['pattern']">Valid 10-digit phone number is required.</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <div class="form-group">
-                            <textarea
-                              formControlName="userMessage"
-                              class="form-control"
-                              rows="4"
-                              placeholder="Message"
-                              [ngClass]="{'is-invalid': contactForm.get('userMessage')?.invalid && contactForm.get('userMessage')?.touched}"
-                            ></textarea>
-                            <!-- <div *ngIf="contactForm.get('userMessage')?.invalid && contactForm.get('userMessage')?.touched" class="invalid-feedback">
-                              <div *ngIf="contactForm.get('userMessage')?.errors?.['required']">Message is required.</div>
-                              <div *ngIf="contactForm.get('userMessage')?.errors?.['minlength']">Message must be at least 10 characters long.</div>
-                            </div> -->
-                          </div>
-                        </div>
-                        <div class="col-sm-12 mt-2 text-center">
-                          <button type="submit" class="btn submitBtn" >
-                            Send Message
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                    
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="leave-img">
-                    <img src="/assets/Leave_a_message.jpg" alt="contact-img">
+<section class="head-img"
+  style="background: url('assets/ourservices1.jpg')no-repeat center center / cover;margin-top: 85px;">
+  <!-- <div class="row justify-content-center"> -->
+    <div class="text-header">
+      <h1 class="text-white mb-0">Our Services</h1>
+
+    </div>
+  <!-- </div> -->
+</section>
+
+<section class="promo-block mt-5">
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let promo of promoBlocks" class="col-md-4 col-lg-4 mt-4">
+        <div class="single-promo-block shadow-lg rounded" [ngStyle]="{ 'height': '100%' }">
+          <img [src]="promo.imgSrc" [alt]="promo.altText" class="mb-3" width="100">
+          <div class="promo-block-content" [ngStyle]="{ 'padding-bottom': promo.paddingBottom }">
+            <h5>{{ promo.title }}</h5>
+            <p>{{ promo.description }}</p>
+            <a *ngIf="promo.link" [href]="promo.link" class="detail-link mt-4">{{ promo.linkText }} <span
+                class="ti-arrow-right"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-us-section ">
+  <div class="container">
+    <div class="row justify-content-around">
+      <div class="col-md-6">
+        <div class="contact-us-form rounded p-5">
+          <h3 class="mb-4" style="text-align: center; color:#333"><b>Get in touch with us</b></h3>
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="form-row">
+              <div class="col-12">
+                <div class="form-group">
+                  <input type="text" formControlName="userName" class="form-control" placeholder="Enter name"
+                    [ngClass]="{'is-invalid': contactForm.get('userName')?.invalid && contactForm.get('userName')?.touched}" />
+                  <div *ngIf="contactForm.get('userName')?.invalid && contactForm.get('userName')?.touched"
+                    class="invalid-feedback">
+                    <div *ngIf="contactForm.get('userName')?.errors?.['required']">Name is required.</div>
+                    <div *ngIf="contactForm.get('userName')?.errors?.['minlength']">Name must be at least 2 characters
+                      long.</div>
                   </div>
                 </div>
               </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <input type="email" formControlName="userEmail" class="form-control" placeholder="Enter email"
+                    [ngClass]="{'is-invalid': contactForm.get('userEmail')?.invalid && contactForm.get('userEmail')?.touched}" />
+                  <div *ngIf="contactForm.get('userEmail')?.invalid && contactForm.get('userEmail')?.touched"
+                    class="invalid-feedback">
+                    <div *ngIf="contactForm.get('userEmail')?.errors?.['required']">Email is required.</div>
+                    <div *ngIf="contactForm.get('userEmail')?.errors?.['email']">Valid email is required.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <input type="text" formControlName="phone" class="form-control" placeholder="Mobile No"
+                    [ngClass]="{'is-invalid': contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched}" />
+                  <div *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched"
+                    class="invalid-feedback">
+                    <div *ngIf="contactForm.get('phone')?.errors?.['required']">Phone number is required.</div>
+                    <div *ngIf="contactForm.get('phone')?.errors?.['pattern']">Valid 10-digit phone number is required.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <textarea formControlName="userMessage" class="form-control" rows="4" placeholder="Message"
+                    [ngClass]="{'is-invalid': contactForm.get('userMessage')?.invalid && contactForm.get('userMessage')?.touched}"></textarea>
+                  <!-- <div *ngIf="contactForm.get('userMessage')?.invalid && contactForm.get('userMessage')?.touched" class="invalid-feedback">
+                              <div *ngIf="contactForm.get('userMessage')?.errors?.['required']">Message is required.</div>
+                              <div *ngIf="contactForm.get('userMessage')?.errors?.['minlength']">Message must be at least 10 characters long.</div>
+                            </div> -->
+                </div>
+              </div>
+              <div class="col-sm-12 mt-2 text-center">
+                <button type="submit" class="btn submitBtn">
+                  Send Message
+                </button>
+              </div>
             </div>
-          </section>
-          
-         
-      <!--bottom to top button start-->
-    <button class="scroll-top scroll-to-target open" data-target="html">
-        <span class="ti-angle-up"></span>
-    </button>
-    <!--bottom to top button end-->
-    
-    <app-footer></app-footer>
-    
+          </form>
+
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="leave-img">
+          <img src="/assets/Leave_a_message.jpg" alt="contact-img">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--bottom to top button start-->
+<button class="scroll-top scroll-to-target open" data-target="html">
+  <span class="ti-angle-up"></span>
+</button>
+<!--bottom to top button end-->
+
+<app-footer></app-footer>
