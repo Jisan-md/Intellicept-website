@@ -59,8 +59,8 @@ export class DigitalMarketingServicesComponent implements OnInit {
   cards = [
     {
       title: 'SEO Services',
-      descriptionShort: `Intellicept's SEO service is designed to help businesses improve their search engine rankings and increase their online visibility. Our team of experts uses a data-driven approach to identify`,
-      descriptionFull: ` the most effective strategies for your business, including keyword research, on-page optimization, and link building. We conduct thorough website audits to identify areas for improvement, and we create customized SEO strategies that are tailored to your business goals and target audience. Our ongoing SEO efforts include monitoring and analyzing website traffic and search engine rankings, making necessary adjustments to optimize performance.`,
+      descriptionShort: `Intellicept's SEO service is designed to help businesses improve their search engine rankings and increase their online visibility. Our team of experts uses a data-driven approach to `,
+      descriptionFull: `identify the most effective strategies for your business, including keyword research, on-page optimization, and link building. We conduct thorough website audits to identify areas for improvement, and we create customized SEO strategies that are tailored to your business goals and target audience. Our ongoing SEO efforts include monitoring and analyzing website traffic and search engine rankings, making necessary adjustments to optimize performance.`,
       imageSrc: 'assets/seo.png',
       imageWidth: 100,
       expanded: false
@@ -83,8 +83,8 @@ export class DigitalMarketingServicesComponent implements OnInit {
     },
     {
       title: 'Email Marketing Campaign',
-      descriptionShort: `Our email marketing campaign service helps businesses build and maintain relationships with their customers through targeted email campaigns`,
-      descriptionFull: `Our team of experts uses a data-driven approach to create customized email campaigns that deliver measurable results. We conduct thorough research to identify your target audience and create compelling email content that resonates with them. We also use advanced email automation tools to deliver emails at the right time, to the right people, and track performance. Our ongoing efforts include monitoring email analytics, optimizing campaigns, and continuously improving results.`,
+      descriptionShort: `Our email marketing campaign service helps businesses build and maintain relationships with their customers through targeted `,
+      descriptionFull: `email campaigns Our team of experts uses a data-driven approach to create customized email campaigns that deliver measurable results. We conduct thorough research to identify your target audience and create compelling email content that resonates with them. We also use advanced email automation tools to deliver emails at the right time, to the right people, and track performance. Our ongoing efforts include monitoring email analytics, optimizing campaigns, and continuously improving results.`,
       imageSrc: '/assets/email.png',
       imageWidth: 100,
       expanded: false
