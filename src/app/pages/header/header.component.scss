@@ -215,15 +215,17 @@
 }
 
 
-.animated-navbar {
-  max-height: 0; 
+.collapse {
+  transition: height 0.9s ease;
   overflow: hidden;
-  transition: max-height 0.9s ease-in-out;
 }
 
-.animated-navbar.show {
-  max-height: 500px; 
+.collapse.show {
+  height: auto;
 }
+
+
+
 
 
 

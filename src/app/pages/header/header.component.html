@@ -5,8 +5,8 @@
       <img [src]="logoSrc" alt="logo" style="max-height: 64px;/* width: auto; */" />
 
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
-      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" style="border-color: white;">
+    <button class="navbar-toggler" type="button" aria-controls="navbarContent"
+      aria-expanded="false" aria-label="Toggle navigation" style="border-color: white;">
       <span class="burger-menu">
         <span class="top-bar" style="background-color: black;"></span>
         <span class="middle-bar" style="background-color: black;"></span>
@@ -101,7 +101,8 @@
     <a class="navbar-brand" routerLink="/">
       <img [src]="logoSrc" alt="logo" style="max-height: 64px;" />
     </a>  
-    <!-- Navbar Toggler Button -->
+   
+    <!-- Toggler button for mobile -->
     <button class="navbar-toggler" type="button" (click)="toggleNav()" aria-controls="navbarContent"
       aria-expanded="false" aria-label="Toggle navigation" style="border-color: white;">
       <span class="burger-menu">
@@ -111,76 +112,80 @@
       </span>
     </button>
     
-    <!-- Navbar Collapse -->
-    <div class="navbar-collapse animated-navbar" id="navbarContent">
+    <!-- Navbar content -->
+    <div class="collapse navbar-collapse" [ngClass]="{'show': isNavOpen}" id="navbarContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a routerLink="/" class="nav-link" style="background: none;" routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true }"
-            [style.color]="(router.url == '/' || router.url == '/webinar') && !isSticky ? 'white' : 'black'">
+          <a routerLink="/" class="nav-link" style="background: none;" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+            [style.color]="(router.url == '/' || router.url == '/' || router.url == '/webinar') && isSticky == false ? 'white' : 'black'">
             Home
           </a>
         </li>
         <li class="nav-item">
-          <a routerLink="/aboutUs" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-            [style.color]="(router.url == '/' || router.url == '/webinar') && !isSticky ? 'white' : 'black'">
+          <a routerLink="/aboutUs" class="nav-link" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            [style.color]="(router.url == '/' || router.url == '/' || router.url == '/webinar') && isSticky == false ? 'white' : 'black'">
             About Us
           </a>
         </li>
         <li class="nav-item">
-          <a routerLink="/rpo-services" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-            [style.color]="(router.url == '/' || router.url == '/webinar') && !isSticky ? 'white' : 'black'">
+          <a routerLink="/rpo-services" class="nav-link" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            [style.color]="(router.url == '/' || router.url == '/' || router.url == '/webinar') && isSticky == false ? 'white' : 'black'">
             RPO
           </a>
         </li>
         <li class="nav-item">
-          <a routerLink="/services" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-            [style.color]="(router.url == '/' || router.url == '/webinar') && !isSticky ? 'white' : 'black'">
+          <a routerLink="/services" class="nav-link" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            [style.color]="(router.url == '/' || router.url == '/' || router.url == '/webinar') && isSticky == false ? 'white' : 'black'">
             Services
           </a>
         </li>
         <li class="nav-item">
           <a routerLink="/digital-marketing-services" class="nav-link" routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }"
-            [style.color]="(router.url == '/' || router.url == '/webinar') && !isSticky ? 'white' : 'black'">
+            [style.color]="(router.url == '/' || router.url == '/' || router.url == '/webinar') && isSticky == false ? 'white' : 'black'">
             Digital Marketing Services
           </a>
         </li>
         <li class="nav-item">
           <a routerLink="/staffing-services" class="nav-link" routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }"
-            [style.color]="(router.url == '/' || router.url == '/webinar') && !isSticky ? 'white' : 'black'">
+            [style.color]="(router.url == '/' || router.url == '/' || router.url == '/webinar') && isSticky == false ? 'white' : 'black'">
             Staffing Services
           </a>
         </li>
         <li class="nav-item">
           <a routerLink="/career" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-            [style.color]="(router.url == '/' || router.url == '/webinar') && !isSticky ? 'white' : 'black'">
+            [style.color]="(router.url == '/' || router.url == '/' || router.url == '/webinar') && isSticky == false ? 'white' : 'black'">
             Career
           </a>
         </li>
         <li class="nav-item">
-          <a routerLink="/industries" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-            [style.color]="(router.url == '/' || router.url == '/webinar') && !isSticky ? 'white' : 'black'">
+          <a routerLink="/industries" class="nav-link" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            [style.color]="(router.url == '/' || router.url == '/' || router.url == '/webinar') && isSticky == false ? 'white' : 'black'">
             Industries
           </a>
         </li>
         <li class="nav-item">
-          <a routerLink="/partner" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-            [style.color]="(router.url == '/' || router.url == '/webinar') && !isSticky ? 'white' : 'black'">
+          <a routerLink="/partner" class="nav-link" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            [style.color]="(router.url == '/' || router.url == '/' || router.url == '/webinar') && isSticky == false ? 'white' : 'black'">
             Partners
           </a>
         </li>
         <li class="nav-item">
           <a routerLink="/blog" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-            [style.color]="(router.url == '/' || router.url == '/webinar') && !isSticky ? 'white' : 'black'">
+            [style.color]="(router.url == '/' || router.url == '/' || router.url == '/webinar') && isSticky == false ? 'white' : 'black'">
             Blog
           </a>
         </li>
         <li class="nav-item">
           <a routerLink="/contact-us" class="nav-link" routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }"
-            [style.color]="(router.url == '/' || router.url == '/webinar') && !isSticky ? 'white' : 'black'">
+            [style.color]="(router.url == '/' || router.url == '/' || router.url == '/webinar') && isSticky == false ? 'white' : 'black'">
             Contact Us
           </a>
         </li>
@@ -188,3 +193,4 @@
     </div>
   </nav>
 </div>
+
