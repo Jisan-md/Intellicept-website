@@ -290,8 +290,43 @@ a:hover {
     justify-content: center !important;
 }
 
+// testimonial cards
 
+.testimonial-section {
+    background-color: #e9ecef;
+    padding: 60px 0;
+}
 
+.section-heading h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.testimonial-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+blockquote {
+    font-style: italic;
+    color: #555;
+}
+
+footer h5 {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+    text-align: right; 
+}
 
 
 
@@ -557,3 +592,7 @@ blockquote {
         transform: scale(1.5);
     }
 }
+
+
+
+
