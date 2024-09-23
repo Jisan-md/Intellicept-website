@@ -15,7 +15,8 @@ export class AddJobsComponent implements OnInit {
   errorMessage: string | null = null;
   jobData: any = {};  
   selectedJob: any = null;
-
+  
+  
   constructor(private fb: FormBuilder, private commonService: CommonService) { 
     // Initialize form for adding a new job with date comparison validator
     this.addJobForm = this.fb.group({
