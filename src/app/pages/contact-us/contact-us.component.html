@@ -3,11 +3,11 @@
 <section
   class="head-img"
   style="
-    background: url('/assets/contact.png') no-repeat center center / cover; margin-top: 85px;"
+    background: url('/assets/contact.png') no-repeat center center / cover; margin-top: 90px;"
 >
   <div class="justify-content-center">
     <div class="text-header">
-      <h1 class="text-white mb-0">Contact Us</h1>
+      <h1 class="text-white text-shadow-black mb-0">Contact Us</h1>
     </div>
   </div>
 </section>
@@ -67,7 +67,7 @@
   </div>
 </div>
 
-<section class="contact-us-section ptb-100">
+<section class="contact-us-section ptb-100" style="background-image: url('/assets/contact_bg_1.png');  ">
   <div class="container">
     <div class="row justify-content-around">
       <div class="col-md-6">
@@ -127,7 +127,7 @@
                   <textarea
                     class="form-control"
                     formControlName="message"
-                    rows="7"
+                    rows="5"
                     cols="25"
                     placeholder="Message"
                     [ngClass]="{'is-invalid': contactForm.get('message')?.invalid && contactForm.get('message')?.touched}"

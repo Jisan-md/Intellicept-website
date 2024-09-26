@@ -19,10 +19,9 @@ export class SideNavComponent {
   ) {
     this.breakpointObserver.observe([Breakpoints.Handset, Breakpoints.Small]).subscribe(result => {
       this.isMobileView = result.matches;
-      this.isSidenavOpen = !this.isMobileView; // Close sidenav on mobile
+      this.isSidenavOpen = !this.isMobileView; 
     });
 
-    // Auto-close sidenav on login route
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         if (event.url.startsWith('/admin-login')) {
@@ -34,13 +33,13 @@ export class SideNavComponent {
 
   toggleSidenav() {
     if (this.sidenav) {
-      this.sidenav.toggle(); // Toggle sidenav using Angular Material method
+      this.sidenav.toggle(); 
     }
   }
 
   closeSidenav() {
     if (this.sidenav && this.isMobileView) {
-      this.sidenav.close(); // Only close on mobile view
+      this.sidenav.close(); 
     }
   }
 

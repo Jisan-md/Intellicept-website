@@ -9,7 +9,9 @@ p:not(:last-child) {
     color: #fff;
     font-size: 40px;
 }
-
+.text-shadow-black {
+    text-shadow: 5px 2px 4px rgba(0, 0, 0, 0.8); 
+  }
 .lead {
     font-size: 1.2rem;
     // font-weight: 300;
