@@ -18,7 +18,7 @@ export class AddJobsComponent implements OnInit {
   
   
   constructor(private fb: FormBuilder, private commonService: CommonService) { 
-    // Initialize form for adding a new job with date comparison validator
+    // Initialize form for adding a new job 
     this.addJobForm = this.fb.group({
       job_title: ['', [Validators.required]],
       job_description: ['', Validators.required],
@@ -28,7 +28,7 @@ export class AddJobsComponent implements OnInit {
       no_of_position: ['', [Validators.required, Validators.min(1), Validators.max(100)]],
     }, { validator: this.endDateAfterStartDateValidator('start_application_date', 'end_application_date') });
 
-    // Initialize form for editing an existing job with date comparison validator
+    // Initialize form for editing an existing job 
     this.editJobForm = this.fb.group({
       id: [null], 
       job_title: ['', [Validators.required, Validators.minLength(2)]],
@@ -44,24 +44,23 @@ export class AddJobsComponent implements OnInit {
     this.fetchJob();
   }
 
-  // Custom validator to ensure end date is after start date
   endDateAfterStartDateValidator(startDateControlName: string, endDateControlName: string): ValidatorFn {
     return (formGroup: AbstractControl): ValidationErrors | null => {
       const startDateControl = formGroup.get(startDateControlName);
       const endDateControl = formGroup.get(endDateControlName);
 
       if (!startDateControl || !endDateControl) {
-        return null; // If either control doesn't exist, skip validation
+        return null; 
       }
 
       const startDate = new Date(startDateControl.value);
       const endDate = new Date(endDateControl.value);
 
       if (startDateControl.value && endDateControl.value && endDate <= startDate) {
-        return { endDateBeforeStartDate: true }; // Error if end date is before or equal to start date
+        return { endDateBeforeStartDate: true }; 
       }
 
-      return null; // Validation passed
+      return null; 
     };
   }
 
@@ -92,7 +91,9 @@ export class AddJobsComponent implements OnInit {
   }
 
   closeEditModal() {
-    this.isEditModalOpen = false;  
+    this.isEditModalOpen = false; 
+    this.editJobForm.reset();
+
   }
 
   onEditSubmit() {

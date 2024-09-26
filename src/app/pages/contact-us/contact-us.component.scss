@@ -13,6 +13,9 @@
     color: #fff;
     font-size: 40px;
 }
+.text-shadow-black {
+  text-shadow: 5px 2px 4px rgba(0, 0, 0, 0.8); 
+}
 i{
     color: #fff;
 }
@@ -112,17 +115,18 @@ a{
     background-color: #0056b3;
     color: white;
     padding: 10px 20px;
-    // margin: 0px 0;
-    border: none;
+    border: #0056b3 1px solid;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
   .btn:hover {
-    background-color: #007bff;
-    color: #fff;
+    background: transparent;
+    border: #0056b3 1px solid;
+    color: #0056b3;
   }
+  
   .contact-us-form{
     box-shadow: rgba(19, 81, 168, 0.3) 0px 1px 2px 0px, rgba(19, 81, 168, 0.15) 0px 2px 6px 2px;
 
@@ -210,3 +214,9 @@ a{
 }
 
 
+.contact-us-section {
+  background-size: cover;  
+  background-position: center; 
+  background-repeat: no-repeat; 
+  // background-attachment: fixed; /* Make the background stay fixed while scrolling */
+}
