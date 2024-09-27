@@ -1,0 +1,111 @@
+
+// ----------------------*****--------------------
+.head-img {
+    height: 270px;
+    width: 100%;
+}
+.text-header h1{
+    text-align: center;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    font-weight: 700;
+    color: #fff;
+    font-size: 40px;
+}
+.text-shadow-black {
+  text-shadow: 5px 2px 4px rgba(0, 0, 0, 0.8); 
+}
+
+
+
+
+
+
+h1, h2 {
+    color: #0056b3;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h1 {
+    border-bottom: 2px solid #0056b3;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Header Section */
+.header-section {
+    background-color: #e9ecef;
+    padding: 60px 0;
+}
+
+.header-section p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Our Roots Section */
+.our-roots-section {
+    background-color: #fff;
+}
+
+/* Our Services Section */
+.services-section {
+    background-color: #f8f9fa;
+}
+
+/* Offshore Development Section */
+.offshore-section {
+    background-color: #fff;
+}
+
+/* IntelligentMDG Section */
+.intelligent-mdg-section {
+    background-color: #f8f9fa;
+}
+
+.intelligent-mdg-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.intelligent-mdg-section ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Commitment Section */
+.commitment-section {
+    background-color: #fff;
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #343a40;
+}
+
+.footer-section p {
+    margin: 0;
+    font-size: 14px;
+}

@@ -43,6 +43,7 @@ import { AdminServicesComponent } from './admin/admin-services/admin-services.co
 import { SideNavComponent } from './admin/side-nav/side-nav.component';
 import { AddJobsComponent } from './admin/add-jobs/add-jobs.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { IMDGComponent } from './pages/imdg/imdg.component';
 
 @NgModule({
   declarations: [
@@ -77,6 +78,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     SideNavComponent,
     AddJobsComponent,
     NotFoundComponent,
+    IMDGComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [

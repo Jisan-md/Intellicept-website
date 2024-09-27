@@ -143,6 +143,8 @@ h4 .highlight {
     padding: 20px;
     transition: all 0.3s ease;
     text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
 }
 
 .quality-card .number {
@@ -165,7 +167,7 @@ h4 .highlight {
 }
 
 .quality-card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow:none;
 }
 
 .card {

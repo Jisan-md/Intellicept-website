@@ -34,10 +34,10 @@ export class ContactUsComponent {
       this.commonService.contactUsForm(this.contactForm.value).subscribe((res: any) => {
         this.commonService.showToast('success', "Form submission successful");
         this.contactForm.reset();
-        this.contactForm.markAsPristine();
-        this.contactForm.markAsUntouched();
       }, (err: any) => {
         this.commonService.showToast('error', "Form submission failed");
+        // this.contactForm.markAsPristine();
+        // this.contactForm.markAsUntouched();
       });
     } else {
       this.commonService.showToast('error', "Please correct the errors in the form");

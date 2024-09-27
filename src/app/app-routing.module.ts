@@ -29,6 +29,7 @@ import { AdminCareerComponent } from './admin/admin-career/admin-career.componen
 import { AdminServicesComponent } from './admin/admin-services/admin-services.component';
 import { SideNavComponent } from './admin/side-nav/side-nav.component';
 import { AddJobsComponent } from './admin/add-jobs/add-jobs.component';
+import { IMDGComponent } from './pages/imdg/imdg.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 
@@ -150,6 +151,11 @@ const routes: Routes = [
   {
     path: 'login',    
     component: AdminLoginComponent
+  },
+  
+  {
+    path: 'imdg',
+    component: IMDGComponent
   },
 
   {
