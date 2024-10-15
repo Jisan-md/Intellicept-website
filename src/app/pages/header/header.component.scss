@@ -1,92 +1,89 @@
-
 .transparent-header {
-    background: transparent;
-    transition: background 0.3s ease;
-  }
-  
-  
-  .sticky {
-    transition: background 0.3s ease;
-  }
-  
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+
+.sticky {
+  transition: background 0.3s ease;
+}
+
 
 
 .navbar-area {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 999;
-    transition: background-color 0.3s ease, padding 0.3s ease;
-  }
-  
-
-  .navbar {
-    background: transparent;
-    transition: background-color 0.3s, padding 0.3s;
-  }
-  
-
-  .sticky .navbar {
-    // background: linear-gradient(75deg, #1351a8 5%, #162e66);
-    // padding: 10px 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  @media (min-width: 992px) {
-    
-  
- .navbar-brand img{
-    margin-left: 50px;
-    // margin-bottom: 20px;
- }
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  transition: background-color 0.3s ease, padding 0.3s ease;
 }
-  .nav-link {
-    color: white;
-    transition: color 0.3s;
-  }
-  
-  /* Change text color when sticky */
- 
-  
 
-  .burger-menu span {
-    background-color: white;
-  }
-  
- 
-  .sticky .burger-menu span {
-    background-color: white;
-  }
-  
 
-  @media (min-width: 992px) {
-    .navbar-expand-lg .navbar-collapse {
-        margin-right: 100px;
-    }
+.navbar {
+  background: transparent;
+  transition: background-color 0.3s, padding 0.3s;
 }
-@media (min-width: 992px) {
-    .navbar-expand-lg .navbar-nav .nav-link {
-        position: relative;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 600;
-        font-size: 15px;
-    }
-
-    .navbar-nav .nav-item a.active {
-      // color: #1351a8 !important;
-      font-weight: bold;
-      font-size: 15px;
-      background-color: #e7e7e7;
-      border-radius: 5px;
-    }
-    .navbar-nav .nav-item a:hover {
-      color: #a3bbdb !important;
-      font-weight: bold; 
-    }
 
 
-}
 .sticky .navbar {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 1.1);
+  // background: linear-gradient(75deg, #1351a8 5%, #162e66);
+  // padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 992px) {}
+
+.nav-link {
+  color: white;
+  transition: color 0.3s;
+}
+
+/* Change text color when sticky */
+
+
+
+.burger-menu span {
+  background-color: white;
+}
+
+
+.sticky .burger-menu span {
+  background-color: white;
+}
+
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    margin-right: 100px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .navbar-nav .nav-item a.active {
+    // color: #1351a8 !important;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #e7e7e7;
+    border-radius: 5px;
+  }
+
+  .navbar-nav .nav-item a:hover {
+    color: #a3bbdb !important;
+    font-weight: bold;
+  }
+
+
+}
+
+.sticky .navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 1.1);
 }
 
 
@@ -133,7 +130,7 @@
   margin: 5px auto;
   transition: all 0.3s ease;
   // margin-right: 10px;
-  
+
 }
 
 /* Mobile view */
@@ -144,10 +141,10 @@
 
   .navbar-nav {
     width: 100%;
-    
+
   }
 
- 
+
 
   .navbar-toggler {
     margin-left: auto;
@@ -169,7 +166,7 @@
 
   .navbar-collapse.show {
     background: white;
-  
+
   }
 
   .navbar-nav .nav-item a.active {
@@ -178,10 +175,12 @@
     font-size: 15px;
     background-color: #e7e7e7;
   }
+
   .navbar-nav .nav-item a:hover {
     color: #1351a8 !important;
-    font-weight: bold; 
+    font-weight: bold;
   }
+
   .navbar-collapse {
     transition: max-height 0.5s ease-in-out;
     max-height: 0;
@@ -203,14 +202,16 @@
   transition: height 0.3s ease;
   margin-left: 50px;
 }
+
 @media (max-width: 992px) {
 
-.sticky .navbar-brand img {
-  margin-left: 20px;
+  .sticky .navbar-brand img {
+    margin-left: 20px;
+  }
 }
-}
+
 .navbar {
- 
+
   padding: .5rem 0rem;
 }
 
@@ -228,6 +229,28 @@
 
 
 
+
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  top: 100%; /* Show the menu below the link */
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Desktop hover behavior for dropdown */
+@media (max-width: 992px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
 
 
 
