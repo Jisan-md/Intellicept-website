@@ -69,9 +69,19 @@ ngOnInit() {
 
   activeDropdown: string = '';
 
-  toggleDropdown(dropdown: string) {
-    this.activeDropdown = this.activeDropdown === dropdown ? '' : dropdown;
-  }
-  
+ 
+
+showDropdown() {
+  this.isDropdownVisible = true;
+}
+
+hideDropdown() {
+  this.isDropdownVisible = false;
+}
+isDropdownVisible = false;
+
+toggleDropdown() {
+  this.isDropdownVisible = !this.isDropdownVisible;
+}
   
 }
