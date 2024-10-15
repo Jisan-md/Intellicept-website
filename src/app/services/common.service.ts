@@ -6,7 +6,7 @@ import { ToastrService } from 'ngx-toastr';
   providedIn: 'root'
 })
 export class CommonService {
-  private apiUrl = "https://f5c7-203-92-37-218.ngrok-free.app/";
+  private apiUrl = "https://cbf2-203-92-37-218.ngrok-free.app/";
   private isAuthenticatedKey = 'isAuthenticated'; 
   header: any = {
     "ngrok-skip-browser-warning": "true",
