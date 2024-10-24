@@ -12,7 +12,7 @@ export class HeaderComponent {
   logoSrc: string = 'assets/intellicept.png'; 
   isNavOpen = false;
   isDropdownOpen: boolean = false;
-  // activeDropdown: string | null = null;
+ 
   constructor(public router: Router) {
     this.checkIfHomePage();
 
@@ -62,26 +62,38 @@ ngOnInit() {
    toggleNav() {
     this.isNavOpen = !this.isNavOpen;
   }
+  activeDropdown: string | null = null; 
 
- 
- 
-
-
-  activeDropdown: string = '';
-
- 
-
-showDropdown() {
-  this.isDropdownVisible = true;
-}
-
-hideDropdown() {
-  this.isDropdownVisible = false;
-}
-isDropdownVisible = false;
-
-toggleDropdown() {
-  this.isDropdownVisible = !this.isDropdownVisible;
-}
+  toggleDropdown(dropdown: string) {
+    if (this.activeDropdown === dropdown) {
+      this.activeDropdown = '';  
+    } else {
+      this.activeDropdown = dropdown; 
+    }
+  }
   
+  onClick(dropdown: string) {
+    if (window.innerWidth <= 768) {  
+      this.activeDropdown = this.activeDropdown === dropdown ? '' : dropdown; 
+    }
+  }
+  
+
+  onMouseEnter(dropdown: string) {
+    if (window.innerWidth > 768) {  
+      this.activeDropdown = dropdown; 
+    }
+  }
+  
+  onMouseLeave() {
+    if (window.innerWidth > 768) {  
+      this.activeDropdown = '';  
+    }
+  }
+
 }
+
+
+  
+  
+

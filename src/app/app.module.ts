@@ -44,7 +44,7 @@ import { SideNavComponent } from './admin/side-nav/side-nav.component';
 import { AddJobsComponent } from './admin/add-jobs/add-jobs.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { IMDGComponent } from './pages/imdg/imdg.component';
-import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -94,7 +94,7 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
     RouterModule.forRoot([]),
     MatSidenavModule,
     MatToolbarModule,
-    MatIconModule,NgbDropdownModule
+    MatIconModule,
    
   ],
   providers: [],
